@@ -1,0 +1,85 @@
+is_global = true
+build_property.TargetFramework = net8.0-windows10.0.19041.0
+build_property.TargetPlatformMinVersion = 10.0.17763.0
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 9A19103F-16F7-4668-BE54-9A1E7A4F7556
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = TicketSeller
+build_property.ProjectDir = D:\University\3 course\ПСП\CourseWork\TicketSeller\TicketSeller\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+
+[D:/University/3 course/ПСП/CourseWork/TicketSeller/TicketSeller/App.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = TicketSeller.App.xaml
+build_metadata.AdditionalFiles.TargetPath = App.xaml
+build_metadata.AdditionalFiles.RelativePath = App.xaml
+
+[D:/University/3 course/ПСП/CourseWork/TicketSeller/TicketSeller/AppShell.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = TicketSeller.AppShell.xaml
+build_metadata.AdditionalFiles.TargetPath = AppShell.xaml
+build_metadata.AdditionalFiles.RelativePath = AppShell.xaml
+
+[D:/University/3 course/ПСП/CourseWork/TicketSeller/TicketSeller/Resources/Styles/Colors.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = TicketSeller.Resources.Styles.Colors.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Colors.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Colors.xaml
+
+[D:/University/3 course/ПСП/CourseWork/TicketSeller/TicketSeller/Resources/Styles/Styles.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = TicketSeller.Resources.Styles.Styles.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml
+
+[D:/University/3 course/ПСП/CourseWork/TicketSeller/TicketSeller/View/AddUser.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = TicketSeller.View.AddUser.xaml
+build_metadata.AdditionalFiles.TargetPath = View\AddUser.xaml
+build_metadata.AdditionalFiles.RelativePath = View\AddUser.xaml
+
+[D:/University/3 course/ПСП/CourseWork/TicketSeller/TicketSeller/View/Amin.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = TicketSeller.View.Amin.xaml
+build_metadata.AdditionalFiles.TargetPath = View\Amin.xaml
+build_metadata.AdditionalFiles.RelativePath = View\Amin.xaml
+
+[D:/University/3 course/ПСП/CourseWork/TicketSeller/TicketSeller/View/Authorization.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = TicketSeller.View.Authorization.xaml
+build_metadata.AdditionalFiles.TargetPath = View\Authorization.xaml
+build_metadata.AdditionalFiles.RelativePath = View\Authorization.xaml
+
+[D:/University/3 course/ПСП/CourseWork/TicketSeller/TicketSeller/View/MainPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = TicketSeller.View.MainPage.xaml
+build_metadata.AdditionalFiles.TargetPath = View\MainPage.xaml
+build_metadata.AdditionalFiles.RelativePath = View\MainPage.xaml
+
+[D:/University/3 course/ПСП/CourseWork/TicketSeller/TicketSeller/View/Registration.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = TicketSeller.View.Registration.xaml
+build_metadata.AdditionalFiles.TargetPath = View\Registration.xaml
+build_metadata.AdditionalFiles.RelativePath = View\Registration.xaml
+
+[D:/University/3 course/ПСП/CourseWork/TicketSeller/TicketSeller/View/Seats.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = TicketSeller.View.Seats.xaml
+build_metadata.AdditionalFiles.TargetPath = View\Seats.xaml
+build_metadata.AdditionalFiles.RelativePath = View\Seats.xaml
+
+[D:/University/3 course/ПСП/CourseWork/TicketSeller/TicketSeller/View/ShowFilms.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = TicketSeller.View.ShowFilms.xaml
+build_metadata.AdditionalFiles.TargetPath = View\ShowFilms.xaml
+build_metadata.AdditionalFiles.RelativePath = View\ShowFilms.xaml
+
+[D:/University/3 course/ПСП/CourseWork/TicketSeller/TicketSeller/View/ShowUsers.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = TicketSeller.View.ShowUsers.xaml
+build_metadata.AdditionalFiles.TargetPath = View\ShowUsers.xaml
+build_metadata.AdditionalFiles.RelativePath = View\ShowUsers.xaml

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:model="clr-namespace:TicketSeller.Model"
+             x:Class="TicketSeller.View.ShowFilms"
+             Title="ShowFilms">
+    <HorizontalStackLayout HorizontalOptions="CenterAndExpand">
+        <ListView x:Name="filmsList" >
+            <ListView.Header>
+                <Label Text="Films" FontSize="Header" FontAttributes="Bold" Padding="8"/>
+            </ListView.Header>
+            <ListView.ItemTemplate>
+                <DataTemplate x:DataType="model:Film">
+                    <ViewCell>
+                        <VerticalStackLayout Padding="10" Margin="10" WidthRequest="400" Spacing="10">
+                            <Image Source="https://aka.ms/campus.jpg"/>
+                            <Label Text="{Binding Name}" 
+                                   FontSize="24" 
+                                   HorizontalTextAlignment="Start"
+                                   VerticalTextAlignment="Center"
+                                   FontAttributes="Bold"
+                                   />
+                            <Label Text="{Binding Description}" 
+                               FontSize="16" 
+                               HorizontalTextAlignment="Start"
+                               VerticalTextAlignment="Center"
+                               FontAttributes="Bold"
+                               LineBreakMode="TailTruncation"/>
+                            
+                            <HorizontalStackLayout Spacing="4">
+                                <Label Text="Cost: " 
+                                       FontSize="16" 
+                                       HorizontalTextAlignment="Start"  
+                                       VerticalTextAlignment="Center"
+                                       FontAttributes="Bold"
+                                       />
+                                <Label Text="{Binding Cost}" 
+                                   FontSize="16" 
+                                   HorizontalTextAlignment="Start"
+                                   VerticalTextAlignment="Center"
+                                   />
+                            </HorizontalStackLayout>
+                            
+                            <HorizontalStackLayout Spacing="4">
+                                <Label Text="Duration: " 
+                                    FontSize="16" 
+                                    HorizontalTextAlignment="End"
+                                    VerticalTextAlignment="Center"
+                                    FontAttributes="Bold"
+                                    />
+                                <Label Text="{Binding Duration}" 
+                                   FontSize="16" 
+                                   HorizontalTextAlignment="End"
+                                   VerticalTextAlignment="Center"
+                                   />
+                            </HorizontalStackLayout>
+                            
+                            <Button Text="Book" HorizontalOptions="Center" FontAttributes="Bold"/>
+                        </VerticalStackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </HorizontalStackLayout>
+</ContentPage>

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\University\\3 course\\ПСП\\CourseWork\\TicketSeller\\TicketSeller\\TicketSeller.csproj": {}
+    "D:\\University\\3 course\\PSP\\CourseWork\\TicketSeller\\TicketSeller\\TicketSeller.csproj": {}
   },
   "projects": {
-    "D:\\University\\3 course\\ПСП\\CourseWork\\TicketSeller\\TicketSeller\\TicketSeller.csproj": {
+    "D:\\University\\3 course\\PSP\\CourseWork\\TicketSeller\\TicketSeller\\TicketSeller.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\University\\3 course\\ПСП\\CourseWork\\TicketSeller\\TicketSeller\\TicketSeller.csproj",
+        "projectUniqueName": "D:\\University\\3 course\\PSP\\CourseWork\\TicketSeller\\TicketSeller\\TicketSeller.csproj",
         "projectName": "TicketSeller",
-        "projectPath": "D:\\University\\3 course\\ПСП\\CourseWork\\TicketSeller\\TicketSeller\\TicketSeller.csproj",
+        "projectPath": "D:\\University\\3 course\\PSP\\CourseWork\\TicketSeller\\TicketSeller\\TicketSeller.csproj",
         "packagesPath": "C:\\Users\\Defestronik\\.nuget\\packages\\",
-        "outputPath": "D:\\University\\3 course\\ПСП\\CourseWork\\TicketSeller\\TicketSeller\\obj\\",
+        "outputPath": "D:\\University\\3 course\\PSP\\CourseWork\\TicketSeller\\TicketSeller\\obj\\",
         "projectStyle": "PackageReference",
         "crossTargeting": true,
         "fallbackFolders": [

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TicketSeller.View.AddCinema"
+             Title="AddCinema">
+    
+    <VerticalStackLayout HorizontalOptions="Center" VerticalOptions="Center" Spacing="10">
+        <Label Text="Add Cinema" FontAttributes="Bold" FontSize="Large" HorizontalTextAlignment="Center"/>
+        <Entry Placeholder="Name"/>
+        <Entry Placeholder="Address"/>
+        <Button Text = "Add" FontAttributes="Bold"/>
+    </VerticalStackLayout>
+</ContentPage>

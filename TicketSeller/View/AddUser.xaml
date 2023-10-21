@@ -12,6 +12,6 @@
             <Label Text="ADMIN" VerticalOptions="Center" FontSize="20"/>
             <CheckBox />
         </HorizontalStackLayout>
-        <Button Text = "Add" FontAttributes="Bold"/>
+        <Button Text = "Add" FontAttributes="Bold" Clicked="UserAdded"/>
     </VerticalStackLayout>
 </ContentPage>

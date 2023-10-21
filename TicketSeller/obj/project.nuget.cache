@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "K1qqMpzfQbbMMkhbAK6igugF6oaNCxBdUY1dxSy7Wt5CCFI+f9g8gKRTjIlL3y3vOtZZhER35BnZz5nAP1UL2w==",
+  "dgSpecHash": "KqydcJisuGTg6E6cJjjogqo9NS3PtJCB4xFj8JvCz7iHIUsWjFWt9YGhxJ+P7XxmBJVnaxrsc4HQqBm6Iah70w==",
   "success": true,
-  "projectFilePath": "D:\\University\\3 course\\ПСП\\CourseWork\\TicketSeller\\TicketSeller\\TicketSeller.csproj",
+  "projectFilePath": "D:\\University\\3 course\\PSP\\CourseWork\\TicketSeller\\TicketSeller\\Client.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Defestronik\\.nuget\\packages\\googlegson\\2.10.1.4\\googlegson.2.10.1.4.nupkg.sha512",
     "C:\\Users\\Defestronik\\.nuget\\packages\\microsoft.extensions.configuration\\8.0.0-rc.1.23419.4\\microsoft.extensions.configuration.8.0.0-rc.1.23419.4.nupkg.sha512",

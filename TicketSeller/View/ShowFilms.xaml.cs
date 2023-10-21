@@ -1,4 +1,4 @@
-using TicketSeller.Model;
+using TicketSellerLib.DTO;
 
 namespace TicketSeller.View;
 

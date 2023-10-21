@@ -11,19 +11,8 @@
         <!--<ShellContent
             Title="Home"
             ContentTemplate="{DataTemplate local:MainPage}"
-            Route="MainPage" />
-        <ShellContent
-            Title="Admin"
-            ContentTemplate="{DataTemplate local:Amin}"
-            Route="Admin" />-->
-        <ShellContent
-            Title="Seats"
-            ContentTemplate="{DataTemplate local:Seats}"
-            Route="Seats" />
-        <ShellContent
-            Title="AddUser"
-            ContentTemplate="{DataTemplate local:AddUser}"
-            Route="AddUser" />
+            Route="MainPage" />-->
+
         <ShellContent
             Title="Authorization"
             ContentTemplate="{DataTemplate local:Authorization}"
@@ -33,13 +22,37 @@
             ContentTemplate="{DataTemplate local:Registration}"
             Route="Registration" />
         <ShellContent
-            Title="ShowFilms"
-            ContentTemplate="{DataTemplate local:ShowFilms}"
-            Route="ShowFilms" />
+            Title="AddUser"
+            ContentTemplate="{DataTemplate local:AddUser}"
+            Route="AddUser" />
+        <ShellContent
+            Title="AddFilm"
+            ContentTemplate="{DataTemplate local:AddFilm}"
+            Route="AddFilm" />
+        <ShellContent
+            Title="AddCinema"
+            ContentTemplate="{DataTemplate local:AddCinema}"
+            Route="AddCinema" />
+        <ShellContent
+            Title="AddHall"
+            ContentTemplate="{DataTemplate local:AddHall}"
+            Route="AddHall" />
         <ShellContent
             Title="ShowUsers"
             ContentTemplate="{DataTemplate local:ShowUsers}"
             Route="ShowUsers" />
+        <ShellContent
+            Title="ShowCinemas"
+            ContentTemplate="{DataTemplate local:ShowCinemas}"
+            Route="ShowCinemas" />
+        <ShellContent
+            Title="ShowFilms"
+            ContentTemplate="{DataTemplate local:ShowFilms}"
+            Route="ShowFilms" />
+        <ShellContent
+            Title="Seats"
+            ContentTemplate="{DataTemplate local:Seats}"
+            Route="Seats" />
     </TabBar>
 
 </Shell>

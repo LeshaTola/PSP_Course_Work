@@ -1,0 +1,12 @@
+D:\University\3 course\PSP\CourseWork\TicketSeller\TicketSellerLib\bin\Debug\net8.0\TicketSellerLib.deps.json
+D:\University\3 course\PSP\CourseWork\TicketSeller\TicketSellerLib\bin\Debug\net8.0\TicketSellerLib.dll
+D:\University\3 course\PSP\CourseWork\TicketSeller\TicketSellerLib\bin\Debug\net8.0\TicketSellerLib.pdb
+D:\University\3 course\PSP\CourseWork\TicketSeller\TicketSellerLib\obj\Debug\net8.0\TicketSellerLib.GeneratedMSBuildEditorConfig.editorconfig
+D:\University\3 course\PSP\CourseWork\TicketSeller\TicketSellerLib\obj\Debug\net8.0\TicketSellerLib.AssemblyInfoInputs.cache
+D:\University\3 course\PSP\CourseWork\TicketSeller\TicketSellerLib\obj\Debug\net8.0\TicketSellerLib.AssemblyInfo.cs
+D:\University\3 course\PSP\CourseWork\TicketSeller\TicketSellerLib\obj\Debug\net8.0\TicketSellerLib.csproj.CoreCompileInputs.cache
+D:\University\3 course\PSP\CourseWork\TicketSeller\TicketSellerLib\obj\Debug\net8.0\TicketSellerLib.sourcelink.json
+D:\University\3 course\PSP\CourseWork\TicketSeller\TicketSellerLib\obj\Debug\net8.0\TicketSellerLib.dll
+D:\University\3 course\PSP\CourseWork\TicketSeller\TicketSellerLib\obj\Debug\net8.0\refint\TicketSellerLib.dll
+D:\University\3 course\PSP\CourseWork\TicketSeller\TicketSellerLib\obj\Debug\net8.0\TicketSellerLib.pdb
+D:\University\3 course\PSP\CourseWork\TicketSeller\TicketSellerLib\obj\Debug\net8.0\ref\TicketSellerLib.dll

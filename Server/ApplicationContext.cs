@@ -9,11 +9,12 @@ namespace TicketSeller.Model
 		public DbSet<Hall> Halls { get; set; } = null!;
 		public DbSet<Cinema> Cinema { get; set; } = null!;
 		public DbSet<Film> Films { get; set; } = null!;
-		public DbSet<Session> Session { get; set; } = null!;
+		public DbSet<Session> Sessions { get; set; } = null!;
+		public DbSet<Ticket> Tickets { get; set; } = null!;
 
 		public ApplicationContext()
 		{
-			Database.EnsureDeleted();
+			//Database.EnsureDeleted();
 			Database.EnsureCreated();
 		}
 		protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)

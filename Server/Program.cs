@@ -1,4 +1,5 @@
-﻿using TicketSeller.Model;
+﻿using System.Net;
+using TicketSeller.Model;
 using TicketSellerLib.DTO;
 
 namespace Server
@@ -15,6 +16,8 @@ namespace Server
 			});*/
 			//var dao = new UserDAO();
 			//Console.WriteLine(dao.Get(1).Login);
+			Server server = new Server(IPAddress.Any, 8888);
+			server.StartServerAsync();
 		}
 
 		public static void AddUser(User user)

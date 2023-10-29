@@ -4,13 +4,15 @@ namespace TicketSellerLib.TCP
 {
 	public class Request
 	{
-		public RequestTypes RequestType { get; set; }
-		public string RequestMessage { get; set; }
+		public RequestTypes Type { get; set; }
+		public string Message { get; set; }
 
-		public Request(RequestTypes requestType, string requestMessage)
+		public Request() { }
+
+		public Request(RequestTypes type, string message)
 		{
-			RequestType = requestType;
-			RequestMessage = requestMessage;
+			Type = type;
+			Message = message;
 		}
 	}
 }

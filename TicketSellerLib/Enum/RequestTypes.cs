@@ -4,6 +4,7 @@
 	{
 		SignUp,
 		Login,
+		Error
 		/*SIGNUP,
 		LOGIN,
 		GET_CLIENT,

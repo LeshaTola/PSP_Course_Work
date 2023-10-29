@@ -10,3 +10,4 @@ D:\University\3 course\PSP\CourseWork\TicketSeller\TicketSellerLib\obj\Debug\net
 D:\University\3 course\PSP\CourseWork\TicketSeller\TicketSellerLib\obj\Debug\net8.0\refint\TicketSellerLib.dll
 D:\University\3 course\PSP\CourseWork\TicketSeller\TicketSellerLib\obj\Debug\net8.0\TicketSellerLib.pdb
 D:\University\3 course\PSP\CourseWork\TicketSeller\TicketSellerLib\obj\Debug\net8.0\ref\TicketSellerLib.dll
+D:\University\3 course\PSP\CourseWork\TicketSeller\TicketSellerLib\obj\Debug\net8.0\TicketSellerLib.csproj.AssemblyReference.cache

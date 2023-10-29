@@ -2,6 +2,8 @@
 {
 	public enum ResponseTypes
 	{
-
+		Ok,
+		NotOk,
+		Error
 	}
 }

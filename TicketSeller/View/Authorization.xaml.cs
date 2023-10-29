@@ -4,7 +4,7 @@ namespace TicketSeller.View;
 
 public partial class Authorization : ContentPage
 {
-	internal Authorization(AuthorizationViewModel viewModel)
+	public Authorization(AuthorizationViewModel viewModel)
 	{
 		InitializeComponent();
 		BindingContext = viewModel;

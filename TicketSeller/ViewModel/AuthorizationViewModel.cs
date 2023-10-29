@@ -1,14 +1,13 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using Newtonsoft.Json;
-using System.Diagnostics;
 using TicketSeller.Services;
 using TicketSellerLib.DTO;
 using TicketSellerLib.Enum;
 
 namespace TicketSeller.ViewModel
 {
-	partial class AuthorizationViewModel : BaseViewModel
+	public partial class AuthorizationViewModel : BaseViewModel
 	{
 
 		[ObservableProperty] private User user = new();
@@ -41,15 +40,17 @@ namespace TicketSeller.ViewModel
 					}
 					else
 					{
-						ErrorString = response.Message;
-						//await Shell.Current.DisplayAlert("Error!", "message", "Ok");
+						//ErrorString = response.Message;
+						await Shell.Current.DisplayAlert("Error!", response.Message, "Ok");
 					}
 				}
 			}
 			catch (Exception ex)
 			{
 				//ErrorString = ex.Message;//TODO: Handle
-				Debug.WriteLine(ex.Message);
+				//Debug.WriteLine(ex.Message);
+				await Shell.Current.DisplayAlert("Error!", ex.Message, "Ok");
+
 			}
 			finally
 			{

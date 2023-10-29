@@ -1,6 +1,6 @@
 ﻿using Microsoft.Extensions.Logging;
-using System.Net;
 using TicketSeller.Services;
+using TicketSeller.View;
 using TicketSeller.ViewModel;
 
 namespace TicketSeller
@@ -26,6 +26,9 @@ namespace TicketSeller
 #if DEBUG
 			builder.Logging.AddDebug();
 #endif
+
+			Client.Client client = new("127.0.0.1", 14447);
+			client.Connect();
 
 			return builder.Build();
 		}

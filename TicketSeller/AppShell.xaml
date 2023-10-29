@@ -20,8 +20,8 @@
         <!--<ShellContent
             Title="Registration"
             ContentTemplate="{DataTemplate local:Registration}"
-            Route="Registration" />
-        <ShellContent
+            Route="Registration" />-->
+        <!--<ShellContent
             Title="AddUser"
             ContentTemplate="{DataTemplate local:AddUser}"
             Route="AddUser" />

@@ -7,7 +7,7 @@
     Shell.FlyoutBehavior="Disabled"
     Title="TicketSeller">
     
-    <TabBar>
+    
         <!--<ShellContent
             Title="Home"
             ContentTemplate="{DataTemplate local:MainPage}"
@@ -17,7 +17,7 @@
             Title="Authorization"
             ContentTemplate="{DataTemplate local:Authorization}"
             Route="Authorization" />
-        <ShellContent
+        <!--<ShellContent
             Title="Registration"
             ContentTemplate="{DataTemplate local:Registration}"
             Route="Registration" />
@@ -52,7 +52,6 @@
         <ShellContent
             Title="Seats"
             ContentTemplate="{DataTemplate local:Seats}"
-            Route="Seats" />
-    </TabBar>
+            Route="Seats" />-->
 
 </Shell>

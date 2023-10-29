@@ -31,3 +31,4 @@ D:\University\3 course\PSP\CourseWork\TicketSeller\Server\obj\Debug\net8.0\Serve
 D:\University\3 course\PSP\CourseWork\TicketSeller\Server\obj\Debug\net8.0\ref\Server.dll
 D:\University\3 course\PSP\CourseWork\TicketSeller\Server\bin\Debug\net8.0\TicketSellerLib.dll
 D:\University\3 course\PSP\CourseWork\TicketSeller\Server\bin\Debug\net8.0\TicketSellerLib.pdb
+D:\University\3 course\PSP\CourseWork\TicketSeller\Server\bin\Debug\net8.0\Newtonsoft.Json.dll

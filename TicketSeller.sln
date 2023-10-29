@@ -5,9 +5,9 @@ VisualStudioVersion = 17.8.34112.27
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Client", "TicketSeller\Client.csproj", "{DBADC566-0B93-4B58-BA4D-6DE0F22E9E0A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Server", "Server\Server.csproj", "{AA30F735-70BB-4E7C-A0B4-B3169C411E01}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Server", "Server\Server.csproj", "{AA30F735-70BB-4E7C-A0B4-B3169C411E01}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TicketSellerLib", "TicketSellerLib\TicketSellerLib.csproj", "{0D81A7A6-2B39-4D90-A8CE-6ED3AF63FF5D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TicketSellerLib", "TicketSellerLib\TicketSellerLib.csproj", "{0D81A7A6-2B39-4D90-A8CE-6ED3AF63FF5D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

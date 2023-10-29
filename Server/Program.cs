@@ -6,7 +6,7 @@ namespace Server
 {
 	public class Program
 	{
-		static void Main(string[] args)
+		static async Task Main(string[] args)
 		{
 			/*AddUser(new User()
 			{
@@ -16,8 +16,8 @@ namespace Server
 			});*/
 			//var dao = new UserDAO();
 			//Console.WriteLine(dao.Get(1).Login);
-			Server server = new Server(IPAddress.Any, 8888);
-			server.StartServerAsync();
+			Server server = new Server(IPAddress.Any, 14447);
+			await server.StartServerAsync();
 		}
 
 		public static void AddUser(User user)

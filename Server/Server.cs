@@ -14,7 +14,7 @@ namespace Server
 			clients = new List<ClientHandler>();
 		}
 
-		public async void StartServerAsync()
+		public async Task StartServerAsync()
 		{
 			try
 			{
@@ -26,7 +26,7 @@ namespace Server
 					var client = await tcpListener.AcceptTcpClientAsync();
 					var clientHandler = new ClientHandler(this, client);
 					clients.Add(clientHandler);
-					Task.Run(() => clientHandler.ProcessAsync(client));
+					Task.Run(clientHandler.ProcessAsync);
 				}
 			}
 			catch (Exception ex)

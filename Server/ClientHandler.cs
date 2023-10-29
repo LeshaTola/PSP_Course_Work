@@ -1,5 +1,6 @@
-﻿using System.Net.Sockets;
-using System.Text.Json;
+﻿using Newtonsoft.Json;
+using Server.Services;
+using System.Net.Sockets;
 using TicketSellerLib.DTO;
 using TicketSellerLib.Enum;
 using TicketSellerLib.TCP;
@@ -14,6 +15,13 @@ namespace Server
 		private StreamReader reader;
 		private StreamWriter writer;
 
+		private UserService userService = new();
+		private FilmService filmService = new();
+		private HallService hallService = new();
+		private SessionService sessionService = new();
+		private TicketService ticketService = new();
+		private CinemaService cinemaService = new();
+
 		public ClientHandler(Server server, TcpClient client)
 		{
 			this.server = server;
@@ -24,21 +32,24 @@ namespace Server
 			writer = new StreamWriter(stream);
 		}
 
-		public async Task ProcessAsync(TcpClient client)
+		public async Task ProcessAsync()
 		{
 			Console.WriteLine($"Клиент: {client.Client.RemoteEndPoint} подключился");
 			try
 			{
 				while (true)
 				{
-					var request = GetRequest(client);
-					switch (request.RequestType)
+					var request = await GetRequestAsync();
+					switch (request.Type)
 					{
 						case RequestTypes.SignUp:
 
 							break;
 						case RequestTypes.Login:
-							Login(request.RequestMessage);
+							Login(request.Message);
+							break;
+						case RequestTypes.Error:
+
 							break;
 						default:
 							Console.WriteLine("Unknown request type");
@@ -52,24 +63,50 @@ namespace Server
 			}
 			finally
 			{
+				await Console.Out.WriteLineAsync($"Client {client.Client.RemoteEndPoint} is Disconnected");
 				server.RemoveClient(this);
 				Close();
 			}
 		}
 
-		private Request GetRequest(TcpClient client)
+		private async Task<Request> GetRequestAsync()
 		{
-			string message = reader.ReadToEnd();
+			var message = await reader.ReadLineAsync();
 			Console.WriteLine($"Клиент {client.Client.RemoteEndPoint} отправил: " + message);
-			var request = JsonSerializer.Deserialize<Request>(message);
+			var request = JsonConvert.DeserializeObject<Request>(message);
 			return request;
+		}
+
+		private async void SendResponseAsync(Response response)
+		{
+			string message = JsonConvert.SerializeObject(response);
+			await writer.WriteLineAsync(message);
+			writer.Flush();
 		}
 
 		private void Login(string requestMessage)
 		{
-			var requestUser = JsonSerializer.Deserialize<User>(requestMessage);
+			var requestUser = JsonConvert.DeserializeObject<User>(requestMessage);
 
-
+			var users = userService.GetAll();
+			var user = users.Find(u => u.Login.Equals(requestUser.Login));
+			Response response;
+			if (user != null)
+			{
+				if (user.Password.Equals(requestUser.Password))
+				{
+					response = new Response(ResponseTypes.Ok, "Авторизация подтверждена", JsonConvert.SerializeObject(user));
+				}
+				else
+				{
+					response = new Response(ResponseTypes.NotOk, "Неверный пароль");
+				}
+			}
+			else
+			{
+				response = new Response(ResponseTypes.NotOk, "Такого пользователя не существует");
+			}
+			SendResponseAsync(response);
 		}
 
 		private void Close()

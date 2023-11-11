@@ -10,14 +10,13 @@ namespace TicketSeller.ViewModel
 {
 	public partial class AuthorizationViewModel : BaseViewModel
 	{
-
 		[ObservableProperty] private User user = new();
 
 		private UserService userService;
 
 		public AuthorizationViewModel(UserService userService)
 		{
-			Title = "Authorization";
+			Title = "Авторизация";
 			this.userService = userService;
 		}
 
@@ -63,13 +62,13 @@ namespace TicketSeller.ViewModel
 					}
 					else
 					{
-						await Shell.Current.DisplayAlert("Error!", response.Message, "Ok");
+						await Shell.Current.DisplayAlert("Ошибка!", response.Message, "Хорошо");
 					}
 				}
 			}
 			catch (Exception ex)
 			{
-				await Shell.Current.DisplayAlert("Error!", ex.Message, "Ok");
+				await Shell.Current.DisplayAlert("Ошибка!", ex.Message, "Хорошо");
 			}
 			finally
 			{

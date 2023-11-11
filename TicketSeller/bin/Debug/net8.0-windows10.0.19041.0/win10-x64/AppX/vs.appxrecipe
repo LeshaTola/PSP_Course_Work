@@ -30,13 +30,13 @@
     <AppXManifest Include="D:\University\3 course\PSP\CourseWork\TicketSeller\TicketSeller\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-11-11T10:25:39.538</Modified>
+      <Modified>2023-11-11T12:12:49.349</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="D:\University\3 course\PSP\CourseWork\TicketSeller\TicketSeller\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2023-11-11T10:25:39.400</Modified>
+      <Modified>2023-11-11T12:12:49.207</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\University\3 course\PSP\CourseWork\TicketSeller\TicketSeller\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Client.runtimeconfig.json">
       <PackagePath>Client.runtimeconfig.json</PackagePath>
@@ -44,11 +44,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\University\3 course\PSP\CourseWork\TicketSeller\TicketSeller\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Client.dll">
       <PackagePath>Client.dll</PackagePath>
-      <Modified>2023-11-11T10:25:38.501</Modified>
+      <Modified>2023-11-11T12:12:48.306</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\University\3 course\PSP\CourseWork\TicketSeller\TicketSeller\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>Client.exe</PackagePath>
-      <Modified>2023-11-11T10:25:38.543</Modified>
+      <Modified>2023-11-11T12:12:48.348</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\University\3 course\PSP\CourseWork\TicketSeller\TicketSeller\Resources\Raw\AboutAssets.txt">
       <PackagePath>AboutAssets.txt</PackagePath>

@@ -16,7 +16,7 @@ namespace TicketSeller.ViewModel
 
 		public RegistrationViewModel(UserService userService)
 		{
-			Title = "Registration";
+			Title = "Регистрация";
 			this.userService = userService;
 		}
 

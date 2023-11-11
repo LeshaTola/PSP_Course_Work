@@ -6,15 +6,15 @@
              x:Class="TicketSeller.View.Authorization"
              Title="{Binding Title}">
     <VerticalStackLayout HorizontalOptions="Center" Spacing="30" VerticalOptions="Center">
-        <Label Text="Authorization" FontSize="30" FontAttributes="Bold"/>
-        <Entry Placeholder="login" Text="{Binding User.Login}" />
-        <Entry Placeholder="password" IsPassword="True" Text="{Binding User.Password}"/>
+        <Label Text="Авторизация" FontSize="30" FontAttributes="Bold"/>
+        <Entry Placeholder="Логин" Text="{Binding User.Login}" />
+        <Entry Placeholder="Пароль" IsPassword="True" Text="{Binding User.Password}"/>
 
         <VerticalStackLayout>
-            <Button CornerRadius="20" Text="Enter" FontAttributes="Bold" Command="{Binding LoginCommand}" />
+            <Button CornerRadius="20" Text="Войти" FontAttributes="Bold" Command="{Binding LoginCommand}" />
             <Button 
                 CornerRadius="20" 
-                Text="Registration" 
+                Text="Регистрация" 
                 FontAttributes="Bold" 
                 BackgroundColor="Transparent" 
                 TextColor="White"

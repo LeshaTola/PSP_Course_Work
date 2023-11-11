@@ -4,14 +4,22 @@
              xmlns:viewModel="clr-namespace:TicketSeller.ViewModel"
              x:DataType="viewModel:AuthorizationViewModel"
              x:Class="TicketSeller.View.Authorization"
-             Title="Authorization">
+             Title="{Binding Title}">
     <VerticalStackLayout HorizontalOptions="Center" Spacing="30" VerticalOptions="Center">
         <Label Text="Authorization" FontSize="30" FontAttributes="Bold"/>
         <Entry Placeholder="login" Text="{Binding User.Login}" />
         <Entry Placeholder="password" IsPassword="True" Text="{Binding User.Password}"/>
-        <!--<Label Text="forgot your password?"/>-->
 
-        <Button CornerRadius="20" Text="Enter" FontAttributes="Bold" Command="{Binding LoginCommand}" />
+        <VerticalStackLayout>
+            <Button CornerRadius="20" Text="Enter" FontAttributes="Bold" Command="{Binding LoginCommand}" />
+            <Button 
+                CornerRadius="20" 
+                Text="Registration" 
+                FontAttributes="Bold" 
+                BackgroundColor="Transparent" 
+                TextColor="White"
+                Command="{Binding RegisterCommand}"/>
+        </VerticalStackLayout>
 
     </VerticalStackLayout>
 </ContentPage>

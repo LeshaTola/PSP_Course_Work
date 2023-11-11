@@ -18,10 +18,15 @@ namespace TicketSeller
 					fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
 				});
 
-
 			builder.Services.AddSingleton<UserService>();
+
 			builder.Services.AddSingleton<AuthorizationViewModel>();
+			builder.Services.AddSingleton<RegistrationViewModel>();
+			builder.Services.AddSingleton<MainPageViewModel>();
+
 			builder.Services.AddSingleton<Authorization>();
+			builder.Services.AddSingleton<Registration>();
+			builder.Services.AddSingleton<MainPage>();
 
 #if DEBUG
 			builder.Logging.AddDebug();

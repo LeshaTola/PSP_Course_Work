@@ -43,7 +43,7 @@ namespace Server
 					switch (request.Type)
 					{
 						case RequestTypes.SignUp:
-
+							SignUp(request.Message);
 							break;
 						case RequestTypes.Login:
 							Login(request.Message);
@@ -89,7 +89,7 @@ namespace Server
 			var requestUser = JsonConvert.DeserializeObject<User>(requestMessage);
 
 			var users = userService.GetAll();
-			var user = users.Find(u => u.Login.Equals(requestUser.Login));
+			var user = users.Find(u => u.Login.Equals(requestUser.Login, StringComparison.OrdinalIgnoreCase));
 			Response response;
 			if (user != null)
 			{
@@ -105,6 +105,25 @@ namespace Server
 			else
 			{
 				response = new Response(ResponseTypes.NotOk, "Такого пользователя не существует");
+			}
+			SendResponseAsync(response);
+		}
+
+		private void SignUp(string requestMessage)
+		{
+			var requestUser = JsonConvert.DeserializeObject<User>(requestMessage);
+
+			var users = userService.GetAll();
+			var user = users.Find(u => u.Login.Equals(requestUser.Login, StringComparison.OrdinalIgnoreCase));
+			Response response;
+			if (user == null)
+			{
+				userService.Add(requestUser);
+				response = new Response(ResponseTypes.Ok, "Успешная регистрация");
+			}
+			else
+			{
+				response = new Response(ResponseTypes.NotOk, "Такой пользователь уже существует");
 			}
 			SendResponseAsync(response);
 		}

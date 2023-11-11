@@ -1,4 +1,6 @@
-﻿namespace TicketSeller
+﻿using TicketSeller.View;
+
+namespace TicketSeller
 {
 	public partial class AppShell : Shell
 	{
@@ -6,6 +8,8 @@
 		{
 			InitializeComponent();
 
+			Routing.RegisterRoute(nameof(ShowFilms), typeof(ShowFilms));
+			Routing.RegisterRoute(nameof(Registration), typeof(Registration));
 		}
 	}
 }

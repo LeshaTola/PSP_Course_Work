@@ -2,6 +2,7 @@
 using CommunityToolkit.Mvvm.Input;
 using Newtonsoft.Json;
 using TicketSeller.Services;
+using TicketSeller.View;
 using TicketSellerLib.DTO;
 using TicketSellerLib.Enum;
 
@@ -11,7 +12,6 @@ namespace TicketSeller.ViewModel
 	{
 
 		[ObservableProperty] private User user = new();
-		[ObservableProperty] private string errorString;
 
 		private UserService userService;
 
@@ -19,6 +19,28 @@ namespace TicketSeller.ViewModel
 		{
 			Title = "Authorization";
 			this.userService = userService;
+		}
+
+		private async Task GoToRegistrationPage()
+		{
+			await Shell.Current.GoToAsync($"{nameof(Registration)}", true);
+		}
+
+		private async Task GoToFilmsPageAsync(User user)
+		{
+			if (user == null)
+				return;
+
+			await Shell.Current.GoToAsync($"{nameof(ShowFilms)}", true, new Dictionary<string, object>
+			{
+				{"user", User}
+			});
+		}
+
+		[RelayCommand]
+		private async Task RegisterAsync()
+		{
+			await GoToRegistrationPage();
 		}
 
 		[RelayCommand]
@@ -31,26 +53,23 @@ namespace TicketSeller.ViewModel
 			{
 				IsBusy = true;
 
-				var response = await userService.LoginAsync(User);
+				var response = await userService.AuthorizeAsync(User);
 				if (response != null)
 				{
 					if (response.Type == ResponseTypes.Ok)
 					{
 						User responseUser = JsonConvert.DeserializeObject<User>(response.Data);
+						await GoToFilmsPageAsync(responseUser);
 					}
 					else
 					{
-						//ErrorString = response.Message;
 						await Shell.Current.DisplayAlert("Error!", response.Message, "Ok");
 					}
 				}
 			}
 			catch (Exception ex)
 			{
-				//ErrorString = ex.Message;//TODO: Handle
-				//Debug.WriteLine(ex.Message);
 				await Shell.Current.DisplayAlert("Error!", ex.Message, "Ok");
-
 			}
 			finally
 			{

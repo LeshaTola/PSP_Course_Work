@@ -7,12 +7,16 @@
         <member name="T:TicketSeller.ViewModel.AuthorizationViewModel">
             <inheritdoc/>
             <inheritdoc/>
+            <inheritdoc/>
         </member>
         <member name="P:TicketSeller.ViewModel.AuthorizationViewModel.User">
             <inheritdoc cref="F:TicketSeller.ViewModel.AuthorizationViewModel.user"/>
         </member>
-        <member name="P:TicketSeller.ViewModel.AuthorizationViewModel.ErrorString">
-            <inheritdoc cref="F:TicketSeller.ViewModel.AuthorizationViewModel.errorString"/>
+        <member name="F:TicketSeller.ViewModel.AuthorizationViewModel.registerCommand">
+            <summary>The backing field for <see cref="P:TicketSeller.ViewModel.AuthorizationViewModel.RegisterCommand"/>.</summary>
+        </member>
+        <member name="P:TicketSeller.ViewModel.AuthorizationViewModel.RegisterCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:TicketSeller.ViewModel.AuthorizationViewModel.RegisterAsync"/>.</summary>
         </member>
         <member name="F:TicketSeller.ViewModel.AuthorizationViewModel.loginCommand">
             <summary>The backing field for <see cref="P:TicketSeller.ViewModel.AuthorizationViewModel.LoginCommand"/>.</summary>
@@ -29,6 +33,22 @@
         <member name="P:TicketSeller.ViewModel.BaseViewModel.Title">
             <inheritdoc cref="F:TicketSeller.ViewModel.BaseViewModel.title"/>
         </member>
+        <member name="T:TicketSeller.ViewModel.RegistrationViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:TicketSeller.ViewModel.RegistrationViewModel.User">
+            <inheritdoc cref="F:TicketSeller.ViewModel.RegistrationViewModel.user"/>
+        </member>
+        <member name="P:TicketSeller.ViewModel.RegistrationViewModel.ConfirmPassword">
+            <inheritdoc cref="F:TicketSeller.ViewModel.RegistrationViewModel.confirmPassword"/>
+        </member>
+        <member name="F:TicketSeller.ViewModel.RegistrationViewModel.registerCommand">
+            <summary>The backing field for <see cref="P:TicketSeller.ViewModel.RegistrationViewModel.RegisterCommand"/>.</summary>
+        </member>
+        <member name="P:TicketSeller.ViewModel.RegistrationViewModel.RegisterCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:TicketSeller.ViewModel.RegistrationViewModel.RegisterAsync"/>.</summary>
+        </member>
         <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs">
             <summary>
             A helper type providing cached, reusable <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instances
@@ -38,14 +58,14 @@
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.User">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "User" generated properties.</summary>
         </member>
-        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.ErrorString">
-            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "ErrorString" generated properties.</summary>
-        </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.IsBusy">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "IsBusy" generated properties.</summary>
         </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Title">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Title" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.ConfirmPassword">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "ConfirmPassword" generated properties.</summary>
         </member>
         <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs">
             <summary>
@@ -56,14 +76,14 @@
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.User">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "User" generated properties.</summary>
         </member>
-        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.ErrorString">
-            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "ErrorString" generated properties.</summary>
-        </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.IsBusy">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "IsBusy" generated properties.</summary>
         </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Title">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Title" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.ConfirmPassword">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "ConfirmPassword" generated properties.</summary>
         </member>
     </members>
 </doc>

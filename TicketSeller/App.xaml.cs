@@ -5,8 +5,6 @@
 		public App()
 		{
 			InitializeComponent();
-
-			//MainPage = new Authorization(new AuthorizationViewModel(new Services.UserService()));
 			MainPage = new AppShell();
 		}
 	}

@@ -45,12 +45,6 @@ namespace TicketSeller.Client
 			{
 				Console.WriteLine(ex.Message);
 			}
-			finally
-			{
-				/*Reader?.Close();
-				Writer?.Close();
-				client.Close();*/
-			}
 		}
 
 		public async Task<Response> GetResponseAsync()

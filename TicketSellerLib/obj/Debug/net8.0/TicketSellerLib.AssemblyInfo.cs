@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TicketSellerLib")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9b75745dddcdba639d85b48ee698f45c66dce920")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
 [assembly: System.Reflection.AssemblyProductAttribute("TicketSellerLib")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TicketSellerLib")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

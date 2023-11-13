@@ -60,7 +60,7 @@ namespace TicketSeller.ViewModel
 			if (user == null)
 				return;
 
-			await Shell.Current.GoToAsync($"{nameof(ShowFilms)}", true, new Dictionary<string, object>
+			await Shell.Current.GoToAsync($"{nameof(FilmsPage)}", true, new Dictionary<string, object>
 			{
 				{"user", User}
 			});

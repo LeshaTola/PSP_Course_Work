@@ -90,7 +90,7 @@
 	  <MauiXaml Update="View\ShowCinemas.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="View\ShowFilms.xaml">
+	  <MauiXaml Update="View\FilmsPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="View\ShowUsers.xaml">
@@ -100,6 +100,12 @@
 
 	<ItemGroup>
 	  <ProjectReference Include="..\TicketSellerLib\TicketSellerLib.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Compile Update="View\FilmsPage.xaml.cs">
+	    <DependentUpon>FilmsPage.xaml</DependentUpon>
+	  </Compile>
 	</ItemGroup>
 
 	<!-- Build Properties must be defined within these property groups to ensure successful publishing

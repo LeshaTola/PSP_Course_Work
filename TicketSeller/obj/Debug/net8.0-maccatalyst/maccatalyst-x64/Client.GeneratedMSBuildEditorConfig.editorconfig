@@ -76,6 +76,12 @@ build_metadata.AdditionalFiles.ManifestResourceName = TicketSeller.View.Authoriz
 build_metadata.AdditionalFiles.TargetPath = View\Authorization.xaml
 build_metadata.AdditionalFiles.RelativePath = View\Authorization.xaml
 
+[D:/University/3 course/PSP/CourseWork/TicketSeller/TicketSeller/View/FilmsPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = TicketSeller.View.FilmsPage.xaml
+build_metadata.AdditionalFiles.TargetPath = View\FilmsPage.xaml
+build_metadata.AdditionalFiles.RelativePath = View\FilmsPage.xaml
+
 [D:/University/3 course/PSP/CourseWork/TicketSeller/TicketSeller/View/MainPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = TicketSeller.View.MainPage.xaml
@@ -99,12 +105,6 @@ build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = TicketSeller.View.ShowCinemas.xaml
 build_metadata.AdditionalFiles.TargetPath = View\ShowCinemas.xaml
 build_metadata.AdditionalFiles.RelativePath = View\ShowCinemas.xaml
-
-[D:/University/3 course/PSP/CourseWork/TicketSeller/TicketSeller/View/ShowFilms.xaml]
-build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = TicketSeller.View.ShowFilms.xaml
-build_metadata.AdditionalFiles.TargetPath = View\ShowFilms.xaml
-build_metadata.AdditionalFiles.RelativePath = View\ShowFilms.xaml
 
 [D:/University/3 course/PSP/CourseWork/TicketSeller/TicketSeller/View/ShowUsers.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml

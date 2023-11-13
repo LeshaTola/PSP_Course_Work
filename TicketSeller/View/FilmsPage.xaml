@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewModel="clr-namespace:TicketSeller.ViewModel"
+             xmlns:model="clr-namespace:TicketSellerLib.DTO;assembly=TicketSellerLib"
+             x:DataType="viewModel:FilmsPageViewModel"
+             x:Class="TicketSeller.View.FilmsPage"
+             Title="{Binding Title}">
+
+    <!--<Grid 
+        RowDefinitions="*,*"
+        RowSpacing="10"  
+        ColumnDefinitions="*,auto"
+        ColumnDefinitions="0">
+        <CollectionView 
+            Grid.ColumnSpan="2"
+            ItemsSource="{Binding Films}">
+        <CollectionView.ItemTemplate>
+            <DataTemplate x:DataType="model:Film" >
+                <Grid>
+                    <Frame>
+                        <Grid>
+                            <VerticalStackLayout Padding="10" Margin="10" WidthRequest="400" Spacing="10">
+                                <Image Source="https://aka.ms/campus.jpg"/>
+                                <Label Text="{Binding Name}" 
+                                   FontSize="24" 
+                                   HorizontalTextAlignment="Start"
+                                   VerticalTextAlignment="Center"
+                                   FontAttributes="Bold"/>
+                                <Label Text="{Binding Description}" 
+                                   FontSize="16" 
+                                   HorizontalTextAlignment="Start"
+                                   VerticalTextAlignment="Center"
+                                   FontAttributes="Bold"
+                                   LineBreakMode="TailTruncation"/>
+
+                                <Label Text="{Binding Cost, StringFormat ='Cost: {0}' }" 
+                                    FontSize="16" 
+                                    HorizontalTextAlignment="Start"
+                                    VerticalTextAlignment="Center"/>
+
+                                <HorizontalStackLayout Spacing="4">
+                                    <Label Text="Duration: " 
+                                        FontSize="16" 
+                                        HorizontalTextAlignment="End"
+                                        VerticalTextAlignment="Center"
+                                    FontAttributes="Bold"/>
+                                    <Label Text="{Binding Duration}" 
+                                       FontSize="16" 
+                                       HorizontalTextAlignment="End"
+                                       VerticalTextAlignment="Center"/>
+                                </HorizontalStackLayout>
+
+                                <Button Text="Book" HorizontalOptions="Center" FontAttributes="Bold"/>
+                            </VerticalStackLayout>
+                        </Grid>
+                    </Frame>
+                </Grid>
+            </DataTemplate>
+        </CollectionView.ItemTemplate>
+    </CollectionView>
+</Grid>-->
+    
+    <HorizontalStackLayout>
+        
+        <ListView ItemsSource="{Binding Films}" HorizontalOptions="Center">
+            <ListView.Header>
+                <Label Text="Films" FontSize="Header" FontAttributes="Bold" Padding="8"/>
+            </ListView.Header>
+            
+            <ListView.ItemTemplate>
+                <DataTemplate x:DataType="model:Film">
+                    <ViewCell>
+                        <VerticalStackLayout Padding="10" Margin="10" WidthRequest="400" Spacing="10">
+                            <Image Source="https://aka.ms/campus.jpg"/>
+                            <Label Text="{Binding Name}" 
+                                   FontSize="24" 
+                                   HorizontalTextAlignment="Start"
+                                   VerticalTextAlignment="Center"
+                                   FontAttributes="Bold"/>
+
+                            <Label Text="{Binding Description}" 
+                               FontSize="16" 
+                               HorizontalTextAlignment="Start"
+                               VerticalTextAlignment="Center"
+                               FontAttributes="Bold"
+                               LineBreakMode="TailTruncation"/>
+
+                            <Label Text="{Binding Cost, StringFormat ='Cost: {0}' }" 
+                                FontSize="16" 
+                                HorizontalTextAlignment="Start"
+                                VerticalTextAlignment="Center"/>
+
+                            <HorizontalStackLayout Spacing="4">
+                                <Label Text="Duration: " 
+                                    FontSize="16" 
+                                    HorizontalTextAlignment="End"
+                                    VerticalTextAlignment="Center"
+                                    FontAttributes="Bold"
+                                    />
+                                <Label Text="{Binding Duration}" 
+                                   FontSize="16" 
+                                   HorizontalTextAlignment="End"
+                                   VerticalTextAlignment="Center"
+                                   />
+                            </HorizontalStackLayout>
+
+                            <Button Text="Book" HorizontalOptions="Center" FontAttributes="Bold"/>
+                        </VerticalStackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </HorizontalStackLayout>
+</ContentPage>

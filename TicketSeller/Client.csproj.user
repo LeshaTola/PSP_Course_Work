@@ -33,7 +33,7 @@
     <MauiXaml Update="View\ShowCinemas.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
-    <MauiXaml Update="View\ShowFilms.xaml">
+    <MauiXaml Update="View\FilmsPage.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
     <MauiXaml Update="View\ShowUsers.xaml">

@@ -22,11 +22,11 @@ namespace TicketSeller
 
 			builder.Services.AddSingleton<AuthorizationViewModel>();
 			builder.Services.AddSingleton<RegistrationViewModel>();
-			builder.Services.AddSingleton<MainPageViewModel>();
+			builder.Services.AddSingleton<FilmsPageViewModel>();
 
 			builder.Services.AddSingleton<Authorization>();
 			builder.Services.AddSingleton<Registration>();
-			builder.Services.AddSingleton<MainPage>();
+			builder.Services.AddSingleton<FilmsPage>();
 
 #if DEBUG
 			builder.Logging.AddDebug();

@@ -315,3 +315,16 @@ D:\University\3 course\PSP\CourseWork\TicketSeller\TicketSeller\obj\Debug\net8.0
 D:\University\3 course\PSP\CourseWork\TicketSeller\TicketSeller\obj\Debug\net8.0-ios\iossimulator-x64\Client.genruntimeconfig.cache
 D:\University\3 course\PSP\CourseWork\TicketSeller\TicketSeller\obj\Debug\net8.0-ios\iossimulator-x64\ref\Client.dll
 D:\University\3 course\PSP\CourseWork\TicketSeller\TicketSeller\bin\Debug\net8.0-ios\iossimulator-x64\CommunityToolkit.Mvvm.dll
+D:\University\3 course\PSP\CourseWork\TicketSeller\TicketSeller\bin\Debug\net8.0-ios\iossimulator-x64\CommunityToolkit.Maui.dll
+D:\University\3 course\PSP\CourseWork\TicketSeller\TicketSeller\bin\Debug\net8.0-ios\iossimulator-x64\CommunityToolkit.Maui.Core.dll
+D:\University\3 course\PSP\CourseWork\TicketSeller\TicketSeller\obj\Debug\net8.0-ios\iossimulator-x64\EFCoreNpgsqlNodaTime.cs
+D:\University\3 course\PSP\CourseWork\TicketSeller\TicketSeller\bin\Debug\net8.0-ios\iossimulator-x64\Microsoft.EntityFrameworkCore.dll
+D:\University\3 course\PSP\CourseWork\TicketSeller\TicketSeller\bin\Debug\net8.0-ios\iossimulator-x64\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\University\3 course\PSP\CourseWork\TicketSeller\TicketSeller\bin\Debug\net8.0-ios\iossimulator-x64\Microsoft.EntityFrameworkCore.Relational.dll
+D:\University\3 course\PSP\CourseWork\TicketSeller\TicketSeller\bin\Debug\net8.0-ios\iossimulator-x64\Microsoft.Extensions.Caching.Abstractions.dll
+D:\University\3 course\PSP\CourseWork\TicketSeller\TicketSeller\bin\Debug\net8.0-ios\iossimulator-x64\Microsoft.Extensions.Caching.Memory.dll
+D:\University\3 course\PSP\CourseWork\TicketSeller\TicketSeller\bin\Debug\net8.0-ios\iossimulator-x64\NodaTime.dll
+D:\University\3 course\PSP\CourseWork\TicketSeller\TicketSeller\bin\Debug\net8.0-ios\iossimulator-x64\Npgsql.dll
+D:\University\3 course\PSP\CourseWork\TicketSeller\TicketSeller\bin\Debug\net8.0-ios\iossimulator-x64\Npgsql.EntityFrameworkCore.PostgreSQL.dll
+D:\University\3 course\PSP\CourseWork\TicketSeller\TicketSeller\bin\Debug\net8.0-ios\iossimulator-x64\Npgsql.EntityFrameworkCore.PostgreSQL.NodaTime.dll
+D:\University\3 course\PSP\CourseWork\TicketSeller\TicketSeller\bin\Debug\net8.0-ios\iossimulator-x64\Npgsql.NodaTime.dll

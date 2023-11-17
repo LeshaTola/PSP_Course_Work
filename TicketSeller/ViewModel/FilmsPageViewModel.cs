@@ -24,6 +24,11 @@ namespace TicketSeller.ViewModel
 			Films.Clear();
 
 			List<Film> films = await service.GetActualFilmsAsync();
+			if (films == null)
+			{
+				return;
+			}
+
 			foreach (Film film in films)
 			{
 				Films.Add(film);
@@ -34,7 +39,6 @@ namespace TicketSeller.ViewModel
 		private async Task GoToAddFilmPageAsync()
 		{
 			await Shell.Current.GoToAsync($"{nameof(AddFilm)}", true);
-			UpdateFilms();
 		}
 	}
 }

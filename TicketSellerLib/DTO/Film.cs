@@ -7,7 +7,8 @@
 		public string Description { get; set; } = string.Empty;
 		public float Cost { get; set; }
 		public float Duration { get; set; }
-		public DateTime DateTime { get; set; } = DateTime.Now;
+		public DateOnly Date { get; set; }
+		public TimeSpan Time { get; set; }
 
 	}
 }

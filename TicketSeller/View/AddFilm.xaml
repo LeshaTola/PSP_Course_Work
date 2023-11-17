@@ -7,31 +7,26 @@
              x:DataType="viewModel:AddFilmViewModel"
              x:Class="TicketSeller.View.AddFilm"
              Title="AddFilm">
-             <!--xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"-->
 
     <VerticalStackLayout HorizontalOptions="Center" VerticalOptions="Center" Spacing="10">
         <Label Text="Add Film" FontAttributes="Bold" FontSize="Large" HorizontalTextAlignment="Center"/>
-        <Entry Placeholder="Name"/>
-        <Editor Placeholder="Description"/>
-        <Entry Placeholder="Cost"/>
-        <Entry Placeholder="Duration"/>
-        <DatePicker 
-            MinimumDate="{x:Static sys:DateTime.Today}"
-            Date="{x:Static sys:DateTime.Now}"/>
+        <Entry Placeholder="Название" Text="{Binding Film.Name}"/>
+        <Editor Placeholder="Описание " Text="{Binding Film.Description}"/>
+        <Entry Placeholder="Длительность (минуты)" Keyboard="Numeric" Text="{Binding Film.Duration}"/>
+        <Entry Placeholder="Цена" Keyboard="Numeric" Text="{Binding Film.Cost}"/>
 
-        <!--<Entry Keyboard="Numeric">
-            <Entry.Behaviors>
-                <toolkit:NumericValidationBehavior 
-                InvalidStyle="{StaticResource InvalidEntryStyle}"
-                ValidStyle="{StaticResource ValidEntryStyle}"
-                Flags="ValidateOnValueChanged"
-                MinimumValue="1.0"
-                MaximumValue="100.0"
-                MaximumDecimalPlaces="2" />
-            </Entry.Behaviors>
-        </Entry>-->
-        <!--<Picker Title="Cinema" FontSize="14" FontAttributes="Bold"/>
-        <Picker Title="Hall" FontSize="14" FontAttributes="Bold"/>-->
-        <Button Text = "Add" FontAttributes="Bold" Command="{Binding AddFilmCommand}"/>
+        <HorizontalStackLayout>
+            <Label Text="Дата начала" VerticalTextAlignment="Center"/>
+        <DatePicker 
+            MinimumDate="{x:Static sys:DateTime.Now}"
+            Date="{Binding Film.Date}"/>
+        </HorizontalStackLayout>
+        
+        <HorizontalStackLayout>
+            <Label Text="Время начала" VerticalTextAlignment="Center"/>
+            <TimePicker Time="{Binding Film.Time}"/>
+        </HorizontalStackLayout>
+
+        <Button Text = "Добавить" FontAttributes="Bold" Command="{Binding AddFilmCommand}"/>
     </VerticalStackLayout>
 </ContentPage>

@@ -84,7 +84,7 @@ namespace TicketSeller.ViewModel
 
 		private async Task<bool> CheckLoginAsync()
 		{
-			int minLoginLength = 6;
+			int minLoginLength = 4;
 			if (User.Login.Length < minLoginLength)
 			{
 				await Shell.Current.DisplayAlert("Ошибка!", $"Логин должен состоять из как минимум {minLoginLength} символов", "Хорошо");
@@ -102,7 +102,7 @@ namespace TicketSeller.ViewModel
 
 		private async Task<bool> CheckPasswordAsync()
 		{
-			int minPasswordLength = 6;
+			int minPasswordLength = 4;
 			if (User.Password.Length < minPasswordLength)
 			{
 				await Shell.Current.DisplayAlert("Ошибка!", $"Пароль должен состоять из как минимум {minPasswordLength} символов", "Хорошо");

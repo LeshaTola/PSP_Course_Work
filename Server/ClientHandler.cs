@@ -133,7 +133,6 @@ namespace Server
 
 		private void GetAllFilms()
 		{
-
 			var films = filmService.GetAll();
 			string data = JsonConvert.SerializeObject(films);
 			Response response = new Response(ResponseTypes.Ok, "", data);

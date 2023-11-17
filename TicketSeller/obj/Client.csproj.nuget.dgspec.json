@@ -48,6 +48,10 @@
             "Newtonsoft.Json": {
               "target": "Package",
               "version": "[13.0.3, )"
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL.NodaTime": {
+              "target": "Package",
+              "version": "[7.0.11, )"
             }
           },
           "imports": [
@@ -143,6 +147,10 @@
         "net8.0-android34.0": {
           "targetAlias": "net8.0-android",
           "dependencies": {
+            "CommunityToolkit.Maui": {
+              "target": "Package",
+              "version": "[6.1.0, )"
+            },
             "CommunityToolkit.Mvvm": {
               "target": "Package",
               "version": "[8.2.2, )"
@@ -164,6 +172,10 @@
               "target": "Package",
               "version": "[8.0.0-rc.1.23419.4, )",
               "autoReferenced": true
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL.NodaTime": {
+              "target": "Package",
+              "version": "[8.0.0-rc.2, )"
             }
           },
           "imports": [
@@ -190,6 +202,10 @@
         "net8.0-ios16.1": {
           "targetAlias": "net8.0-ios",
           "dependencies": {
+            "CommunityToolkit.Maui": {
+              "target": "Package",
+              "version": "[6.1.0, )"
+            },
             "CommunityToolkit.Mvvm": {
               "target": "Package",
               "version": "[8.2.2, )"
@@ -211,6 +227,10 @@
               "target": "Package",
               "version": "[8.0.0-rc.1.23419.4, )",
               "autoReferenced": true
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL.NodaTime": {
+              "target": "Package",
+              "version": "[8.0.0-rc.2, )"
             }
           },
           "imports": [
@@ -237,6 +257,10 @@
         "net8.0-maccatalyst16.1": {
           "targetAlias": "net8.0-maccatalyst",
           "dependencies": {
+            "CommunityToolkit.Maui": {
+              "target": "Package",
+              "version": "[6.1.0, )"
+            },
             "CommunityToolkit.Mvvm": {
               "target": "Package",
               "version": "[8.2.2, )"
@@ -258,6 +282,10 @@
               "target": "Package",
               "version": "[8.0.0-rc.1.23419.4, )",
               "autoReferenced": true
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL.NodaTime": {
+              "target": "Package",
+              "version": "[8.0.0-rc.2, )"
             }
           },
           "imports": [
@@ -285,6 +313,10 @@
         "net8.0-windows10.0.19041": {
           "targetAlias": "net8.0-windows10.0.19041.0",
           "dependencies": {
+            "CommunityToolkit.Maui": {
+              "target": "Package",
+              "version": "[6.1.0, )"
+            },
             "CommunityToolkit.Mvvm": {
               "target": "Package",
               "version": "[8.2.2, )"
@@ -300,6 +332,10 @@
             "Microsoft.Maui.Controls.Compatibility": {
               "target": "Package",
               "version": "[8.0.0-rc.2.9373, )"
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL.NodaTime": {
+              "target": "Package",
+              "version": "[8.0.0-rc.2, )"
             }
           },
           "imports": [

@@ -8,7 +8,7 @@ namespace TicketSeller.ViewModel
 {
 	public partial class AddFilmViewModel : BaseViewModel
 	{
-		[ObservableProperty] private Film film;
+		[ObservableProperty] private Film film = new();
 
 		private FilmServices service;
 
@@ -21,6 +21,8 @@ namespace TicketSeller.ViewModel
 		[RelayCommand]
 		private async Task AddFilmAsync()
 		{
+			if (IsBusy) return;
+
 			try
 			{
 				IsBusy = true;
@@ -43,7 +45,7 @@ namespace TicketSeller.ViewModel
 			}
 			finally
 			{
-				IsBusy = true;
+				IsBusy = false;
 			}
 		}
 	}

@@ -12,10 +12,7 @@ namespace Server
 			{
 				Login = "admin",
 				Password = "admin",
-				Email = "Tola.Lesha@mail.ru"
 			});*/
-			//var dao = new UserDAO();
-			//Console.WriteLine(dao.Get(1).Login);
 			Server server = new Server(IPAddress.Any, 14447);
 			await server.StartServerAsync();
 		}

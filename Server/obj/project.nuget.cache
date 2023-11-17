@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "f5HN5BMfLy5M4uwGoB8NWRw0uNU5PpjtRyp7d1VTsVw5fUeKgQnM+NjKtjW1X5Lr4G7kmc5b6RBtBp3ep5PTCA==",
+  "dgSpecHash": "FLHUVvvap5DABeUrbRAQVFh6VchNBe4KRLjbrCFLpP4uyRCxNJPyKdu6j+rupTSRQ54podP1zsqB43iKRwyzFQ==",
   "success": true,
   "projectFilePath": "D:\\University\\3 course\\PSP\\CourseWork\\TicketSeller\\Server\\Server.csproj",
   "expectedPackageFiles": [
@@ -18,8 +18,12 @@
     "C:\\Users\\Defestronik\\.nuget\\packages\\microsoft.extensions.options\\7.0.0\\microsoft.extensions.options.7.0.0.nupkg.sha512",
     "C:\\Users\\Defestronik\\.nuget\\packages\\microsoft.extensions.primitives\\7.0.0\\microsoft.extensions.primitives.7.0.0.nupkg.sha512",
     "C:\\Users\\Defestronik\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
+    "C:\\Users\\Defestronik\\.nuget\\packages\\nodatime\\3.1.5\\nodatime.3.1.5.nupkg.sha512",
     "C:\\Users\\Defestronik\\.nuget\\packages\\npgsql\\7.0.6\\npgsql.7.0.6.nupkg.sha512",
-    "C:\\Users\\Defestronik\\.nuget\\packages\\npgsql.entityframeworkcore.postgresql\\7.0.11\\npgsql.entityframeworkcore.postgresql.7.0.11.nupkg.sha512"
+    "C:\\Users\\Defestronik\\.nuget\\packages\\npgsql.entityframeworkcore.postgresql\\7.0.11\\npgsql.entityframeworkcore.postgresql.7.0.11.nupkg.sha512",
+    "C:\\Users\\Defestronik\\.nuget\\packages\\npgsql.entityframeworkcore.postgresql.nodatime\\7.0.11\\npgsql.entityframeworkcore.postgresql.nodatime.7.0.11.nupkg.sha512",
+    "C:\\Users\\Defestronik\\.nuget\\packages\\npgsql.nodatime\\7.0.6\\npgsql.nodatime.7.0.6.nupkg.sha512",
+    "C:\\Users\\Defestronik\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.7.1\\system.runtime.compilerservices.unsafe.4.7.1.nupkg.sha512"
   ],
   "logs": []
 }

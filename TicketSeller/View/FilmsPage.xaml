@@ -7,109 +7,61 @@
              x:Class="TicketSeller.View.FilmsPage"
              Title="{Binding Title}">
 
-    <!--<Grid 
-        RowDefinitions="*,*"
-        RowSpacing="10"  
-        ColumnDefinitions="*,auto"
-        ColumnDefinitions="0">
-        <CollectionView 
+    <Grid
+        ColumnDefinitions ="*,*"
+        ColumnSpacing="10"
+        RowDefinitions="*,auto"
+        RowSpacing="4">
+        <CollectionView
             Grid.ColumnSpan="2"
             ItemsSource="{Binding Films}">
-        <CollectionView.ItemTemplate>
-            <DataTemplate x:DataType="model:Film" >
-                <Grid>
-                    <Frame>
-                        <Grid>
-                            <VerticalStackLayout Padding="10" Margin="10" WidthRequest="400" Spacing="10">
-                                <Image Source="https://aka.ms/campus.jpg"/>
-                                <Label Text="{Binding Name}" 
-                                   FontSize="24" 
-                                   HorizontalTextAlignment="Start"
-                                   VerticalTextAlignment="Center"
-                                   FontAttributes="Bold"/>
-                                <Label Text="{Binding Description}" 
-                                   FontSize="16" 
-                                   HorizontalTextAlignment="Start"
-                                   VerticalTextAlignment="Center"
-                                   FontAttributes="Bold"
-                                   LineBreakMode="TailTruncation"/>
+            <CollectionView.ItemTemplate
+                >
+                <DataTemplate x:DataType="model:Film">
+                    <Grid Padding="10">
+                        <Frame HeightRequest="400">
+                            <Grid 
+                                ColumnDefinitions="300,*,100" ColumnSpacing="40"
+                                RowDefinitions="*,*,*" RowSpacing="10">
+                                <Image Source="https://aka.ms/campus.jpg" Aspect="Fill" Grid.RowSpan="3"/>
 
-                                <Label Text="{Binding Cost, StringFormat ='Cost: {0}' }" 
-                                    FontSize="16" 
-                                    HorizontalTextAlignment="Start"
-                                    VerticalTextAlignment="Center"/>
-
-                                <HorizontalStackLayout Spacing="4">
-                                    <Label Text="Duration: " 
-                                        FontSize="16" 
-                                        HorizontalTextAlignment="End"
+                                <Label Text="{Binding Name, StringFormat='Название: {0}'}" 
+                                        FontSize="32" 
+                                        HorizontalTextAlignment="Center"
                                         VerticalTextAlignment="Center"
-                                    FontAttributes="Bold"/>
-                                    <Label Text="{Binding Duration}" 
+                                        FontAttributes="Bold"
+                                       Grid.Column="1" Grid.Row ="0"/>
+
+                                <Label Text="{Binding Description}" 
+                                       FontSize="16" 
+                                       HorizontalTextAlignment="Start"
+                                       VerticalTextAlignment="Start"
+                                       FontAttributes="Bold"
+                                       LineBreakMode="TailTruncation"
+                                       Grid.Column="1" Grid.Row ="1"/>
+
+                                <Label Text="{Binding Cost, StringFormat ='Стоимость: {0}BYN' }" 
+                                        FontSize="16" 
+                                        HorizontalTextAlignment="Start"
+                                        VerticalTextAlignment="Center"
+                                       Grid.Column="1" Grid.Row ="2"/>
+
+
+                                <Label Text="{Binding Duration, StringFormat ='Длительность: {0}минут' }" 
                                        FontSize="16" 
                                        HorizontalTextAlignment="End"
-                                       VerticalTextAlignment="Center"/>
-                                </HorizontalStackLayout>
-
-                                <Button Text="Book" HorizontalOptions="Center" FontAttributes="Bold"/>
-                            </VerticalStackLayout>
-                        </Grid>
-                    </Frame>
-                </Grid>
-            </DataTemplate>
-        </CollectionView.ItemTemplate>
-    </CollectionView>
-</Grid>-->
-
-    <VerticalStackLayout>
-        <Button Text="Add" HorizontalOptions="Center" WidthRequest="200" Command ="{Binding GoToAddFilmPageCommand}"/>
-        <ListView ItemsSource="{Binding Films}" HorizontalOptions="Center">
-            <ListView.Header>
-                <Label Text="Films" FontSize="Header" FontAttributes="Bold" Padding="8"/>
-            </ListView.Header>
-            
-            <ListView.ItemTemplate>
-                <DataTemplate x:DataType="model:Film">
-                    <ViewCell>
-                        <VerticalStackLayout Padding="10" Margin="10" WidthRequest="400" Spacing="10">
-                            <Image Source="https://aka.ms/campus.jpg"/>
-                            <Label Text="{Binding Name}" 
-                                   FontSize="24" 
-                                   HorizontalTextAlignment="Start"
-                                   VerticalTextAlignment="Center"
-                                   FontAttributes="Bold"/>
-
-                            <Label Text="{Binding Description}" 
-                               FontSize="16" 
-                               HorizontalTextAlignment="Start"
-                               VerticalTextAlignment="Center"
-                               FontAttributes="Bold"
-                               LineBreakMode="TailTruncation"/>
-
-                            <Label Text="{Binding Cost, StringFormat ='Cost: {0}' }" 
-                                FontSize="16" 
-                                HorizontalTextAlignment="Start"
-                                VerticalTextAlignment="Center"/>
-
-                            <HorizontalStackLayout Spacing="4">
-                                <Label Text="Duration: " 
-                                    FontSize="16" 
-                                    HorizontalTextAlignment="End"
-                                    VerticalTextAlignment="Center"
-                                    FontAttributes="Bold"
-                                    />
-                                <Label Text="{Binding Duration}" 
-                                   FontSize="16" 
-                                   HorizontalTextAlignment="End"
-                                   VerticalTextAlignment="Center"
-                                   />
-                            </HorizontalStackLayout>
-
-                            <Button Text="Book" HorizontalOptions="Center" FontAttributes="Bold"/>
-                        </VerticalStackLayout>
-                    </ViewCell>
+                                       VerticalTextAlignment="Center"
+                                       Grid.Column="1" Grid.Row ="2"/>
+                                <VerticalStackLayout Grid.Column="2" Grid.Row ="1"  Spacing="10">
+                                    <Button BackgroundColor="Red"  WidthRequest="50" HeightRequest="50"/>
+                                    <Button BackgroundColor="Green" WidthRequest="50" HeightRequest="50"/>
+                                </VerticalStackLayout>
+                            </Grid>
+                        </Frame>
+                    </Grid>
                 </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
-    </VerticalStackLayout>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+        <Button Text="Add" Command ="{Binding GoToAddFilmPageCommand}" Grid.Row="1" Margin="8" />
+    </Grid>
 </ContentPage>

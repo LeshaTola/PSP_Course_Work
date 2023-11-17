@@ -48,8 +48,11 @@ namespace Server
 						case RequestTypes.Login:
 							Login(request.Message);
 							break;
-						case RequestTypes.Error:
-
+						case RequestTypes.GetAllFilms:
+							GetAllFilms();
+							break;
+						case RequestTypes.AddFilm:
+							AddFilm(request.Message);
 							break;
 						default:
 							Console.WriteLine("Unknown request type");
@@ -125,6 +128,24 @@ namespace Server
 			{
 				response = new Response(ResponseTypes.NotOk, "Такой пользователь уже существует");
 			}
+			SendResponseAsync(response);
+		}
+
+		private void GetAllFilms()
+		{
+
+			var films = filmService.GetAll();
+			string data = JsonConvert.SerializeObject(films);
+			Response response = new Response(ResponseTypes.Ok, "", data);
+			SendResponseAsync(response);
+		}
+
+		private void AddFilm(string requestMessage)
+		{
+			var requestFilm = JsonConvert.DeserializeObject<Film>(requestMessage);
+
+			filmService.Add(requestFilm);
+			Response response = new Response(ResponseTypes.Ok, "Фильм успешно добавлен");
 			SendResponseAsync(response);
 		}
 

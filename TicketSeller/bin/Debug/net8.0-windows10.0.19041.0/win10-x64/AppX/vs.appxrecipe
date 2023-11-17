@@ -30,25 +30,25 @@
     <AppXManifest Include="D:\University\3 course\PSP\CourseWork\TicketSeller\TicketSeller\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-11-13T19:42:57.722</Modified>
+      <Modified>2023-11-17T11:34:48.548</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="D:\University\3 course\PSP\CourseWork\TicketSeller\TicketSeller\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2023-11-13T19:42:57.600</Modified>
+      <Modified>2023-11-17T11:34:48.334</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\University\3 course\PSP\CourseWork\TicketSeller\TicketSeller\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Client.runtimeconfig.json">
       <PackagePath>Client.runtimeconfig.json</PackagePath>
-      <Modified>2023-10-27T13:12:48.508</Modified>
+      <Modified>2023-11-17T11:34:48.240</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\University\3 course\PSP\CourseWork\TicketSeller\TicketSeller\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Client.dll">
       <PackagePath>Client.dll</PackagePath>
-      <Modified>2023-11-13T19:42:57.255</Modified>
+      <Modified>2023-11-17T11:34:47.384</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\University\3 course\PSP\CourseWork\TicketSeller\TicketSeller\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>Client.exe</PackagePath>
-      <Modified>2023-11-13T19:42:57.259</Modified>
+      <Modified>2023-11-17T11:34:47.387</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\University\3 course\PSP\CourseWork\TicketSeller\TicketSeller\Resources\Raw\AboutAssets.txt">
       <PackagePath>AboutAssets.txt</PackagePath>
@@ -56,23 +56,23 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\University\3 course\PSP\CourseWork\TicketSeller\TicketSeller\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-100.png">
       <PackagePath>splashSplashScreen.scale-100.png</PackagePath>
-      <Modified>2023-10-13T08:19:16.219</Modified>
+      <Modified>2023-11-16T15:58:00.334</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\University\3 course\PSP\CourseWork\TicketSeller\TicketSeller\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-125.png">
       <PackagePath>splashSplashScreen.scale-125.png</PackagePath>
-      <Modified>2023-10-13T08:19:16.231</Modified>
+      <Modified>2023-11-16T15:58:00.347</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\University\3 course\PSP\CourseWork\TicketSeller\TicketSeller\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-150.png">
       <PackagePath>splashSplashScreen.scale-150.png</PackagePath>
-      <Modified>2023-10-13T08:19:16.248</Modified>
+      <Modified>2023-11-16T15:58:00.363</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\University\3 course\PSP\CourseWork\TicketSeller\TicketSeller\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-200.png">
       <PackagePath>splashSplashScreen.scale-200.png</PackagePath>
-      <Modified>2023-10-13T08:19:16.274</Modified>
+      <Modified>2023-11-16T15:58:00.392</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\University\3 course\PSP\CourseWork\TicketSeller\TicketSeller\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-400.png">
       <PackagePath>splashSplashScreen.scale-400.png</PackagePath>
-      <Modified>2023-10-13T08:19:16.374</Modified>
+      <Modified>2023-11-16T15:58:00.504</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\University\3 course\PSP\CourseWork\TicketSeller\TicketSeller\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\f\OpenSans-Regular.ttf">
       <PackagePath>OpenSans-Regular.ttf</PackagePath>
@@ -288,7 +288,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\University\3 course\PSP\CourseWork\TicketSeller\TicketSeller\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Client.deps.json">
       <PackagePath>Client.deps.json</PackagePath>
-      <Modified>2023-11-11T13:33:01.852</Modified>
+      <Modified>2023-11-17T11:34:48.239</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Defestronik\.nuget\packages\microsoft.windows.sdk.net.ref\10.0.19041.29\lib\net6.0\Microsoft.Windows.SDK.NET.dll">
       <PackagePath>Microsoft.Windows.SDK.NET.dll</PackagePath>
@@ -580,7 +580,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\University\3 course\PSP\CourseWork\TicketSeller\TicketSellerLib\bin\Debug\net8.0\TicketSellerLib.dll">
       <PackagePath>TicketSellerLib.dll</PackagePath>
-      <Modified>2023-11-13T19:42:53.367</Modified>
+      <Modified>2023-11-16T15:02:15.676</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Defestronik\.nuget\packages\microsoft.maui.controls.compatibility\8.0.0-rc.2.9373\lib\net8.0-windows10.0.19041\Microsoft.Maui.Controls.Compatibility.pri">
       <PackagePath>Microsoft.Maui.Controls.Compatibility.pri</PackagePath>

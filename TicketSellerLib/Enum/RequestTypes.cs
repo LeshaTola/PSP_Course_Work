@@ -4,7 +4,8 @@
 	{
 		SignUp,
 		Login,
-		Error
+		GetAllFilms,
+		AddFilm,
 		/*SIGNUP,
 		LOGIN,
 		GET_CLIENT,

@@ -60,9 +60,9 @@
         </CollectionView.ItemTemplate>
     </CollectionView>
 </Grid>-->
-    
-    <HorizontalStackLayout>
-        
+
+    <VerticalStackLayout>
+        <Button Text="Add" HorizontalOptions="Center" WidthRequest="200" Command ="{Binding GoToAddFilmPageCommand}"/>
         <ListView ItemsSource="{Binding Films}" HorizontalOptions="Center">
             <ListView.Header>
                 <Label Text="Films" FontSize="Header" FontAttributes="Bold" Padding="8"/>
@@ -111,5 +111,5 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
-    </HorizontalStackLayout>
+    </VerticalStackLayout>
 </ContentPage>

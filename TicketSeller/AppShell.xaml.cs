@@ -8,6 +8,7 @@ namespace TicketSeller
 		{
 			InitializeComponent();
 
+			Routing.RegisterRoute(nameof(AddFilm), typeof(AddFilm));
 			Routing.RegisterRoute(nameof(FilmsPage), typeof(FilmsPage));
 			Routing.RegisterRoute(nameof(Registration), typeof(Registration));
 		}

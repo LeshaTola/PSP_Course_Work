@@ -12,7 +12,6 @@ namespace Server
 			{
 				Login = "admin",
 				Password = "admin",
-				Email = "Tola.Lesha@mail.ru"
 			});*/
 			//var dao = new UserDAO();
 			//Console.WriteLine(dao.Get(1).Login);

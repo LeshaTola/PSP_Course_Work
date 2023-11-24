@@ -6,9 +6,11 @@ using TicketSellerLib.Enum;
 
 namespace TicketSeller.ViewModel
 {
+	[QueryProperty("Film", "Film")]
 	public partial class AddFilmViewModel : BaseViewModel
 	{
-		[ObservableProperty] private Film film = new();
+		[ObservableProperty] private Film film;
+		[ObservableProperty] private DateTime dummyDateTime = DateTime.Today;
 
 		private FilmServices service;
 
@@ -19,14 +21,15 @@ namespace TicketSeller.ViewModel
 		}
 
 		[RelayCommand]
-		private async Task AddFilmAsync()
+		private async Task UpsertFilmAsync()
 		{
 			if (IsBusy) return;
 
 			try
 			{
 				IsBusy = true;
-				var response = await service.AddFilmAsync(Film);
+				Film.Date = DateOnly.FromDateTime(DummyDateTime);
+				var response = await service.UpsertFilmAsync(Film);
 
 				if (response.Type == ResponseTypes.Ok)
 				{

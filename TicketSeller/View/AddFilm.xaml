@@ -17,9 +17,9 @@
 
         <HorizontalStackLayout>
             <Label Text="Дата начала" VerticalTextAlignment="Center"/>
-        <DatePicker 
-            MinimumDate="{x:Static sys:DateTime.Now}"
-            Date="{Binding Film.Date}"/>
+            <DatePicker 
+            MinimumDate="{x:Static sys:DateTime.Today}"
+            Date="{Binding DummyDateTime}"/>
         </HorizontalStackLayout>
         
         <HorizontalStackLayout>
@@ -27,6 +27,6 @@
             <TimePicker Time="{Binding Film.Time}"/>
         </HorizontalStackLayout>
 
-        <Button Text = "Добавить" FontAttributes="Bold" Command="{Binding AddFilmCommand}"/>
+        <Button Text = "Добавить" FontAttributes="Bold" Command="{Binding UpsertFilmCommand}"/>
     </VerticalStackLayout>
 </ContentPage>

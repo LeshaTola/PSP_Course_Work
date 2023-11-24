@@ -15,8 +15,7 @@
         <CollectionView
             Grid.ColumnSpan="2"
             ItemsSource="{Binding Films}">
-            <CollectionView.ItemTemplate
-                >
+            <CollectionView.ItemTemplate>
                 <DataTemplate x:DataType="model:Film">
                     <Grid Padding="10">
                         <Frame HeightRequest="400">
@@ -52,9 +51,23 @@
                                        HorizontalTextAlignment="End"
                                        VerticalTextAlignment="Center"
                                        Grid.Column="1" Grid.Row ="2"/>
+                                
                                 <VerticalStackLayout Grid.Column="2" Grid.Row ="1"  Spacing="10">
-                                    <Button BackgroundColor="Red"  WidthRequest="50" HeightRequest="50"/>
-                                    <Button BackgroundColor="Green" WidthRequest="50" HeightRequest="50"/>
+                                    <Button 
+                                        BackgroundColor="Red" 
+                                        WidthRequest="50" HeightRequest="50" 
+                                        Text="X" TextColor="White" 
+                                        FontSize="24" FontAttributes="Bold"
+                                        Command="{Binding Source={RelativeSource AncestorType={x:Type viewModel:FilmsPageViewModel}},Path=DeleteFilmCommand}"
+                                        CommandParameter="{Binding Id}"/>
+                                    <Button 
+                                        BackgroundColor="Green" 
+                                        WidthRequest="50" HeightRequest="50" 
+                                        Text="E" TextColor="White" 
+                                        FontSize="24" FontAttributes="Bold"
+                                        Command="{Binding Source={RelativeSource AncestorType={x:Type viewModel:FilmsPageViewModel}},Path=GoToAddFilmPageCommand}"
+                                        CommandParameter="{Binding .}"/>
+
                                 </VerticalStackLayout>
                             </Grid>
                         </Frame>
@@ -62,6 +75,9 @@
                 </DataTemplate>
             </CollectionView.ItemTemplate>
         </CollectionView>
-        <Button Text="Add" Command ="{Binding GoToAddFilmPageCommand}" Grid.Row="1" Margin="8" />
+        <Button Text="Add" 
+                Command ="{Binding GoToAddFilmPageCommand}" 
+                CommandParameter="{x:Null}"
+                Grid.Row="1" Margin="8" />
     </Grid>
 </ContentPage>

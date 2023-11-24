@@ -9,4 +9,5 @@ public partial class FilmsPage : ContentPage
 		InitializeComponent();
 		BindingContext = viewModel;
 	}
+
 }

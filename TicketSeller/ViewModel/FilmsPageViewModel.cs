@@ -21,14 +21,13 @@ namespace TicketSeller.ViewModel
 
 		public async void UpdateFilms()
 		{
-			Films.Clear();
-
 			List<Film> films = await service.GetActualFilmsAsync();
-			if (films == null)
-			{
-				return;
-			}
 
+			if (films.Count == 0)
+				return;
+
+
+			Films.Clear();
 			foreach (Film film in films)
 			{
 				Films.Add(film);
@@ -36,9 +35,20 @@ namespace TicketSeller.ViewModel
 		}
 
 		[RelayCommand]
-		private async Task GoToAddFilmPageAsync()
+		private async Task GoToAddFilmPageAsync(Film film)
 		{
-			await Shell.Current.GoToAsync($"{nameof(AddFilm)}", true);
+			await Shell.Current.GoToAsync($"{nameof(AddFilm)}", true, new Dictionary<string, object>
+			{
+				{"Film", film}
+			});
+			UpdateFilms();
+		}
+
+		[RelayCommand]
+		private async Task DeleteFilmAsync(int id)
+		{
+			await service.DeleteFilmAsync(id);
+			UpdateFilms();
 		}
 	}
 }

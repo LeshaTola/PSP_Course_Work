@@ -51,8 +51,11 @@ namespace Server
 						case RequestTypes.GetAllFilms:
 							GetAllFilms();
 							break;
-						case RequestTypes.AddFilm:
-							AddFilm(request.Message);
+						case RequestTypes.UpsertFilm:
+							UpsertFilm(request.Message);
+							break;
+						case RequestTypes.DeleteFilm:
+							DeleteFilm(request.Message);
 							break;
 						default:
 							Console.WriteLine("Unknown request type");
@@ -139,11 +142,20 @@ namespace Server
 			SendResponseAsync(response);
 		}
 
-		private void AddFilm(string requestMessage)
+		private void UpsertFilm(string requestMessage)
 		{
 			var requestFilm = JsonConvert.DeserializeObject<Film>(requestMessage);
 
 			filmService.Add(requestFilm);
+			Response response = new Response(ResponseTypes.Ok, "Фильм успешно добавлен");
+			SendResponseAsync(response);
+		}
+
+		private void DeleteFilm(string requestMessage)
+		{
+			var film = filmService.Get(int.Parse(requestMessage));
+
+			filmService.Remove(film);
 			Response response = new Response(ResponseTypes.Ok, "Фильм успешно добавлен");
 			SendResponseAsync(response);
 		}

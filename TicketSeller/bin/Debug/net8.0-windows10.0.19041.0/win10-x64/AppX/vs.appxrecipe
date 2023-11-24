@@ -30,25 +30,25 @@
     <AppXManifest Include="D:\University\3 course\PSP\CourseWork\TicketSeller\TicketSeller\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-11-17T15:35:08.430</Modified>
+      <Modified>2023-11-24T19:20:48.171</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="D:\University\3 course\PSP\CourseWork\TicketSeller\TicketSeller\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2023-11-17T15:35:08.274</Modified>
+      <Modified>2023-11-24T19:20:48.033</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\University\3 course\PSP\CourseWork\TicketSeller\TicketSeller\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Client.runtimeconfig.json">
       <PackagePath>Client.runtimeconfig.json</PackagePath>
-      <Modified>2023-11-17T14:04:16.142</Modified>
+      <Modified>2023-11-17T16:02:01.323</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\University\3 course\PSP\CourseWork\TicketSeller\TicketSeller\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Client.dll">
       <PackagePath>Client.dll</PackagePath>
-      <Modified>2023-11-17T15:35:07.905</Modified>
+      <Modified>2023-11-24T19:20:47.716</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\University\3 course\PSP\CourseWork\TicketSeller\TicketSeller\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>Client.exe</PackagePath>
-      <Modified>2023-11-17T15:35:07.909</Modified>
+      <Modified>2023-11-24T19:20:47.719</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\University\3 course\PSP\CourseWork\TicketSeller\TicketSeller\Resources\Raw\AboutAssets.txt">
       <PackagePath>AboutAssets.txt</PackagePath>
@@ -288,7 +288,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\University\3 course\PSP\CourseWork\TicketSeller\TicketSeller\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Client.deps.json">
       <PackagePath>Client.deps.json</PackagePath>
-      <Modified>2023-11-17T14:04:16.034</Modified>
+      <Modified>2023-11-17T16:02:01.317</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Defestronik\.nuget\packages\microsoft.windows.sdk.net.ref\10.0.19041.29\lib\net6.0\Microsoft.Windows.SDK.NET.dll">
       <PackagePath>Microsoft.Windows.SDK.NET.dll</PackagePath>
@@ -632,7 +632,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\University\3 course\PSP\CourseWork\TicketSeller\TicketSellerLib\bin\Debug\net8.0\TicketSellerLib.dll">
       <PackagePath>TicketSellerLib.dll</PackagePath>
-      <Modified>2023-11-17T14:24:07.403</Modified>
+      <Modified>2023-11-24T19:15:15.290</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Defestronik\.nuget\packages\microsoft.maui.controls.compatibility\8.0.0-rc.2.9373\lib\net8.0-windows10.0.19041\Microsoft.Maui.Controls.Compatibility.pri">
       <PackagePath>Microsoft.Maui.Controls.Compatibility.pri</PackagePath>

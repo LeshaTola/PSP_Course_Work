@@ -6,9 +6,9 @@ namespace Server.Services
 	public class HallService : Service<Hall>
 	{
 		private HallDAO dao = new HallDAO();
-		public override void Add(Hall item)
+		public override void Upsert(Hall item)
 		{
-			dao.Add(item);
+			dao.Upsert(item);
 		}
 
 		public override Hall Get(int id)
@@ -24,11 +24,6 @@ namespace Server.Services
 		public override void Remove(Hall item)
 		{
 			dao.Remove(item);
-		}
-
-		public override void Update(Hall item)
-		{
-			dao.Update(item);
 		}
 	}
 }

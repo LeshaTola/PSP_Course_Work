@@ -124,7 +124,7 @@ namespace Server
 			Response response;
 			if (user == null)
 			{
-				userService.Add(requestUser);
+				userService.Upsert(requestUser);
 				response = new Response(ResponseTypes.Ok, "Успешная регистрация");
 			}
 			else
@@ -146,7 +146,7 @@ namespace Server
 		{
 			var requestFilm = JsonConvert.DeserializeObject<Film>(requestMessage);
 
-			filmService.Add(requestFilm);
+			filmService.Upsert(requestFilm);
 			Response response = new Response(ResponseTypes.Ok, "Фильм успешно добавлен");
 			SendResponseAsync(response);
 		}

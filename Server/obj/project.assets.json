@@ -2,6 +2,22 @@
   "version": 3,
   "targets": {
     "net8.0": {
+      "FlexLabs.EntityFrameworkCore.Upsert/7.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.Relational": "7.0.0"
+        },
+        "compile": {
+          "lib/net6.0/FlexLabs.EntityFrameworkCore.Upsert.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/FlexLabs.EntityFrameworkCore.Upsert.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.EntityFrameworkCore/7.0.11": {
         "type": "package",
         "dependencies": {
@@ -365,6 +381,19 @@
     }
   },
   "libraries": {
+    "FlexLabs.EntityFrameworkCore.Upsert/7.0.0": {
+      "sha512": "cblLAKnAuJjxzP9vsQlHyz9DNzlOuI6zJpDF6pYdmKJ9JK3ko1K9XY8HuCa8hITqh7CvhZsxYfcGjhWbokK1ZA==",
+      "type": "package",
+      "path": "flexlabs.entityframeworkcore.upsert/7.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "flexlabs.entityframeworkcore.upsert.7.0.0.nupkg.sha512",
+        "flexlabs.entityframeworkcore.upsert.nuspec",
+        "lib/net6.0/FlexLabs.EntityFrameworkCore.Upsert.dll",
+        "lib/net6.0/FlexLabs.EntityFrameworkCore.Upsert.xml"
+      ]
+    },
     "Microsoft.EntityFrameworkCore/7.0.11": {
       "sha512": "r7YGITjQ7v1hYtUXIavjSx+T1itKVPUFAIBN7HaKNjbR8x+gep8w9H3NEchglJOh1woZR4b2MhbSo2YFRZwZDg==",
       "type": "package",
@@ -876,6 +905,7 @@
   },
   "projectFileDependencyGroups": {
     "net8.0": [
+      "FlexLabs.EntityFrameworkCore.Upsert >= 7.0.0",
       "Npgsql.EntityFrameworkCore.PostgreSQL >= 7.0.11",
       "TicketSellerLib >= 1.0.0"
     ]
@@ -929,6 +959,10 @@
       "net8.0": {
         "targetAlias": "net8.0",
         "dependencies": {
+          "FlexLabs.EntityFrameworkCore.Upsert": {
+            "target": "Package",
+            "version": "[7.0.0, )"
+          },
           "Npgsql.EntityFrameworkCore.PostgreSQL": {
             "target": "Package",
             "version": "[7.0.11, )"

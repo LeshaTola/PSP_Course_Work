@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "FLHUVvvap5DABeUrbRAQVFh6VchNBe4KRLjbrCFLpP4uyRCxNJPyKdu6j+rupTSRQ54podP1zsqB43iKRwyzFQ==",
+  "dgSpecHash": "9qPxrEf2i1BFmFU2PGdX7a+vgGR5JLICQKYErRiYZGrvzru1scjs6NAMgw54tIGLQN3d+ImUmmBkoPnxLWZ39w==",
   "success": true,
   "projectFilePath": "D:\\University\\3 course\\PSP\\CourseWork\\TicketSeller\\Server\\Server.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Defestronik\\.nuget\\packages\\flexlabs.entityframeworkcore.upsert\\7.0.0\\flexlabs.entityframeworkcore.upsert.7.0.0.nupkg.sha512",
     "C:\\Users\\Defestronik\\.nuget\\packages\\microsoft.entityframeworkcore\\7.0.11\\microsoft.entityframeworkcore.7.0.11.nupkg.sha512",
     "C:\\Users\\Defestronik\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\7.0.11\\microsoft.entityframeworkcore.abstractions.7.0.11.nupkg.sha512",
     "C:\\Users\\Defestronik\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\7.0.11\\microsoft.entityframeworkcore.analyzers.7.0.11.nupkg.sha512",

@@ -6,9 +6,9 @@ namespace Server.Services
 	public class UserService : Service<User>
 	{
 		private UserDAO dao = new UserDAO();
-		public override void Add(User item)
+		public override void Upsert(User item)
 		{
-			dao.Add(item);
+			dao.Upsert(item);
 		}
 
 		public override User Get(int id)
@@ -24,11 +24,6 @@ namespace Server.Services
 		public override void Remove(User item)
 		{
 			dao.Remove(item);
-		}
-
-		public override void Update(User item)
-		{
-			dao.Update(item);
 		}
 	}
 }

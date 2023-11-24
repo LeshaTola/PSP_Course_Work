@@ -1,15 +1,16 @@
-﻿using TicketSeller.Model;
+﻿using Microsoft.EntityFrameworkCore;
+using TicketSeller.Model;
 using TicketSellerLib.DTO;
 
 namespace Server.DAO
 {
 	internal class TicketDAO : DAO<Ticket>
 	{
-		public override void Add(Ticket item)
+		public override void Upsert(Ticket item)
 		{
 			using (ApplicationContext db = new ApplicationContext())
 			{
-				db.Add(item);
+				db.Upsert(item);
 				db.SaveChanges();
 			}
 		}
@@ -35,15 +36,6 @@ namespace Server.DAO
 			using (ApplicationContext db = new ApplicationContext())
 			{
 				db.Remove(item);
-				db.SaveChanges();
-			}
-		}
-
-		public override void Update(Ticket item)
-		{
-			using (ApplicationContext db = new ApplicationContext())
-			{
-				db.Update(item);
 				db.SaveChanges();
 			}
 		}

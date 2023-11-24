@@ -1,15 +1,16 @@
-﻿using TicketSeller.Model;
+﻿using Microsoft.EntityFrameworkCore;
+using TicketSeller.Model;
 using TicketSellerLib.DTO;
 
 namespace Server.DAO
 {
 	public class FilmDAO : DAO<Film>
 	{
-		public override void Add(Film item)
+		public override void Upsert(Film item)
 		{
 			using (ApplicationContext db = new ApplicationContext())
 			{
-				db.Films.Add(item);
+				db.Films.Upsert(item);
 				db.SaveChanges();
 			}
 		}
@@ -35,15 +36,6 @@ namespace Server.DAO
 			using (ApplicationContext db = new ApplicationContext())
 			{
 				db.Films.Remove(item);
-				db.SaveChanges();
-			}
-		}
-
-		public override void Update(Film item)
-		{
-			using (ApplicationContext db = new ApplicationContext())
-			{
-				db.Films.Update(item);
 				db.SaveChanges();
 			}
 		}

@@ -6,9 +6,9 @@ namespace Server.Services
 	public class CinemaService : Service<Cinema>
 	{
 		private CinemaDAO dao = new CinemaDAO();
-		public override void Add(Cinema item)
+		public override void Upsert(Cinema item)
 		{
-			dao.Add(item);
+			dao.Upsert(item);
 		}
 
 		public override Cinema Get(int id)
@@ -24,11 +24,6 @@ namespace Server.Services
 		public override void Remove(Cinema item)
 		{
 			dao.Remove(item);
-		}
-
-		public override void Update(Cinema item)
-		{
-			dao.Update(item);
 		}
 	}
 }

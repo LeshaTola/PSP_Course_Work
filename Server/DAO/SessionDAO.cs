@@ -1,15 +1,16 @@
-﻿using TicketSeller.Model;
+﻿using Microsoft.EntityFrameworkCore;
+using TicketSeller.Model;
 using TicketSellerLib.DTO;
 
 namespace Server.DAO
 {
 	public class SessionDAO : DAO<Session>
 	{
-		public override void Add(Session item)
+		public override void Upsert(Session item)
 		{
 			using (ApplicationContext db = new ApplicationContext())
 			{
-				db.Sessions.Add(item);
+				db.Sessions.Upsert(item);
 				db.SaveChanges();
 			}
 		}
@@ -35,15 +36,6 @@ namespace Server.DAO
 			using (ApplicationContext db = new ApplicationContext())
 			{
 				db.Sessions.Remove(item);
-				db.SaveChanges();
-			}
-		}
-
-		public override void Update(Session item)
-		{
-			using (ApplicationContext db = new ApplicationContext())
-			{
-				db.Sessions.Update(item);
 				db.SaveChanges();
 			}
 		}

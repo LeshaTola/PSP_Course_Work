@@ -6,9 +6,9 @@ namespace Server.Services
 	public class FilmService : Service<Film>
 	{
 		private FilmDAO dao = new FilmDAO();
-		public override void Add(Film item)
+		public override void Upsert(Film item)
 		{
-			dao.Add(item);
+			dao.Upsert(item);
 		}
 
 		public override Film Get(int id)
@@ -24,11 +24,6 @@ namespace Server.Services
 		public override void Remove(Film item)
 		{
 			dao.Remove(item);
-		}
-
-		public override void Update(Film item)
-		{
-			dao.Update(item);
 		}
 	}
 }

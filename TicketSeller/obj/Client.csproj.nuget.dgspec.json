@@ -48,10 +48,6 @@
             "Newtonsoft.Json": {
               "target": "Package",
               "version": "[13.0.3, )"
-            },
-            "Npgsql.EntityFrameworkCore.PostgreSQL.NodaTime": {
-              "target": "Package",
-              "version": "[7.0.11, )"
             }
           },
           "imports": [
@@ -172,10 +168,6 @@
               "target": "Package",
               "version": "[8.0.0-rc.1.23419.4, )",
               "autoReferenced": true
-            },
-            "Npgsql.EntityFrameworkCore.PostgreSQL.NodaTime": {
-              "target": "Package",
-              "version": "[8.0.0-rc.2, )"
             }
           },
           "imports": [
@@ -227,10 +219,6 @@
               "target": "Package",
               "version": "[8.0.0-rc.1.23419.4, )",
               "autoReferenced": true
-            },
-            "Npgsql.EntityFrameworkCore.PostgreSQL.NodaTime": {
-              "target": "Package",
-              "version": "[8.0.0-rc.2, )"
             }
           },
           "imports": [
@@ -282,10 +270,6 @@
               "target": "Package",
               "version": "[8.0.0-rc.1.23419.4, )",
               "autoReferenced": true
-            },
-            "Npgsql.EntityFrameworkCore.PostgreSQL.NodaTime": {
-              "target": "Package",
-              "version": "[8.0.0-rc.2, )"
             }
           },
           "imports": [
@@ -332,10 +316,6 @@
             "Microsoft.Maui.Controls.Compatibility": {
               "target": "Package",
               "version": "[8.0.0-rc.2.9373, )"
-            },
-            "Npgsql.EntityFrameworkCore.PostgreSQL.NodaTime": {
-              "target": "Package",
-              "version": "[8.0.0-rc.2, )"
             }
           },
           "imports": [

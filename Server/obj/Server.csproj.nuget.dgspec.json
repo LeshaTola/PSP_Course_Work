@@ -49,13 +49,9 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
-            "FlexLabs.EntityFrameworkCore.Upsert": {
-              "target": "Package",
-              "version": "[7.0.0, )"
-            },
             "Npgsql.EntityFrameworkCore.PostgreSQL": {
               "target": "Package",
-              "version": "[7.0.11, )"
+              "version": "[8.0.0, )"
             }
           },
           "imports": [
@@ -122,10 +118,6 @@
             "Newtonsoft.Json": {
               "target": "Package",
               "version": "[13.0.3, )"
-            },
-            "Npgsql.EntityFrameworkCore.PostgreSQL.NodaTime": {
-              "target": "Package",
-              "version": "[7.0.11, )"
             }
           },
           "imports": [

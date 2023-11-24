@@ -1,5 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore;
-using TicketSeller.Model;
+﻿using TicketSeller.Model;
 using TicketSellerLib.DTO;
 
 namespace Server.DAO
@@ -10,7 +9,15 @@ namespace Server.DAO
 		{
 			using (ApplicationContext db = new ApplicationContext())
 			{
-				db.Users.Upsert(user).On(c => c.Id).Run();
+				var cinema = db.Users.Find(user.Id);
+				if (cinema != null)
+				{
+					db.Users.Update(user);
+				}
+				else
+				{
+					db.Users.Add(user);
+				}
 				db.SaveChanges();
 			}
 		}

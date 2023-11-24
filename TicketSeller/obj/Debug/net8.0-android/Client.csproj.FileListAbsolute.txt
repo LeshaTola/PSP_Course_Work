@@ -1081,15 +1081,3 @@ D:\University\3 course\PSP\CourseWork\TicketSeller\TicketSeller\obj\Debug\net8.0
 D:\University\3 course\PSP\CourseWork\TicketSeller\TicketSeller\obj\Debug\net8.0-android\android\src\crc64159f3caeb1269279\MauiSemanticOrderView.java
 D:\University\3 course\PSP\CourseWork\TicketSeller\TicketSeller\obj\Debug\net8.0-android\android\src\crc648fc34c62be8fbbff\Snackbar_SnackbarCallback.java
 D:\University\3 course\PSP\CourseWork\TicketSeller\TicketSeller\obj\Debug\net8.0-android\android\src\crc64d6358e7bf64fbac4\SpeechToTextImplementation_SpeechRecognitionListener.java
-D:\University\3 course\PSP\CourseWork\TicketSeller\TicketSeller\obj\Debug\net8.0-android\EFCoreNpgsqlNodaTime.cs
-D:\University\3 course\PSP\CourseWork\TicketSeller\TicketSeller\obj\Debug\net8.0-android\android\assets\Microsoft.EntityFrameworkCore.Abstractions.dll
-D:\University\3 course\PSP\CourseWork\TicketSeller\TicketSeller\obj\Debug\net8.0-android\android\assets\Microsoft.EntityFrameworkCore.dll
-D:\University\3 course\PSP\CourseWork\TicketSeller\TicketSeller\obj\Debug\net8.0-android\android\assets\Microsoft.EntityFrameworkCore.Relational.dll
-D:\University\3 course\PSP\CourseWork\TicketSeller\TicketSeller\obj\Debug\net8.0-android\android\assets\Microsoft.Extensions.Caching.Abstractions.dll
-D:\University\3 course\PSP\CourseWork\TicketSeller\TicketSeller\obj\Debug\net8.0-android\android\assets\Microsoft.Extensions.Caching.Memory.dll
-D:\University\3 course\PSP\CourseWork\TicketSeller\TicketSeller\obj\Debug\net8.0-android\android\assets\NodaTime.dll
-D:\University\3 course\PSP\CourseWork\TicketSeller\TicketSeller\obj\Debug\net8.0-android\android\assets\NodaTime.pdb
-D:\University\3 course\PSP\CourseWork\TicketSeller\TicketSeller\obj\Debug\net8.0-android\android\assets\Npgsql.dll
-D:\University\3 course\PSP\CourseWork\TicketSeller\TicketSeller\obj\Debug\net8.0-android\android\assets\Npgsql.EntityFrameworkCore.PostgreSQL.dll
-D:\University\3 course\PSP\CourseWork\TicketSeller\TicketSeller\obj\Debug\net8.0-android\android\assets\Npgsql.EntityFrameworkCore.PostgreSQL.NodaTime.dll
-D:\University\3 course\PSP\CourseWork\TicketSeller\TicketSeller\obj\Debug\net8.0-android\android\assets\Npgsql.NodaTime.dll

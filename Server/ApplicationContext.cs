@@ -7,7 +7,7 @@ namespace TicketSeller.Model
 	{
 		public DbSet<User> Users { get; set; } = null!;
 		public DbSet<Hall> Halls { get; set; } = null!;
-		public DbSet<Cinema> Cinema { get; set; } = null!;
+		public DbSet<Cinema> Cinemas { get; set; } = null!;
 		public DbSet<Film> Films { get; set; } = null!;
 		public DbSet<Session> Sessions { get; set; } = null!;
 		public DbSet<Ticket> Tickets { get; set; } = null!;

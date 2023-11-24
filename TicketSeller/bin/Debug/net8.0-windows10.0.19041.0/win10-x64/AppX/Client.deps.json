@@ -14,7 +14,6 @@
           "Microsoft.Extensions.Logging.Debug": "8.0.0-rc.2.23479.6",
           "Microsoft.Maui.Controls": "8.0.0-rc.2.9373",
           "Microsoft.Maui.Controls.Compatibility": "8.0.0-rc.2.9373",
-          "Npgsql.EntityFrameworkCore.PostgreSQL.NodaTime": "8.0.0-rc.2",
           "TicketSellerLib": "1.0.0",
           "runtimepack.Microsoft.Windows.SDK.NET.Ref": "10.0.19041.29"
         },
@@ -61,67 +60,6 @@
           "lib/net6.0/CommunityToolkit.Mvvm.dll": {
             "assemblyVersion": "8.2.0.0",
             "fileVersion": "8.2.2.1"
-          }
-        }
-      },
-      "Microsoft.EntityFrameworkCore/8.0.0-rc.2.23480.1": {
-        "dependencies": {
-          "Microsoft.EntityFrameworkCore.Abstractions": "8.0.0-rc.2.23480.1",
-          "Microsoft.EntityFrameworkCore.Analyzers": "8.0.0-rc.2.23480.1",
-          "Microsoft.Extensions.Caching.Memory": "8.0.0-rc.2.23479.6",
-          "Microsoft.Extensions.Logging": "8.0.0-rc.2.23479.6"
-        },
-        "runtime": {
-          "lib/net8.0/Microsoft.EntityFrameworkCore.dll": {
-            "assemblyVersion": "8.0.0.0",
-            "fileVersion": "8.0.23.48001"
-          }
-        }
-      },
-      "Microsoft.EntityFrameworkCore.Abstractions/8.0.0-rc.2.23480.1": {
-        "runtime": {
-          "lib/net8.0/Microsoft.EntityFrameworkCore.Abstractions.dll": {
-            "assemblyVersion": "8.0.0.0",
-            "fileVersion": "8.0.23.48001"
-          }
-        }
-      },
-      "Microsoft.EntityFrameworkCore.Analyzers/8.0.0-rc.2.23480.1": {},
-      "Microsoft.EntityFrameworkCore.Relational/8.0.0-rc.2.23480.1": {
-        "dependencies": {
-          "Microsoft.EntityFrameworkCore": "8.0.0-rc.2.23480.1",
-          "Microsoft.Extensions.Configuration.Abstractions": "8.0.0-rc.2.23479.6"
-        },
-        "runtime": {
-          "lib/net8.0/Microsoft.EntityFrameworkCore.Relational.dll": {
-            "assemblyVersion": "8.0.0.0",
-            "fileVersion": "8.0.23.48001"
-          }
-        }
-      },
-      "Microsoft.Extensions.Caching.Abstractions/8.0.0-rc.2.23479.6": {
-        "dependencies": {
-          "Microsoft.Extensions.Primitives": "8.0.0-rc.2.23479.6"
-        },
-        "runtime": {
-          "lib/net8.0/Microsoft.Extensions.Caching.Abstractions.dll": {
-            "assemblyVersion": "8.0.0.0",
-            "fileVersion": "8.0.23.47906"
-          }
-        }
-      },
-      "Microsoft.Extensions.Caching.Memory/8.0.0-rc.2.23479.6": {
-        "dependencies": {
-          "Microsoft.Extensions.Caching.Abstractions": "8.0.0-rc.2.23479.6",
-          "Microsoft.Extensions.DependencyInjection.Abstractions": "8.0.0-rc.2.23479.6",
-          "Microsoft.Extensions.Logging.Abstractions": "8.0.0-rc.2.23479.6",
-          "Microsoft.Extensions.Options": "8.0.0-rc.2.23479.6",
-          "Microsoft.Extensions.Primitives": "8.0.0-rc.2.23479.6"
-        },
-        "runtime": {
-          "lib/net8.0/Microsoft.Extensions.Caching.Memory.dll": {
-            "assemblyVersion": "8.0.0.0",
-            "fileVersion": "8.0.23.47906"
           }
         }
       },
@@ -540,67 +478,6 @@
           }
         }
       },
-      "NodaTime/3.1.9": {
-        "dependencies": {
-          "System.Runtime.CompilerServices.Unsafe": "4.7.1"
-        },
-        "runtime": {
-          "lib/net6.0/NodaTime.dll": {
-            "assemblyVersion": "3.1.9.0",
-            "fileVersion": "3.1.9.0"
-          }
-        }
-      },
-      "Npgsql/8.0.0-rc.2": {
-        "dependencies": {
-          "Microsoft.Extensions.Logging.Abstractions": "8.0.0-rc.2.23479.6"
-        },
-        "runtime": {
-          "lib/net8.0/Npgsql.dll": {
-            "assemblyVersion": "8.0.0.0",
-            "fileVersion": "8.0.0.0"
-          }
-        }
-      },
-      "Npgsql.EntityFrameworkCore.PostgreSQL/8.0.0-rc.2": {
-        "dependencies": {
-          "Microsoft.EntityFrameworkCore": "8.0.0-rc.2.23480.1",
-          "Microsoft.EntityFrameworkCore.Abstractions": "8.0.0-rc.2.23480.1",
-          "Microsoft.EntityFrameworkCore.Relational": "8.0.0-rc.2.23480.1",
-          "Npgsql": "8.0.0-rc.2"
-        },
-        "runtime": {
-          "lib/net8.0/Npgsql.EntityFrameworkCore.PostgreSQL.dll": {
-            "assemblyVersion": "8.0.0.0",
-            "fileVersion": "8.0.0.0"
-          }
-        }
-      },
-      "Npgsql.EntityFrameworkCore.PostgreSQL.NodaTime/8.0.0-rc.2": {
-        "dependencies": {
-          "Npgsql.EntityFrameworkCore.PostgreSQL": "8.0.0-rc.2",
-          "Npgsql.NodaTime": "8.0.0-rc.2"
-        },
-        "runtime": {
-          "lib/net8.0/Npgsql.EntityFrameworkCore.PostgreSQL.NodaTime.dll": {
-            "assemblyVersion": "8.0.0.0",
-            "fileVersion": "8.0.0.0"
-          }
-        }
-      },
-      "Npgsql.NodaTime/8.0.0-rc.2": {
-        "dependencies": {
-          "NodaTime": "3.1.9",
-          "Npgsql": "8.0.0-rc.2"
-        },
-        "runtime": {
-          "lib/net6.0/Npgsql.NodaTime.dll": {
-            "assemblyVersion": "8.0.0.0",
-            "fileVersion": "8.0.0.0"
-          }
-        }
-      },
-      "System.Runtime.CompilerServices.Unsafe/4.7.1": {},
       "System.Speech/7.0.0": {
         "runtime": {
           "runtimes/win/lib/net7.0/System.Speech.dll": {
@@ -611,8 +488,7 @@
       },
       "TicketSellerLib/1.0.0": {
         "dependencies": {
-          "Newtonsoft.Json": "13.0.3",
-          "Npgsql.EntityFrameworkCore.PostgreSQL.NodaTime": "8.0.0-rc.2"
+          "Newtonsoft.Json": "13.0.3"
         },
         "runtime": {
           "TicketSellerLib.dll": {}
@@ -651,48 +527,6 @@
       "sha512": "sha512-r0g0k9tGYdrnz8R7T3x5UiokDffeevzK/2P/9SBL6fqLgN8B157MIi/bVUWI1KAz6ZorZrK9AdABCWUeXZZsvA==",
       "path": "communitytoolkit.mvvm/8.2.2",
       "hashPath": "communitytoolkit.mvvm.8.2.2.nupkg.sha512"
-    },
-    "Microsoft.EntityFrameworkCore/8.0.0-rc.2.23480.1": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-UhC219ZUvPYC5rO0BddqHWU+3LL+WUVjtC3IRfcr53QGuUZJ7W2x2anoHXZSA/ouFOUC+KmThIKDUPklVknLWQ==",
-      "path": "microsoft.entityframeworkcore/8.0.0-rc.2.23480.1",
-      "hashPath": "microsoft.entityframeworkcore.8.0.0-rc.2.23480.1.nupkg.sha512"
-    },
-    "Microsoft.EntityFrameworkCore.Abstractions/8.0.0-rc.2.23480.1": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-o1DA30AlAwA69ug787ru7hvc19Ej5H+1L5qZ2GmsnajVRC8SKy/EE2kWZ9Rzscb4GTqSaXo/qtbqsR/osa2sSA==",
-      "path": "microsoft.entityframeworkcore.abstractions/8.0.0-rc.2.23480.1",
-      "hashPath": "microsoft.entityframeworkcore.abstractions.8.0.0-rc.2.23480.1.nupkg.sha512"
-    },
-    "Microsoft.EntityFrameworkCore.Analyzers/8.0.0-rc.2.23480.1": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-Xy+CAw24l2qUWIZwaYj3W+SINrEbLWp037Dz4x9WyXg4HSagigRWMDGhZBk9ElAHAmCi9e6/AvqygO80rcdcTg==",
-      "path": "microsoft.entityframeworkcore.analyzers/8.0.0-rc.2.23480.1",
-      "hashPath": "microsoft.entityframeworkcore.analyzers.8.0.0-rc.2.23480.1.nupkg.sha512"
-    },
-    "Microsoft.EntityFrameworkCore.Relational/8.0.0-rc.2.23480.1": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-68dmYZPy4oSqdpXzA8qKBGVqJkArfiWeHMTQaWGm+p/UbXObIpFsJI1uvEeIxkcKF50xPeh6LKBr7XTOSxG6BA==",
-      "path": "microsoft.entityframeworkcore.relational/8.0.0-rc.2.23480.1",
-      "hashPath": "microsoft.entityframeworkcore.relational.8.0.0-rc.2.23480.1.nupkg.sha512"
-    },
-    "Microsoft.Extensions.Caching.Abstractions/8.0.0-rc.2.23479.6": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-8Rg0MN55ETBZHzTBWBduYfhlzOqxdSjSKmr2XBN+hprkrFp66CAx6wCkz4jNL0CFFySmEvzT3Gh3hz+FQRoZHw==",
-      "path": "microsoft.extensions.caching.abstractions/8.0.0-rc.2.23479.6",
-      "hashPath": "microsoft.extensions.caching.abstractions.8.0.0-rc.2.23479.6.nupkg.sha512"
-    },
-    "Microsoft.Extensions.Caching.Memory/8.0.0-rc.2.23479.6": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-F8ptJyqu8j9ttZzgpBr2WbqWfF6IaACCnyJwHNrItb+JyVi01aZKKooKHbnVf6uvWMZrKTJ5YDlF4sy8U6JZtQ==",
-      "path": "microsoft.extensions.caching.memory/8.0.0-rc.2.23479.6",
-      "hashPath": "microsoft.extensions.caching.memory.8.0.0-rc.2.23479.6.nupkg.sha512"
     },
     "Microsoft.Extensions.Configuration/8.0.0-rc.2.23479.6": {
       "type": "package",
@@ -854,48 +688,6 @@
       "sha512": "sha512-HrC5BXdl00IP9zeV+0Z848QWPAoCr9P3bDEZguI+gkLcBKAOxix/tLEAAHC+UvDNPv4a2d18lOReHMOagPa+zQ==",
       "path": "newtonsoft.json/13.0.3",
       "hashPath": "newtonsoft.json.13.0.3.nupkg.sha512"
-    },
-    "NodaTime/3.1.9": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-EzjwDOtsETlXWBDE6qvTQqc3guP+9xrAOf9j1mHL++UD4VeZay+dbCPNnXyZhoQMkKAOZ/+hIOtz7STl0Rkknw==",
-      "path": "nodatime/3.1.9",
-      "hashPath": "nodatime.3.1.9.nupkg.sha512"
-    },
-    "Npgsql/8.0.0-rc.2": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-iTIX8+YztrS0zjlmhmKQY1ExvIEhhko5dzKAKvuxtYaVd/ZDeOGD90RdwCiqwlnqcw8m3k3DJNOFpmAucY8A3w==",
-      "path": "npgsql/8.0.0-rc.2",
-      "hashPath": "npgsql.8.0.0-rc.2.nupkg.sha512"
-    },
-    "Npgsql.EntityFrameworkCore.PostgreSQL/8.0.0-rc.2": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-d210c8xarZ4W/1HDwZX8LYupkgkzD1hS68ZYpogAe60hbSk93/qSfBVwNxRsO3ibhlQLVgPLJWZ9Yws6xzct5Q==",
-      "path": "npgsql.entityframeworkcore.postgresql/8.0.0-rc.2",
-      "hashPath": "npgsql.entityframeworkcore.postgresql.8.0.0-rc.2.nupkg.sha512"
-    },
-    "Npgsql.EntityFrameworkCore.PostgreSQL.NodaTime/8.0.0-rc.2": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-XkvJXxpFPR5qx6w2HF49oamcut+ECG7cmJ6LigypvgPdBvJAKo2kKK0SKiVHcFIUcyI21NEztMslxTjKci8nOw==",
-      "path": "npgsql.entityframeworkcore.postgresql.nodatime/8.0.0-rc.2",
-      "hashPath": "npgsql.entityframeworkcore.postgresql.nodatime.8.0.0-rc.2.nupkg.sha512"
-    },
-    "Npgsql.NodaTime/8.0.0-rc.2": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-Vi+mHJEEDGEkh/5mVm/7io9gyAld2A6hJbHMQfY6nu9O4LTrmV86dML/GTu6IEojgb9JMixR5B6ll1daFvnGEg==",
-      "path": "npgsql.nodatime/8.0.0-rc.2",
-      "hashPath": "npgsql.nodatime.8.0.0-rc.2.nupkg.sha512"
-    },
-    "System.Runtime.CompilerServices.Unsafe/4.7.1": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-zOHkQmzPCn5zm/BH+cxC1XbUS3P4Yoi3xzW7eRgVpDR2tPGSzyMZ17Ig1iRkfJuY0nhxkQQde8pgePNiA7z7TQ==",
-      "path": "system.runtime.compilerservices.unsafe/4.7.1",
-      "hashPath": "system.runtime.compilerservices.unsafe.4.7.1.nupkg.sha512"
     },
     "System.Speech/7.0.0": {
       "type": "package",

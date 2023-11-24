@@ -232,21 +232,6 @@
     <AppxPackagedFile Include="C:\Users\Defestronik\.nuget\packages\communitytoolkit.mvvm\8.2.2\lib\net6.0\CommunityToolkit.Mvvm.dll">
       <PackagePath>CommunityToolkit.Mvvm.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Defestronik\.nuget\packages\microsoft.entityframeworkcore\8.0.0-rc.2.23480.1\lib\net8.0\Microsoft.EntityFrameworkCore.dll">
-      <PackagePath>Microsoft.EntityFrameworkCore.dll</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Defestronik\.nuget\packages\microsoft.entityframeworkcore.abstractions\8.0.0-rc.2.23480.1\lib\net8.0\Microsoft.EntityFrameworkCore.Abstractions.dll">
-      <PackagePath>Microsoft.EntityFrameworkCore.Abstractions.dll</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Defestronik\.nuget\packages\microsoft.entityframeworkcore.relational\8.0.0-rc.2.23480.1\lib\net8.0\Microsoft.EntityFrameworkCore.Relational.dll">
-      <PackagePath>Microsoft.EntityFrameworkCore.Relational.dll</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Defestronik\.nuget\packages\microsoft.extensions.caching.abstractions\8.0.0-rc.2.23479.6\lib\net8.0\Microsoft.Extensions.Caching.Abstractions.dll">
-      <PackagePath>Microsoft.Extensions.Caching.Abstractions.dll</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Defestronik\.nuget\packages\microsoft.extensions.caching.memory\8.0.0-rc.2.23479.6\lib\net8.0\Microsoft.Extensions.Caching.Memory.dll">
-      <PackagePath>Microsoft.Extensions.Caching.Memory.dll</PackagePath>
-    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Defestronik\.nuget\packages\microsoft.extensions.configuration\8.0.0-rc.2.23479.6\lib\net8.0\Microsoft.Extensions.Configuration.dll">
       <PackagePath>Microsoft.Extensions.Configuration.dll</PackagePath>
     </AppxPackagedFile>
@@ -345,21 +330,6 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Defestronik\.nuget\packages\newtonsoft.json\13.0.3\lib\net6.0\Newtonsoft.Json.dll">
       <PackagePath>Newtonsoft.Json.dll</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Defestronik\.nuget\packages\nodatime\3.1.9\lib\net6.0\NodaTime.dll">
-      <PackagePath>NodaTime.dll</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Defestronik\.nuget\packages\npgsql\8.0.0-rc.2\lib\net8.0\Npgsql.dll">
-      <PackagePath>Npgsql.dll</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Defestronik\.nuget\packages\npgsql.entityframeworkcore.postgresql\8.0.0-rc.2\lib\net8.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll">
-      <PackagePath>Npgsql.EntityFrameworkCore.PostgreSQL.dll</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Defestronik\.nuget\packages\npgsql.entityframeworkcore.postgresql.nodatime\8.0.0-rc.2\lib\net8.0\Npgsql.EntityFrameworkCore.PostgreSQL.NodaTime.dll">
-      <PackagePath>Npgsql.EntityFrameworkCore.PostgreSQL.NodaTime.dll</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Defestronik\.nuget\packages\npgsql.nodatime\8.0.0-rc.2\lib\net6.0\Npgsql.NodaTime.dll">
-      <PackagePath>Npgsql.NodaTime.dll</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Defestronik\.nuget\packages\system.speech\7.0.0\runtimes\win\lib\net7.0\System.Speech.dll">
       <PackagePath>System.Speech.dll</PackagePath>

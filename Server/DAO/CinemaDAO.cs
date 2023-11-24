@@ -1,5 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore;
-using TicketSeller.Model;
+﻿using TicketSeller.Model;
 using TicketSellerLib.DTO;
 
 namespace Server.DAO
@@ -10,7 +9,16 @@ namespace Server.DAO
 		{
 			using (ApplicationContext db = new ApplicationContext())
 			{
-				db.Cinema.Upsert(item).On(c => c.Id).Run();
+				var cinema = db.Cinemas.Find(item.Id);
+				if (cinema != null)
+				{
+					db.Cinemas.Update(item);
+				}
+				else
+				{
+					db.Cinemas.Add(item);
+				}
+
 				db.SaveChanges();
 			}
 		}
@@ -19,7 +27,7 @@ namespace Server.DAO
 		{
 			using (ApplicationContext db = new ApplicationContext())
 			{
-				return db.Cinema.FirstOrDefault(c => c.Id == id);
+				return db.Cinemas.FirstOrDefault(c => c.Id == id);
 			}
 		}
 
@@ -27,7 +35,7 @@ namespace Server.DAO
 		{
 			using (ApplicationContext db = new ApplicationContext())
 			{
-				return db.Cinema.ToList();
+				return db.Cinemas.ToList();
 			}
 		}
 
@@ -35,7 +43,7 @@ namespace Server.DAO
 		{
 			using (ApplicationContext db = new ApplicationContext())
 			{
-				db.Cinema.Remove(item);
+				db.Cinemas.Remove(item);
 				db.SaveChanges();
 			}
 		}

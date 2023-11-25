@@ -3,6 +3,8 @@ using Microsoft.Extensions.Logging;
 using TicketSeller.Services;
 using TicketSeller.View;
 using TicketSeller.ViewModel;
+using TicketSeller.ViewModel.Films;
+using TicketSeller.ViewModel.Users;
 
 namespace TicketSeller
 {
@@ -22,19 +24,21 @@ namespace TicketSeller
 			builder.Services.AddSingleton<UserService>();
 			builder.Services.AddSingleton<FilmServices>();
 
-			builder.Services.AddSingleton<AdminPageViewModel>();
+			builder.Services.AddSingleton<AdminViewModel>();
 			builder.Services.AddSingleton<AuthorizationViewModel>();
 			builder.Services.AddTransient<RegistrationViewModel>();
-
+			builder.Services.AddSingleton<FilmsViewModel>();
 			builder.Services.AddTransient<AddFilmViewModel>();
-			builder.Services.AddSingleton<FilmsPageViewModel>();
+			builder.Services.AddSingleton<UsersViewModel>();
+			builder.Services.AddTransient<AddUserViewModel>();
 
 			builder.Services.AddSingleton<Admin>();
 			builder.Services.AddSingleton<Authorization>();
 			builder.Services.AddTransient<Registration>();
-
-			builder.Services.AddTransient<AddFilm>();
 			builder.Services.AddSingleton<Films>();
+			builder.Services.AddTransient<AddFilm>();
+			builder.Services.AddSingleton<Users>();
+			builder.Services.AddTransient<AddUser>();
 
 #if DEBUG
 			builder.Logging.AddDebug();

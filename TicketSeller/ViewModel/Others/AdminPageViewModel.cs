@@ -1,11 +1,10 @@
 ﻿using CommunityToolkit.Mvvm.Input;
-using TicketSeller.View;
 
 namespace TicketSeller.ViewModel
 {
-	public partial class AdminPageViewModel : BaseViewModel
+	public partial class AdminViewModel : BaseViewModel
 	{
-		public AdminPageViewModel()
+		public AdminViewModel()
 		{
 			Title = "Панель администратора";
 		}
@@ -13,8 +12,41 @@ namespace TicketSeller.ViewModel
 		[RelayCommand]
 		private async Task GoToFilmsPageAsync()
 		{
-			await Shell.Current.GoToAsync($"{nameof(Films)}", true);
+			if (IsBusy) return;
+			try
+			{
+				IsBusy = true;
+				await Shell.Current.GoToAsync($"{nameof(Films)}", true);
+
+			}
+			catch (Exception ex)
+			{
+				await Shell.Current.DisplayAlert("Ошибка!", ex.Message, "Хорошо");
+			}
+			finally
+			{
+				IsBusy = false;
+			}
 		}
 
+		[RelayCommand]
+		private async Task GoToUsersPageAsync()
+		{
+			if (IsBusy) return;
+			try
+			{
+				IsBusy = true;
+				await Shell.Current.GoToAsync($"{nameof(Users)}", true);
+
+			}
+			catch (Exception ex)
+			{
+				await Shell.Current.DisplayAlert("Ошибка!", ex.Message, "Хорошо");
+			}
+			finally
+			{
+				IsBusy = false;
+			}
+		}
 	}
 }

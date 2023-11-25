@@ -13,46 +13,53 @@
         <member name="P:TicketSeller.ViewModel.BaseViewModel.Title">
             <inheritdoc cref="F:TicketSeller.ViewModel.BaseViewModel.title"/>
         </member>
-        <member name="T:TicketSeller.ViewModel.AddFilmViewModel">
+        <member name="T:TicketSeller.ViewModel.Films.AddFilmViewModel">
             <inheritdoc/>
             <inheritdoc/>
         </member>
-        <member name="P:TicketSeller.ViewModel.AddFilmViewModel.Film">
-            <inheritdoc cref="F:TicketSeller.ViewModel.AddFilmViewModel.film"/>
+        <member name="P:TicketSeller.ViewModel.Films.AddFilmViewModel.Film">
+            <inheritdoc cref="F:TicketSeller.ViewModel.Films.AddFilmViewModel.film"/>
         </member>
-        <member name="P:TicketSeller.ViewModel.AddFilmViewModel.DummyDateTime">
-            <inheritdoc cref="F:TicketSeller.ViewModel.AddFilmViewModel.dummyDateTime"/>
+        <member name="P:TicketSeller.ViewModel.Films.AddFilmViewModel.DummyDateTime">
+            <inheritdoc cref="F:TicketSeller.ViewModel.Films.AddFilmViewModel.dummyDateTime"/>
         </member>
-        <member name="F:TicketSeller.ViewModel.AddFilmViewModel.upsertFilmCommand">
-            <summary>The backing field for <see cref="P:TicketSeller.ViewModel.AddFilmViewModel.UpsertFilmCommand"/>.</summary>
+        <member name="F:TicketSeller.ViewModel.Films.AddFilmViewModel.upsertFilmCommand">
+            <summary>The backing field for <see cref="P:TicketSeller.ViewModel.Films.AddFilmViewModel.UpsertFilmCommand"/>.</summary>
         </member>
-        <member name="P:TicketSeller.ViewModel.AddFilmViewModel.UpsertFilmCommand">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:TicketSeller.ViewModel.AddFilmViewModel.UpsertFilmAsync"/>.</summary>
+        <member name="P:TicketSeller.ViewModel.Films.AddFilmViewModel.UpsertFilmCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:TicketSeller.ViewModel.Films.AddFilmViewModel.UpsertFilmAsync"/>.</summary>
         </member>
-        <member name="T:TicketSeller.ViewModel.FilmsPageViewModel">
+        <member name="T:TicketSeller.ViewModel.Films.FilmsViewModel">
             <inheritdoc/>
             <inheritdoc/>
         </member>
-        <member name="F:TicketSeller.ViewModel.FilmsPageViewModel.goToAddFilmPageCommand">
-            <summary>The backing field for <see cref="P:TicketSeller.ViewModel.FilmsPageViewModel.GoToAddFilmPageCommand"/>.</summary>
+        <member name="F:TicketSeller.ViewModel.Films.FilmsViewModel.goToAddFilmPageCommand">
+            <summary>The backing field for <see cref="P:TicketSeller.ViewModel.Films.FilmsViewModel.GoToAddFilmPageCommand"/>.</summary>
         </member>
-        <member name="P:TicketSeller.ViewModel.FilmsPageViewModel.GoToAddFilmPageCommand">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:TicketSeller.ViewModel.FilmsPageViewModel.GoToAddFilmPageAsync(TicketSellerLib.DTO.Film)"/>.</summary>
+        <member name="P:TicketSeller.ViewModel.Films.FilmsViewModel.GoToAddFilmPageCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:TicketSeller.ViewModel.Films.FilmsViewModel.GoToAddFilmPageAsync(TicketSellerLib.DTO.Film)"/>.</summary>
         </member>
-        <member name="F:TicketSeller.ViewModel.FilmsPageViewModel.deleteFilmCommand">
-            <summary>The backing field for <see cref="P:TicketSeller.ViewModel.FilmsPageViewModel.DeleteFilmCommand"/>.</summary>
+        <member name="F:TicketSeller.ViewModel.Films.FilmsViewModel.deleteFilmCommand">
+            <summary>The backing field for <see cref="P:TicketSeller.ViewModel.Films.FilmsViewModel.DeleteFilmCommand"/>.</summary>
         </member>
-        <member name="P:TicketSeller.ViewModel.FilmsPageViewModel.DeleteFilmCommand">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:TicketSeller.ViewModel.FilmsPageViewModel.DeleteFilmAsync(System.Int32)"/>.</summary>
+        <member name="P:TicketSeller.ViewModel.Films.FilmsViewModel.DeleteFilmCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:TicketSeller.ViewModel.Films.FilmsViewModel.DeleteFilmAsync(System.Int32)"/>.</summary>
         </member>
-        <member name="T:TicketSeller.ViewModel.AdminPageViewModel">
+        <member name="T:TicketSeller.ViewModel.AdminViewModel">
+            <inheritdoc/>
             <inheritdoc/>
         </member>
-        <member name="F:TicketSeller.ViewModel.AdminPageViewModel.goToFilmsPageCommand">
-            <summary>The backing field for <see cref="P:TicketSeller.ViewModel.AdminPageViewModel.GoToFilmsPageCommand"/>.</summary>
+        <member name="F:TicketSeller.ViewModel.AdminViewModel.goToFilmsPageCommand">
+            <summary>The backing field for <see cref="P:TicketSeller.ViewModel.AdminViewModel.GoToFilmsPageCommand"/>.</summary>
         </member>
-        <member name="P:TicketSeller.ViewModel.AdminPageViewModel.GoToFilmsPageCommand">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:TicketSeller.ViewModel.AdminPageViewModel.GoToFilmsPageAsync"/>.</summary>
+        <member name="P:TicketSeller.ViewModel.AdminViewModel.GoToFilmsPageCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:TicketSeller.ViewModel.AdminViewModel.GoToFilmsPageAsync"/>.</summary>
+        </member>
+        <member name="F:TicketSeller.ViewModel.AdminViewModel.goToUsersPageCommand">
+            <summary>The backing field for <see cref="P:TicketSeller.ViewModel.AdminViewModel.GoToUsersPageCommand"/>.</summary>
+        </member>
+        <member name="P:TicketSeller.ViewModel.AdminViewModel.GoToUsersPageCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:TicketSeller.ViewModel.AdminViewModel.GoToUsersPageAsync"/>.</summary>
         </member>
         <member name="T:TicketSeller.ViewModel.AuthorizationViewModel">
             <inheritdoc/>
@@ -89,6 +96,42 @@
         </member>
         <member name="P:TicketSeller.ViewModel.RegistrationViewModel.RegisterCommand">
             <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:TicketSeller.ViewModel.RegistrationViewModel.RegisterAsync"/>.</summary>
+        </member>
+        <member name="T:TicketSeller.ViewModel.Users.AddUserViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:TicketSeller.ViewModel.Users.AddUserViewModel.User">
+            <inheritdoc cref="F:TicketSeller.ViewModel.Users.AddUserViewModel.user"/>
+        </member>
+        <member name="F:TicketSeller.ViewModel.Users.AddUserViewModel.upsertUserCommand">
+            <summary>The backing field for <see cref="P:TicketSeller.ViewModel.Users.AddUserViewModel.UpsertUserCommand"/>.</summary>
+        </member>
+        <member name="P:TicketSeller.ViewModel.Users.AddUserViewModel.UpsertUserCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:TicketSeller.ViewModel.Users.AddUserViewModel.UpsertUserAsync"/>.</summary>
+        </member>
+        <member name="T:TicketSeller.ViewModel.Users.UsersViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="F:TicketSeller.ViewModel.Users.UsersViewModel.loadUsersCommand">
+            <summary>The backing field for <see cref="P:TicketSeller.ViewModel.Users.UsersViewModel.LoadUsersCommand"/>.</summary>
+        </member>
+        <member name="P:TicketSeller.ViewModel.Users.UsersViewModel.LoadUsersCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:TicketSeller.ViewModel.Users.UsersViewModel.LoadUsersAsync"/>.</summary>
+        </member>
+        <member name="F:TicketSeller.ViewModel.Users.UsersViewModel.upsertUserCommand">
+            <summary>The backing field for <see cref="P:TicketSeller.ViewModel.Users.UsersViewModel.UpsertUserCommand"/>.</summary>
+        </member>
+        <member name="P:TicketSeller.ViewModel.Users.UsersViewModel.UpsertUserCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:TicketSeller.ViewModel.Users.UsersViewModel.UpsertUserAsync(TicketSellerLib.DTO.User)"/>.</summary>
+        </member>
+        <member name="F:TicketSeller.ViewModel.Users.UsersViewModel.deleteUserCommand">
+            <summary>The backing field for <see cref="P:TicketSeller.ViewModel.Users.UsersViewModel.DeleteUserCommand"/>.</summary>
+        </member>
+        <member name="P:TicketSeller.ViewModel.Users.UsersViewModel.DeleteUserCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:TicketSeller.ViewModel.Users.UsersViewModel.DeleteUserAsync(System.Int32)"/>.</summary>
         </member>
         <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_Button.TextColorTo(Microsoft.Maui.Controls.Button,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing)">
             <summary>

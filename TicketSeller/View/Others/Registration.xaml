@@ -8,11 +8,11 @@
     
     <VerticalStackLayout HorizontalOptions="Center" Spacing="30" VerticalOptions="Center">
         <Label Text="Registration" FontSize="30" FontAttributes="Bold"/>
-        <Entry Placeholder="login" Text="{Binding User.Login}"/>
+        <Entry Placeholder="Логин" Text="{Binding User.Login}"/>
         <Entry Placeholder="Email" Text="{Binding User.Email}"/>
-        <Entry Placeholder="password" IsPassword="True" Text="{Binding User.Password}"/>
-        <Entry Placeholder="confirm password" IsPassword="True" Text= "{Binding ConfirmPassword}"/>
-        <Button CornerRadius="20" Text="Register" FontAttributes="Bold" Command="{Binding RegisterCommand}"/>
+        <Entry Placeholder="Пароль" IsPassword="True" Text="{Binding User.Password}"/>
+        <Entry Placeholder="Повторить пароль" IsPassword="True" Text= "{Binding ConfirmPassword}"/>
+        <Button CornerRadius="20" Text="Зарегистрироваться" FontAttributes="Bold" Command="{Binding RegisterCommand}"/>
 
     </VerticalStackLayout>
 </ContentPage>

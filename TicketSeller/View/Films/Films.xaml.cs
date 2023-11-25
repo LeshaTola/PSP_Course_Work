@@ -1,10 +1,10 @@
-using TicketSeller.ViewModel;
+using TicketSeller.ViewModel.Films;
 
 namespace TicketSeller.View;
 
 public partial class Films : ContentPage
 {
-	public Films(FilmsPageViewModel viewModel)
+	public Films(FilmsViewModel viewModel)
 	{
 		InitializeComponent();
 		BindingContext = viewModel;

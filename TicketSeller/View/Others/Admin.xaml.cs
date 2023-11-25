@@ -4,7 +4,7 @@ namespace TicketSeller.View;
 
 public partial class Admin : ContentPage
 {
-	public Admin(AdminPageViewModel viewModel)
+	public Admin(AdminViewModel viewModel)
 	{
 		InitializeComponent();
 		BindingContext = viewModel;

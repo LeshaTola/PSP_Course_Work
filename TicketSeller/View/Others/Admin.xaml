@@ -2,11 +2,11 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:viewModel="clr-namespace:TicketSeller.ViewModel"
-             x:DataType="viewModel:AdminPageViewModel"
+             x:DataType="viewModel:AdminViewModel"
              x:Class="TicketSeller.View.Admin"
-             Title="AdminPage">
+             Title="{Binding Title}">
     <VerticalStackLayout Spacing="10" VerticalOptions="CenterAndExpand">
-        <Button Text="Users" WidthRequest="200" FontAttributes="Bold"/>
+        <Button Text="Users" WidthRequest="200" FontAttributes="Bold" Command="{Binding GoToUsersPageCommand}"/>
         <Button Text="Cinemas" WidthRequest="200" FontAttributes="Bold" />
         <Button Text="Halls" WidthRequest="200" FontAttributes="Bold"/>
         <Button Text="Films" WidthRequest="200" FontAttributes="Bold"  Command="{Binding GoToFilmsPageCommand}"/>

@@ -64,16 +64,16 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <MauiXaml Update="View\Cinema\AddCinema.xaml">
+	  <MauiXaml Update="View\Cinemas\AddCinema.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="View\Film\AddFilm.xaml">
+	  <MauiXaml Update="View\Films\AddFilm.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="View\Hall\AddHall.xaml">
+	  <MauiXaml Update="View\Halls\AddHall.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="View\User\AddUser.xaml">
+	  <MauiXaml Update="View\Users\AddUser.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="View\Others\Admin.xaml">
@@ -85,16 +85,16 @@
 	  <MauiXaml Update="View\Others\Registration.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="View\Hall\Seats.xaml">
+	  <MauiXaml Update="View\Halls\Seats.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="View\Cinema\Sinemas.xaml">
+	  <MauiXaml Update="View\Cinemas\Sinemas.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="View\Film\Films.xaml">
+	  <MauiXaml Update="View\Films\Films.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="View\User\Users.xaml">
+	  <MauiXaml Update="View\Users\Users.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>
@@ -104,24 +104,23 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Compile Update="View\Cinema\Sinemas.xaml.cs">
+	  <Compile Update="View\Cinemas\Sinemas.xaml.cs">
 	    <DependentUpon>Sinemas.xaml</DependentUpon>
 	  </Compile>
-	  <Compile Update="View\Film\Films.xaml.cs">
+	  <Compile Update="View\Films\Films.xaml.cs">
 	    <DependentUpon>Films.xaml</DependentUpon>
 	  </Compile>
 	  <Compile Update="View\Others\Admin.xaml.cs">
 	    <DependentUpon>Admin.xaml</DependentUpon>
 	  </Compile>
-	  <Compile Update="View\User\Users.xaml.cs">
+	  <Compile Update="View\Users\Users.xaml.cs">
 	    <DependentUpon>Users.xaml</DependentUpon>
 	  </Compile>
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Folder Include="ViewModel\Cinema\" />
-	  <Folder Include="ViewModel\Hall\" />
-	  <Folder Include="ViewModel\User\" />
+	  <Folder Include="ViewModel\Cinemas\" />
+	  <Folder Include="ViewModel\Halls\" />
 	</ItemGroup>
 
 	<!-- Build Properties must be defined within these property groups to ensure successful publishing

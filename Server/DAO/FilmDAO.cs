@@ -9,8 +9,8 @@ namespace Server.DAO
 		{
 			using (ApplicationContext db = new ApplicationContext())
 			{
-				var cinema = Get(item.Id);
-				if (cinema != null)
+				var film = Get(item.Id);
+				if (film != null)
 				{
 					db.Films.Update(item);
 				}

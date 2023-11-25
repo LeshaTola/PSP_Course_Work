@@ -1,4 +1,4 @@
-using TicketSeller.ViewModel;
+using TicketSeller.ViewModel.Films;
 
 namespace TicketSeller.View;
 

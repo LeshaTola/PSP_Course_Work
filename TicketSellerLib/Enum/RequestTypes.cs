@@ -2,10 +2,14 @@
 {
 	public enum RequestTypes
 	{
-		SignUp,
 		Login,
-		GetAllFilms,
+
+		GetFilms,
 		UpsertFilm,
 		DeleteFilm,
+
+		GetUsers,
+		UpsertUser,
+		DeleteUser,
 	}
 }

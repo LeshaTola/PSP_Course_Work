@@ -35,7 +35,7 @@ namespace TicketSeller.ViewModel
 				if (!await CheckUserPropertiesAsync())
 					return;
 
-				var response = await userService.RegisterAsync(User);
+				var response = await userService.UpsertAsync(User);
 				if (response.Type == ResponseTypes.Ok)
 				{
 					await GoToFilmsPageAsync(User);

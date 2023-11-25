@@ -9,8 +9,8 @@ namespace Server.DAO
 		{
 			using (ApplicationContext db = new ApplicationContext())
 			{
-				var cinema = Get(user.Id);
-				if (cinema != null)
+				var userInDB = Get(user.Id);
+				if (userInDB != null)
 				{
 					db.Users.Update(user);
 				}
@@ -26,7 +26,7 @@ namespace Server.DAO
 		{
 			using (ApplicationContext db = new ApplicationContext())
 			{
-				return db.Users.First(u => u.Id == id);
+				return db.Users.FirstOrDefault(u => u.Id == id);
 			}
 		}
 

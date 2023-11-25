@@ -8,11 +8,11 @@ namespace TicketSeller.Services
 {
 	public class FilmServices
 	{
-		public async Task<List<Film>> GetActualFilmsAsync()
+		public async Task<List<Film>> GetAllAsync()
 		{
 			try
 			{
-				await Client.Client.Instance.SendRequestAsync(new Request(RequestTypes.GetAllFilms, ""));
+				await Client.Client.Instance.SendRequestAsync(new Request(RequestTypes.GetFilms, ""));
 				var response = await Client.Client.Instance.GetResponseAsync();
 				var films = JsonConvert.DeserializeObject<List<Film>>(response.Data);
 				return films;
@@ -24,7 +24,7 @@ namespace TicketSeller.Services
 			}
 		}
 
-		public async Task<Response> UpsertFilmAsync(Film film)
+		public async Task<Response> UpsertAsync(Film film)
 		{
 			try
 			{
@@ -40,7 +40,7 @@ namespace TicketSeller.Services
 			}
 		}
 
-		public async Task<Response> DeleteFilmAsync(int id)
+		public async Task<Response> DeleteAsync(int id)
 		{
 			try
 			{

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="TicketSeller.View.AddFilm"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:sys="clr-namespace:System;assembly=mscorlib"
+    xmlns:toolkit="[toolkit ]http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+    xmlns:viewModel="clr-namespace:TicketSeller.ViewModel.Films"
+    Title="AddFilm"
+    x:DataType="viewModel:AddFilmViewModel">
+
+    <VerticalStackLayout
+        HorizontalOptions="Center"
+        Spacing="10"
+        VerticalOptions="Center">
+        <Label
+            FontAttributes="Bold"
+            FontSize="Large"
+            HorizontalTextAlignment="Center"
+            Text="Add Film" />
+        <Entry Placeholder="Название" Text="{Binding Film.Name}" />
+        <Editor Placeholder="Описание " Text="{Binding Film.Description}" />
+        <Entry
+            Keyboard="Numeric"
+            Placeholder="Длительность (минуты)"
+            Text="{Binding Film.Duration}" />
+        <Entry
+            Keyboard="Numeric"
+            Placeholder="Цена"
+            Text="{Binding Film.Cost}" />
+
+        <HorizontalStackLayout>
+            <Label Text="Дата начала" VerticalTextAlignment="Center" />
+            <DatePicker Date="{Binding DummyDateTime}" MinimumDate="{x:Static sys:DateTime.Today}" />
+        </HorizontalStackLayout>
+
+        <HorizontalStackLayout>
+            <Label Text="Время начала" VerticalTextAlignment="Center" />
+            <TimePicker Time="{Binding Film.Time}" />
+        </HorizontalStackLayout>
+
+        <Button
+            Command="{Binding UpsertFilmCommand}"
+            FontAttributes="Bold"
+            Text="Добавить" />
+    </VerticalStackLayout>
+</ContentPage>

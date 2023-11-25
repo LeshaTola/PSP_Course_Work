@@ -36,41 +36,41 @@ build_metadata.AdditionalFiles.ManifestResourceName = TicketSeller.Resources.Sty
 build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
 build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml
 
-[D:/University/3 course/PSP/CourseWork/TicketSeller/TicketSeller/View/Cinema/AddCinema.xaml]
+[D:/University/3 course/PSP/CourseWork/TicketSeller/TicketSeller/View/Cinemas/AddCinema.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = TicketSeller.View.Cinema.AddCinema.xaml
-build_metadata.AdditionalFiles.TargetPath = View\Cinema\AddCinema.xaml
-build_metadata.AdditionalFiles.RelativePath = View\Cinema\AddCinema.xaml
+build_metadata.AdditionalFiles.ManifestResourceName = TicketSeller.View.Cinemas.AddCinema.xaml
+build_metadata.AdditionalFiles.TargetPath = View\Cinemas\AddCinema.xaml
+build_metadata.AdditionalFiles.RelativePath = View\Cinemas\AddCinema.xaml
 
-[D:/University/3 course/PSP/CourseWork/TicketSeller/TicketSeller/View/Cinema/Sinemas.xaml]
+[D:/University/3 course/PSP/CourseWork/TicketSeller/TicketSeller/View/Cinemas/Sinemas.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = TicketSeller.View.Cinema.Sinemas.xaml
-build_metadata.AdditionalFiles.TargetPath = View\Cinema\Sinemas.xaml
-build_metadata.AdditionalFiles.RelativePath = View\Cinema\Sinemas.xaml
+build_metadata.AdditionalFiles.ManifestResourceName = TicketSeller.View.Cinemas.Sinemas.xaml
+build_metadata.AdditionalFiles.TargetPath = View\Cinemas\Sinemas.xaml
+build_metadata.AdditionalFiles.RelativePath = View\Cinemas\Sinemas.xaml
 
-[D:/University/3 course/PSP/CourseWork/TicketSeller/TicketSeller/View/Film/AddFilm.xaml]
+[D:/University/3 course/PSP/CourseWork/TicketSeller/TicketSeller/View/Films/AddFilm.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = TicketSeller.View.Film.AddFilm.xaml
-build_metadata.AdditionalFiles.TargetPath = View\Film\AddFilm.xaml
-build_metadata.AdditionalFiles.RelativePath = View\Film\AddFilm.xaml
+build_metadata.AdditionalFiles.ManifestResourceName = TicketSeller.View.Films.AddFilm.xaml
+build_metadata.AdditionalFiles.TargetPath = View\Films\AddFilm.xaml
+build_metadata.AdditionalFiles.RelativePath = View\Films\AddFilm.xaml
 
-[D:/University/3 course/PSP/CourseWork/TicketSeller/TicketSeller/View/Film/Films.xaml]
+[D:/University/3 course/PSP/CourseWork/TicketSeller/TicketSeller/View/Films/Films.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = TicketSeller.View.Film.Films.xaml
-build_metadata.AdditionalFiles.TargetPath = View\Film\Films.xaml
-build_metadata.AdditionalFiles.RelativePath = View\Film\Films.xaml
+build_metadata.AdditionalFiles.ManifestResourceName = TicketSeller.View.Films.Films.xaml
+build_metadata.AdditionalFiles.TargetPath = View\Films\Films.xaml
+build_metadata.AdditionalFiles.RelativePath = View\Films\Films.xaml
 
-[D:/University/3 course/PSP/CourseWork/TicketSeller/TicketSeller/View/Hall/AddHall.xaml]
+[D:/University/3 course/PSP/CourseWork/TicketSeller/TicketSeller/View/Halls/AddHall.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = TicketSeller.View.Hall.AddHall.xaml
-build_metadata.AdditionalFiles.TargetPath = View\Hall\AddHall.xaml
-build_metadata.AdditionalFiles.RelativePath = View\Hall\AddHall.xaml
+build_metadata.AdditionalFiles.ManifestResourceName = TicketSeller.View.Halls.AddHall.xaml
+build_metadata.AdditionalFiles.TargetPath = View\Halls\AddHall.xaml
+build_metadata.AdditionalFiles.RelativePath = View\Halls\AddHall.xaml
 
-[D:/University/3 course/PSP/CourseWork/TicketSeller/TicketSeller/View/Hall/Seats.xaml]
+[D:/University/3 course/PSP/CourseWork/TicketSeller/TicketSeller/View/Halls/Seats.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = TicketSeller.View.Hall.Seats.xaml
-build_metadata.AdditionalFiles.TargetPath = View\Hall\Seats.xaml
-build_metadata.AdditionalFiles.RelativePath = View\Hall\Seats.xaml
+build_metadata.AdditionalFiles.ManifestResourceName = TicketSeller.View.Halls.Seats.xaml
+build_metadata.AdditionalFiles.TargetPath = View\Halls\Seats.xaml
+build_metadata.AdditionalFiles.RelativePath = View\Halls\Seats.xaml
 
 [D:/University/3 course/PSP/CourseWork/TicketSeller/TicketSeller/View/Others/Admin.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
@@ -90,14 +90,14 @@ build_metadata.AdditionalFiles.ManifestResourceName = TicketSeller.View.Others.R
 build_metadata.AdditionalFiles.TargetPath = View\Others\Registration.xaml
 build_metadata.AdditionalFiles.RelativePath = View\Others\Registration.xaml
 
-[D:/University/3 course/PSP/CourseWork/TicketSeller/TicketSeller/View/User/AddUser.xaml]
+[D:/University/3 course/PSP/CourseWork/TicketSeller/TicketSeller/View/Users/AddUser.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = TicketSeller.View.User.AddUser.xaml
-build_metadata.AdditionalFiles.TargetPath = View\User\AddUser.xaml
-build_metadata.AdditionalFiles.RelativePath = View\User\AddUser.xaml
+build_metadata.AdditionalFiles.ManifestResourceName = TicketSeller.View.Users.AddUser.xaml
+build_metadata.AdditionalFiles.TargetPath = View\Users\AddUser.xaml
+build_metadata.AdditionalFiles.RelativePath = View\Users\AddUser.xaml
 
-[D:/University/3 course/PSP/CourseWork/TicketSeller/TicketSeller/View/User/Users.xaml]
+[D:/University/3 course/PSP/CourseWork/TicketSeller/TicketSeller/View/Users/Users.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = TicketSeller.View.User.Users.xaml
-build_metadata.AdditionalFiles.TargetPath = View\User\Users.xaml
-build_metadata.AdditionalFiles.RelativePath = View\User\Users.xaml
+build_metadata.AdditionalFiles.ManifestResourceName = TicketSeller.View.Users.Users.xaml
+build_metadata.AdditionalFiles.TargetPath = View\Users\Users.xaml
+build_metadata.AdditionalFiles.RelativePath = View\Users\Users.xaml

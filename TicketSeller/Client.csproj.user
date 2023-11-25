@@ -6,16 +6,16 @@
     <ActiveDebugProfile>Windows Machine</ActiveDebugProfile>
   </PropertyGroup>
   <ItemGroup>
-    <MauiXaml Update="View\Cinema\AddCinema.xaml">
+    <MauiXaml Update="View\Cinemas\AddCinema.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
-    <MauiXaml Update="View\Film\AddFilm.xaml">
+    <MauiXaml Update="View\Films\AddFilm.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
-    <MauiXaml Update="View\Hall\AddHall.xaml">
+    <MauiXaml Update="View\Halls\AddHall.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
-    <MauiXaml Update="View\User\AddUser.xaml">
+    <MauiXaml Update="View\Users\AddUser.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
     <MauiXaml Update="View\Others\Admin.xaml">
@@ -27,16 +27,16 @@
     <MauiXaml Update="View\Others\Registration.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
-    <MauiXaml Update="View\Hall\Seats.xaml">
+    <MauiXaml Update="View\Halls\Seats.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
-    <MauiXaml Update="View\Cinema\Sinemas.xaml">
+    <MauiXaml Update="View\Cinemas\Sinemas.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
-    <MauiXaml Update="View\Film\Films.xaml">
+    <MauiXaml Update="View\Films\Films.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
-    <MauiXaml Update="View\User\Users.xaml">
+    <MauiXaml Update="View\Users\Users.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
   </ItemGroup>

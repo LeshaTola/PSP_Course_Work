@@ -4,32 +4,31 @@ using TicketSeller.Services;
 using TicketSellerLib.DTO;
 using TicketSellerLib.Enum;
 
-namespace TicketSeller.ViewModel
+namespace TicketSeller.ViewModel.Users
 {
-	[QueryProperty("Film", "Film")]
-	public partial class AddFilmViewModel : BaseViewModel
+	[QueryProperty("User", "User")]
+	public partial class AddUserViewModel : BaseViewModel
 	{
-		[ObservableProperty] private Film film;
-		[ObservableProperty] private DateTime dummyDateTime = DateTime.Today;
+		[ObservableProperty] private User user;
 
-		private FilmServices service;
+		private UserService service;
 
-		public AddFilmViewModel(FilmServices service)
+		public AddUserViewModel(UserService service)
 		{
-			Title = "Добавить";
 			this.service = service;
+			Title = "Редактирование пользователя";
 		}
 
+
 		[RelayCommand]
-		private async Task UpsertFilmAsync()
+		private async Task UpsertUserAsync()
 		{
 			if (IsBusy) return;
 
 			try
 			{
 				IsBusy = true;
-				Film.Date = DateOnly.FromDateTime(DummyDateTime);
-				var response = await service.UpsertFilmAsync(Film);
+				var response = await service.UpsertAsync(User);
 
 				if (response.Type == ResponseTypes.Ok)
 				{

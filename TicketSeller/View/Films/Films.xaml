@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="TicketSeller.View.Films"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:model="clr-namespace:TicketSellerLib.DTO;assembly=TicketSellerLib"
+    xmlns:viewModel="clr-namespace:TicketSeller.ViewModel.Films"
+    Title="{Binding Title}"
+    x:DataType="viewModel:FilmsViewModel">
+
+    <Grid
+        ColumnDefinitions="*,*"
+        ColumnSpacing="10"
+        RowDefinitions="*,auto"
+        RowSpacing="4">
+        <CollectionView Grid.ColumnSpan="2" ItemsSource="{Binding Films}">
+            <CollectionView.ItemTemplate>
+                <DataTemplate x:DataType="model:Film">
+                    <Grid Padding="10">
+                        <Frame HeightRequest="400">
+                            <Grid
+                                ColumnDefinitions="300,*,100"
+                                ColumnSpacing="40"
+                                RowDefinitions="*,*,*"
+                                RowSpacing="10">
+                                <Image
+                                    Grid.RowSpan="3"
+                                    Aspect="Fill"
+                                    Source="https://aka.ms/campus.jpg" />
+
+                                <Label
+                                    Grid.Row="0"
+                                    Grid.Column="1"
+                                    FontAttributes="Bold"
+                                    FontSize="32"
+                                    HorizontalTextAlignment="Center"
+                                    Text="{Binding Name, StringFormat='Название: {0}'}"
+                                    VerticalTextAlignment="Center" />
+
+                                <Label
+                                    Grid.Row="1"
+                                    Grid.Column="1"
+                                    FontAttributes="Bold"
+                                    FontSize="16"
+                                    HorizontalTextAlignment="Start"
+                                    LineBreakMode="TailTruncation"
+                                    Text="{Binding Description}"
+                                    VerticalTextAlignment="Start" />
+
+                                <Label
+                                    Grid.Row="2"
+                                    Grid.Column="1"
+                                    FontSize="16"
+                                    HorizontalTextAlignment="Start"
+                                    Text="{Binding Cost, StringFormat='Стоимость: {0} BYN'}"
+                                    VerticalTextAlignment="Center" />
+
+
+                                <Label
+                                    Grid.Row="2"
+                                    Grid.Column="1"
+                                    FontSize="16"
+                                    HorizontalTextAlignment="End"
+                                    Text="{Binding Duration, StringFormat='Длительность: {0} минут'}"
+                                    VerticalTextAlignment="Center" />
+
+                                <VerticalStackLayout
+                                    Grid.Row="1"
+                                    Grid.Column="2"
+                                    Spacing="10">
+                                    <Button
+                                        BackgroundColor="Red"
+                                        Command="{Binding Source={RelativeSource AncestorType={x:Type viewModel:FilmsViewModel}}, Path=DeleteFilmCommand}"
+                                        CommandParameter="{Binding Id}"
+                                        FontAttributes="Bold"
+                                        FontSize="24"
+                                        HeightRequest="50"
+                                        Text="X"
+                                        TextColor="White"
+                                        WidthRequest="50" />
+                                    <Button
+                                        BackgroundColor="Green"
+                                        Command="{Binding Source={RelativeSource AncestorType={x:Type viewModel:FilmsViewModel}}, Path=GoToAddFilmPageCommand}"
+                                        CommandParameter="{Binding .}"
+                                        FontAttributes="Bold"
+                                        FontSize="24"
+                                        HeightRequest="50"
+                                        Text="E"
+                                        TextColor="White"
+                                        WidthRequest="50" />
+
+                                </VerticalStackLayout>
+                            </Grid>
+                        </Frame>
+                    </Grid>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+        <Button
+            Grid.Row="1"
+            Margin="8"
+            Command="{Binding GoToAddFilmPageCommand}"
+            CommandParameter="{x:Null}"
+            Text="Add" />
+    </Grid>
+</ContentPage>

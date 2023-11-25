@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="TicketSeller.View.Users"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:model="clr-namespace:TicketSellerLib.DTO;assembly=TicketSellerLib"
+    xmlns:viewModel="clr-namespace:TicketSeller.ViewModel.Users"
+    Title="{Binding Title}"
+    x:DataType="viewModel:UsersViewModel">
+
+    <Grid
+        ColumnDefinitions="*,*"
+        ColumnSpacing="10"
+        RowDefinitions="*,auto"
+        RowSpacing="4">
+        <ListView
+            Grid.ColumnSpan="2"
+            Margin="20"
+            ItemsSource="{Binding Users}">
+            <ListView.Header>
+                <StackLayout BackgroundColor="{DynamicResource Primary}">
+                    <Label
+                        Margin="10,0,0,0"
+                        FontAttributes="Bold"
+                        FontSize="24"
+                        Text="Users" />
+                </StackLayout>
+            </ListView.Header>
+            <ListView.ItemTemplate>
+                <DataTemplate x:DataType="model:User">
+                    <ViewCell Height="100">
+                        <Grid ColumnDefinitions="*,auto" ColumnSpacing="20">
+
+                            <VerticalStackLayout
+                                Grid.Column="0"
+                                Padding="10"
+                                HeightRequest="100">
+                                <Label Text="{Binding Id, StringFormat='Id: {0}'}" />
+                                <Label Text="{Binding Login, StringFormat='Login: {0}'}" />
+                                <Label Text="{Binding Password, StringFormat='Password: {0}'}" />
+                                <Label Text="{Binding Email, StringFormat='Email: {0}'}" />
+
+                            </VerticalStackLayout>
+
+                            <HorizontalStackLayout Grid.Column="1" Spacing="20">
+                                <!--
+                                    Command="{Binding Source={RelativeSource AncestorType={x:Type viewModel:UsersViewModel}}, Path=UpsertUserCommand}"
+                                    CommandParameter="{Binding .}"
+                                -->
+                                <Button
+                                    HeightRequest="75"
+                                    Text="Изменить"
+                                    WidthRequest="75" />
+
+                                <Button
+                                    Command="{Binding Source={RelativeSource AncestorType={x:Type viewModel:UsersViewModel}}, Path=DeleteUserCommand}"
+                                    CommandParameter="{Binding Id}"
+                                    HeightRequest="75"
+                                    Text="Удалить"
+                                    WidthRequest="75" />
+                            </HorizontalStackLayout>
+
+                        </Grid>
+
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+        <HorizontalStackLayout
+            Grid.Row="2"
+            Grid.ColumnSpan="2"
+            HorizontalOptions="Center"
+            Spacing="20">
+            <Button
+                Command="{Binding UpsertUserCommand}"
+                CommandParameter="{x:Null}"
+                Text="Добавить"
+                WidthRequest="100" />
+            <Button
+                Command="{Binding LoadUsersCommand}"
+                Text="Обновить"
+                WidthRequest="100" />
+        </HorizontalStackLayout>
+    </Grid>
+</ContentPage>

@@ -4,24 +4,24 @@ using TicketSeller.Services;
 using TicketSeller.View;
 using TicketSellerLib.DTO;
 
-namespace TicketSeller.ViewModel
+namespace TicketSeller.ViewModel.Films
 {
-	public partial class FilmsPageViewModel : BaseViewModel
+	public partial class FilmsViewModel : BaseViewModel
 	{
 		public ObservableCollection<Film> Films { get; private set; } = new();
 
 		private FilmServices service;
 
-		public FilmsPageViewModel(FilmServices service)
+		public FilmsViewModel(FilmServices service)
 		{
 			Title = "Фильмы";
 			this.service = service;
-			UpdateFilms();
+			LoadFilms();
 		}
 
-		public async void UpdateFilms()
+		public async void LoadFilms()
 		{
-			List<Film> films = await service.GetActualFilmsAsync();
+			List<Film> films = await service.GetAllAsync();
 
 			if (films.Count == 0)
 				return;
@@ -42,14 +42,14 @@ namespace TicketSeller.ViewModel
 			{
 				{"Film", film}
 			});
-			UpdateFilms();
+			LoadFilms();
 		}
 
 		[RelayCommand]
 		private async Task DeleteFilmAsync(int id)
 		{
-			await service.DeleteFilmAsync(id);
-			UpdateFilms();
+			await service.DeleteAsync(id);
+			LoadFilms();
 		}
 	}
 }

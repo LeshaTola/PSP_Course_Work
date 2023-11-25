@@ -42,13 +42,10 @@ namespace Server
 					var request = await GetRequestAsync();
 					switch (request.Type)
 					{
-						case RequestTypes.SignUp:
-							SignUp(request.Message);
-							break;
 						case RequestTypes.Login:
 							Login(request.Message);
 							break;
-						case RequestTypes.GetAllFilms:
+						case RequestTypes.GetFilms:
 							GetAllFilms();
 							break;
 						case RequestTypes.UpsertFilm:
@@ -56,6 +53,15 @@ namespace Server
 							break;
 						case RequestTypes.DeleteFilm:
 							DeleteFilm(request.Message);
+							break;
+						case RequestTypes.GetUsers:
+							GetAllUsers();
+							break;
+						case RequestTypes.UpsertUser:
+							UpsertUser(request.Message);
+							break;
+						case RequestTypes.DeleteUser:
+							DeleteUser(request.Message);
 							break;
 						default:
 							Console.WriteLine("Unknown request type");
@@ -115,25 +121,6 @@ namespace Server
 			SendResponseAsync(response);
 		}
 
-		private void SignUp(string requestMessage)
-		{
-			var requestUser = JsonConvert.DeserializeObject<User>(requestMessage);
-
-			var users = userService.GetAll();
-			var user = users.Find(u => u.Login.Equals(requestUser.Login, StringComparison.OrdinalIgnoreCase));
-			Response response;
-			if (user == null)
-			{
-				userService.Upsert(requestUser);
-				response = new Response(ResponseTypes.Ok, "Успешная регистрация");
-			}
-			else
-			{
-				response = new Response(ResponseTypes.NotOk, "Такой пользователь уже существует");
-			}
-			SendResponseAsync(response);
-		}
-
 		private void GetAllFilms()
 		{
 			var films = filmService.GetAll();
@@ -156,7 +143,51 @@ namespace Server
 			var film = filmService.Get(int.Parse(requestMessage));
 
 			filmService.Remove(film);
-			Response response = new Response(ResponseTypes.Ok, "Фильм успешно добавлен");
+			Response response = new Response(ResponseTypes.Ok, "Фильм успешно удален");
+			SendResponseAsync(response);
+		}
+
+		private void GetAllUsers()
+		{
+			var users = userService.GetAll();
+			string data = JsonConvert.SerializeObject(users);
+			Response response = new Response(ResponseTypes.Ok, "", data);
+			SendResponseAsync(response);
+		}
+
+		private void UpsertUser(string requestMessage)
+		{
+			var requestUser = JsonConvert.DeserializeObject<User>(requestMessage);
+
+			var users = userService.GetAll();
+			var user = users.Find(u => u.Login.Equals(requestUser.Login, StringComparison.OrdinalIgnoreCase));
+			Response response;
+			if (user != null)
+			{
+				if (user.Id != requestUser.Id)
+				{
+					response = new Response(ResponseTypes.NotOk, "Такой пользователь уже существует");
+				}
+				else
+				{
+					userService.Upsert(requestUser);
+					response = new Response(ResponseTypes.Ok, "Успешно");
+				}
+			}
+			else
+			{
+				userService.Upsert(requestUser);
+				response = new Response(ResponseTypes.Ok, "Успешно");
+			}
+			SendResponseAsync(response);
+		}
+
+		private void DeleteUser(string requestMessage)
+		{
+			var user = userService.Get(int.Parse(requestMessage));
+
+			userService.Remove(user);
+			Response response = new Response(ResponseTypes.Ok, "Пользователь успешно удален");
 			SendResponseAsync(response);
 		}
 

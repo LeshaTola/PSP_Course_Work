@@ -4,6 +4,15 @@
         <name>Client</name>
     </assembly>
     <members>
+        <member name="T:TicketSeller.ViewModel.BaseViewModel">
+            <inheritdoc/>
+        </member>
+        <member name="P:TicketSeller.ViewModel.BaseViewModel.IsBusy">
+            <inheritdoc cref="F:TicketSeller.ViewModel.BaseViewModel.isBusy"/>
+        </member>
+        <member name="P:TicketSeller.ViewModel.BaseViewModel.Title">
+            <inheritdoc cref="F:TicketSeller.ViewModel.BaseViewModel.title"/>
+        </member>
         <member name="T:TicketSeller.ViewModel.AddFilmViewModel">
             <inheritdoc/>
             <inheritdoc/>
@@ -19,6 +28,22 @@
         </member>
         <member name="P:TicketSeller.ViewModel.AddFilmViewModel.UpsertFilmCommand">
             <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:TicketSeller.ViewModel.AddFilmViewModel.UpsertFilmAsync"/>.</summary>
+        </member>
+        <member name="T:TicketSeller.ViewModel.FilmsPageViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="F:TicketSeller.ViewModel.FilmsPageViewModel.goToAddFilmPageCommand">
+            <summary>The backing field for <see cref="P:TicketSeller.ViewModel.FilmsPageViewModel.GoToAddFilmPageCommand"/>.</summary>
+        </member>
+        <member name="P:TicketSeller.ViewModel.FilmsPageViewModel.GoToAddFilmPageCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:TicketSeller.ViewModel.FilmsPageViewModel.GoToAddFilmPageAsync(TicketSellerLib.DTO.Film)"/>.</summary>
+        </member>
+        <member name="F:TicketSeller.ViewModel.FilmsPageViewModel.deleteFilmCommand">
+            <summary>The backing field for <see cref="P:TicketSeller.ViewModel.FilmsPageViewModel.DeleteFilmCommand"/>.</summary>
+        </member>
+        <member name="P:TicketSeller.ViewModel.FilmsPageViewModel.DeleteFilmCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:TicketSeller.ViewModel.FilmsPageViewModel.DeleteFilmAsync(System.Int32)"/>.</summary>
         </member>
         <member name="T:TicketSeller.ViewModel.AdminPageViewModel">
             <inheritdoc/>
@@ -48,31 +73,6 @@
         </member>
         <member name="P:TicketSeller.ViewModel.AuthorizationViewModel.LoginCommand">
             <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:TicketSeller.ViewModel.AuthorizationViewModel.LoginAsync"/>.</summary>
-        </member>
-        <member name="T:TicketSeller.ViewModel.BaseViewModel">
-            <inheritdoc/>
-        </member>
-        <member name="P:TicketSeller.ViewModel.BaseViewModel.IsBusy">
-            <inheritdoc cref="F:TicketSeller.ViewModel.BaseViewModel.isBusy"/>
-        </member>
-        <member name="P:TicketSeller.ViewModel.BaseViewModel.Title">
-            <inheritdoc cref="F:TicketSeller.ViewModel.BaseViewModel.title"/>
-        </member>
-        <member name="T:TicketSeller.ViewModel.FilmsPageViewModel">
-            <inheritdoc/>
-            <inheritdoc/>
-        </member>
-        <member name="F:TicketSeller.ViewModel.FilmsPageViewModel.goToAddFilmPageCommand">
-            <summary>The backing field for <see cref="P:TicketSeller.ViewModel.FilmsPageViewModel.GoToAddFilmPageCommand"/>.</summary>
-        </member>
-        <member name="P:TicketSeller.ViewModel.FilmsPageViewModel.GoToAddFilmPageCommand">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:TicketSeller.ViewModel.FilmsPageViewModel.GoToAddFilmPageAsync(TicketSellerLib.DTO.Film)"/>.</summary>
-        </member>
-        <member name="F:TicketSeller.ViewModel.FilmsPageViewModel.deleteFilmCommand">
-            <summary>The backing field for <see cref="P:TicketSeller.ViewModel.FilmsPageViewModel.DeleteFilmCommand"/>.</summary>
-        </member>
-        <member name="P:TicketSeller.ViewModel.FilmsPageViewModel.DeleteFilmCommand">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:TicketSeller.ViewModel.FilmsPageViewModel.DeleteFilmAsync(System.Int32)"/>.</summary>
         </member>
         <member name="T:TicketSeller.ViewModel.RegistrationViewModel">
             <inheritdoc/>
@@ -206,6 +206,12 @@
             for all properties generated with <see cref="T:CommunityToolkit.Mvvm.ComponentModel.ObservablePropertyAttribute"/>.
             </summary>
         </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.IsBusy">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "IsBusy" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Title">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Title" generated properties.</summary>
+        </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Film">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Film" generated properties.</summary>
         </member>
@@ -214,12 +220,6 @@
         </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.User">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "User" generated properties.</summary>
-        </member>
-        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.IsBusy">
-            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "IsBusy" generated properties.</summary>
-        </member>
-        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Title">
-            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Title" generated properties.</summary>
         </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.ConfirmPassword">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "ConfirmPassword" generated properties.</summary>
@@ -230,6 +230,12 @@
             for all properties generated with <see cref="T:CommunityToolkit.Mvvm.ComponentModel.ObservablePropertyAttribute"/>.
             </summary>
         </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.IsBusy">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "IsBusy" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Title">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Title" generated properties.</summary>
+        </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Film">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Film" generated properties.</summary>
         </member>
@@ -238,12 +244,6 @@
         </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.User">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "User" generated properties.</summary>
-        </member>
-        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.IsBusy">
-            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "IsBusy" generated properties.</summary>
-        </member>
-        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Title">
-            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Title" generated properties.</summary>
         </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.ConfirmPassword">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "ConfirmPassword" generated properties.</summary>

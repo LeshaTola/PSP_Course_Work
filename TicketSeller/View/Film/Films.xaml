@@ -4,7 +4,7 @@
              xmlns:viewModel="clr-namespace:TicketSeller.ViewModel"
              xmlns:model="clr-namespace:TicketSellerLib.DTO;assembly=TicketSellerLib"
              x:DataType="viewModel:FilmsPageViewModel"
-             x:Class="TicketSeller.View.FilmsPage"
+             x:Class="TicketSeller.View.Films"
              Title="{Binding Title}">
 
     <Grid

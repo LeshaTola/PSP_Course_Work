@@ -9,10 +9,10 @@ namespace TicketSeller
 			InitializeComponent();
 
 			Routing.RegisterRoute(nameof(AddFilm), typeof(AddFilm));
-			Routing.RegisterRoute(nameof(FilmsPage), typeof(FilmsPage));
+			Routing.RegisterRoute(nameof(Films), typeof(Films));
 
 			Routing.RegisterRoute(nameof(Registration), typeof(Registration));
-			Routing.RegisterRoute(nameof(AdminPage), typeof(AdminPage));
+			Routing.RegisterRoute(nameof(Admin), typeof(Admin));
 		}
 	}
 }

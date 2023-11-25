@@ -29,12 +29,12 @@ namespace TicketSeller
 			builder.Services.AddTransient<AddFilmViewModel>();
 			builder.Services.AddSingleton<FilmsPageViewModel>();
 
-			builder.Services.AddSingleton<AdminPage>();
+			builder.Services.AddSingleton<Admin>();
 			builder.Services.AddSingleton<Authorization>();
 			builder.Services.AddTransient<Registration>();
 
 			builder.Services.AddTransient<AddFilm>();
-			builder.Services.AddSingleton<FilmsPage>();
+			builder.Services.AddSingleton<Films>();
 
 #if DEBUG
 			builder.Logging.AddDebug();

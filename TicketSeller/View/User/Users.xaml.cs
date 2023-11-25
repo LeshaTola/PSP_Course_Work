@@ -2,9 +2,9 @@ using TicketSellerLib.DTO;
 
 namespace TicketSeller.View;
 
-public partial class ShowUsers : ContentPage
+public partial class Users : ContentPage
 {
-	public ShowUsers()
+	public Users()
 	{
 		InitializeComponent();
 

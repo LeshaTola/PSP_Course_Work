@@ -13,7 +13,7 @@ namespace TicketSeller.ViewModel
 		[RelayCommand]
 		private async Task GoToFilmsPageAsync()
 		{
-			await Shell.Current.GoToAsync($"{nameof(FilmsPage)}", true);
+			await Shell.Current.GoToAsync($"{nameof(Films)}", true);
 		}
 
 	}

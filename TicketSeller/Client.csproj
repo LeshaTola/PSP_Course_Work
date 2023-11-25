@@ -64,43 +64,37 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <MauiXaml Update="View\AddCinema.xaml">
+	  <MauiXaml Update="View\Cinema\AddCinema.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="View\AddFilm.xaml">
+	  <MauiXaml Update="View\Film\AddFilm.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="View\AddHall.xaml">
+	  <MauiXaml Update="View\Hall\AddHall.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="View\AddUser.xaml">
+	  <MauiXaml Update="View\User\AddUser.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="View\AdminPage.xaml">
+	  <MauiXaml Update="View\Others\Admin.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="View\Amin.xaml">
+	  <MauiXaml Update="View\Others\Authorization.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="View\Authorization.xaml">
+	  <MauiXaml Update="View\Others\Registration.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="View\Registration.xaml">
+	  <MauiXaml Update="View\Hall\Seats.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="View\Seats.xaml">
+	  <MauiXaml Update="View\Cinema\Sinemas.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="View\ShowCinemas.xaml">
+	  <MauiXaml Update="View\Film\Films.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="View\FilmsPage.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
-	  <MauiXaml Update="View\ShowUsers.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
-	  <MauiXaml Update="View\UserPage.xaml">
+	  <MauiXaml Update="View\User\Users.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>
@@ -110,9 +104,24 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Compile Update="View\FilmsPage.xaml.cs">
-	    <DependentUpon>FilmsPage.xaml</DependentUpon>
+	  <Compile Update="View\Cinema\Sinemas.xaml.cs">
+	    <DependentUpon>Sinemas.xaml</DependentUpon>
 	  </Compile>
+	  <Compile Update="View\Film\Films.xaml.cs">
+	    <DependentUpon>Films.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="View\Others\Admin.xaml.cs">
+	    <DependentUpon>Admin.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="View\User\Users.xaml.cs">
+	    <DependentUpon>Users.xaml</DependentUpon>
+	  </Compile>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="ViewModel\Cinema\" />
+	  <Folder Include="ViewModel\Hall\" />
+	  <Folder Include="ViewModel\User\" />
 	</ItemGroup>
 
 	<!-- Build Properties must be defined within these property groups to ensure successful publishing

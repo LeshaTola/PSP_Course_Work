@@ -32,14 +32,14 @@ namespace TicketSeller.ViewModel
 
 			if (user.IsAdmin)
 			{
-				await Shell.Current.GoToAsync($"{nameof(AdminPage)}", true, new Dictionary<string, object>
+				await Shell.Current.GoToAsync($"{nameof(Admin)}", true, new Dictionary<string, object>
 				{
 					{"user", User}
 				});
 			}
 			else
 			{
-				await Shell.Current.GoToAsync($"{nameof(FilmsPage)}", true, new Dictionary<string, object>
+				await Shell.Current.GoToAsync($"{nameof(Films)}", true, new Dictionary<string, object>
 				{
 					{"user", User}
 				});

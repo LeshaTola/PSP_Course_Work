@@ -9,7 +9,7 @@ namespace Server.DAO
 		{
 			using (ApplicationContext db = new ApplicationContext())
 			{
-				var cinema = db.Users.Find(user.Id);
+				var cinema = Get(user.Id);
 				if (cinema != null)
 				{
 					db.Users.Update(user);

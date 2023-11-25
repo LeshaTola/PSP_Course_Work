@@ -37,6 +37,7 @@ namespace TicketSeller.ViewModel
 		[RelayCommand]
 		private async Task GoToAddFilmPageAsync(Film film)
 		{
+			film = film ??= new();
 			await Shell.Current.GoToAsync($"{nameof(AddFilm)}", true, new Dictionary<string, object>
 			{
 				{"Film", film}

@@ -9,7 +9,7 @@ namespace Server.DAO
 		{
 			using (ApplicationContext db = new ApplicationContext())
 			{
-				var cinema = db.Sessions.Find(item.Id);
+				var cinema = Get(item.Id);
 				if (cinema != null)
 				{
 					db.Sessions.Update(item);

@@ -20,6 +20,15 @@
         <member name="P:TicketSeller.ViewModel.AddFilmViewModel.UpsertFilmCommand">
             <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:TicketSeller.ViewModel.AddFilmViewModel.UpsertFilmAsync"/>.</summary>
         </member>
+        <member name="T:TicketSeller.ViewModel.AdminPageViewModel">
+            <inheritdoc/>
+        </member>
+        <member name="F:TicketSeller.ViewModel.AdminPageViewModel.goToFilmsPageCommand">
+            <summary>The backing field for <see cref="P:TicketSeller.ViewModel.AdminPageViewModel.GoToFilmsPageCommand"/>.</summary>
+        </member>
+        <member name="P:TicketSeller.ViewModel.AdminPageViewModel.GoToFilmsPageCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:TicketSeller.ViewModel.AdminPageViewModel.GoToFilmsPageAsync"/>.</summary>
+        </member>
         <member name="T:TicketSeller.ViewModel.AuthorizationViewModel">
             <inheritdoc/>
             <inheritdoc/>

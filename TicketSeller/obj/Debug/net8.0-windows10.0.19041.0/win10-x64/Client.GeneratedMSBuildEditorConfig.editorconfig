@@ -60,6 +60,12 @@ build_metadata.AdditionalFiles.ManifestResourceName = TicketSeller.View.AddUser.
 build_metadata.AdditionalFiles.TargetPath = View\AddUser.xaml
 build_metadata.AdditionalFiles.RelativePath = View\AddUser.xaml
 
+[D:/University/3 course/PSP/CourseWork/TicketSeller/TicketSeller/View/AdminPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = TicketSeller.View.AdminPage.xaml
+build_metadata.AdditionalFiles.TargetPath = View\AdminPage.xaml
+build_metadata.AdditionalFiles.RelativePath = View\AdminPage.xaml
+
 [D:/University/3 course/PSP/CourseWork/TicketSeller/TicketSeller/View/Amin.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = TicketSeller.View.Amin.xaml
@@ -107,3 +113,9 @@ build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = TicketSeller.View.ShowUsers.xaml
 build_metadata.AdditionalFiles.TargetPath = View\ShowUsers.xaml
 build_metadata.AdditionalFiles.RelativePath = View\ShowUsers.xaml
+
+[D:/University/3 course/PSP/CourseWork/TicketSeller/TicketSeller/View/UserPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = TicketSeller.View.UserPage.xaml
+build_metadata.AdditionalFiles.TargetPath = View\UserPage.xaml
+build_metadata.AdditionalFiles.RelativePath = View\UserPage.xaml

@@ -25,15 +25,26 @@ namespace TicketSeller.ViewModel
 			await Shell.Current.GoToAsync($"{nameof(Registration)}", true);
 		}
 
-		private async Task GoToFilmsPageAsync(User user)
+		private async Task GoToMainPageAsync(User user)
 		{
 			if (user == null)
 				return;
 
-			await Shell.Current.GoToAsync($"{nameof(FilmsPage)}", true, new Dictionary<string, object>
+			if (user.IsAdmin)
 			{
-				{"user", User}
-			});
+				await Shell.Current.GoToAsync($"{nameof(AdminPage)}", true, new Dictionary<string, object>
+				{
+					{"user", User}
+				});
+			}
+			else
+			{
+				await Shell.Current.GoToAsync($"{nameof(FilmsPage)}", true, new Dictionary<string, object>
+				{
+					{"user", User}
+				});
+			}
+
 		}
 
 		[RelayCommand]
@@ -58,7 +69,7 @@ namespace TicketSeller.ViewModel
 					if (response.Type == ResponseTypes.Ok)
 					{
 						User responseUser = JsonConvert.DeserializeObject<User>(response.Data);
-						await GoToFilmsPageAsync(responseUser);
+						await GoToMainPageAsync(responseUser);
 					}
 					else
 					{

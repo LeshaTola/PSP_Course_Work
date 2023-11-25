@@ -22,13 +22,17 @@ namespace TicketSeller
 			builder.Services.AddSingleton<UserService>();
 			builder.Services.AddSingleton<FilmServices>();
 
+			builder.Services.AddSingleton<AdminPageViewModel>();
 			builder.Services.AddSingleton<AuthorizationViewModel>();
-			builder.Services.AddSingleton<RegistrationViewModel>();
+			builder.Services.AddTransient<RegistrationViewModel>();
+
 			builder.Services.AddTransient<AddFilmViewModel>();
 			builder.Services.AddSingleton<FilmsPageViewModel>();
 
+			builder.Services.AddSingleton<AdminPage>();
 			builder.Services.AddSingleton<Authorization>();
-			builder.Services.AddSingleton<Registration>();
+			builder.Services.AddTransient<Registration>();
+
 			builder.Services.AddTransient<AddFilm>();
 			builder.Services.AddSingleton<FilmsPage>();
 

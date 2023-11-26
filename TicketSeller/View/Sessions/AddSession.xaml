@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="TicketSeller.View.AddSession"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:sys="clr-namespace:System;assembly=mscorlib"
+    xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+    xmlns:viewModel="clr-namespace:TicketSeller.ViewModel.Sessions"
+    Title="{Binding Title}"
+    x:DataType="viewModel:AddSessionViewModel">
+
+    <VerticalStackLayout
+        HorizontalOptions="Center"
+        Spacing="10"
+        VerticalOptions="Center">
+        <Label
+            FontAttributes="Bold"
+            FontSize="Large"
+            HorizontalTextAlignment="Center"
+            Text="Редактировать сеанс" />
+
+        <Picker
+            Title="Фильм"
+            ItemsSource="{Binding Films}"
+            SelectedItem="{Binding Session.Film}" />
+
+        <Picker Title="Кинотеатр" ItemsSource="{Binding Cinemas}">
+            <Picker.Behaviors>
+                <toolkit:EventToCommandBehavior Command="{Binding SelectedFilmCommand}" EventName="SelectedIndexChanged" />
+            </Picker.Behaviors>
+        </Picker>
+        <Picker
+            Title="Зал"
+            ItemsSource="{Binding Halls}"
+            SelectedItem="{Binding Session.Hall}" />
+
+        <HorizontalStackLayout>
+            <Label Text="Дата начала" VerticalTextAlignment="Center" />
+            <DatePicker Date="{Binding DummyDateTime}" MinimumDate="{x:Static sys:DateTime.Today}" />
+        </HorizontalStackLayout>
+
+        <HorizontalStackLayout>
+            <Label Text="Время начала" VerticalTextAlignment="Center" />
+            <TimePicker Time="{Binding Session.Time}" />
+        </HorizontalStackLayout>
+
+        <Button
+            Command="{Binding UpsertCommand}"
+            FontAttributes="Bold"
+            Text="Подтвердить" />
+    </VerticalStackLayout>
+
+</ContentPage>

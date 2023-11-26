@@ -23,6 +23,9 @@ namespace TicketSeller
 			Routing.RegisterRoute(nameof(AddHall), typeof(AddHall));
 			Routing.RegisterRoute(nameof(Halls), typeof(Halls));
 			Routing.RegisterRoute(nameof(Seats), typeof(Seats));
+
+			Routing.RegisterRoute(nameof(AddSession), typeof(AddSession));
+			Routing.RegisterRoute(nameof(Sessions), typeof(Sessions));
 		}
 	}
 }

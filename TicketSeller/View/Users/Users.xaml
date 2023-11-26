@@ -13,11 +13,11 @@
         ColumnSpacing="10"
         RowDefinitions="*,auto"
         RowSpacing="4">
-        <ListView
+        <CollectionView
             Grid.ColumnSpan="2"
             Margin="20"
             ItemsSource="{Binding Users}">
-            <ListView.Header>
+            <CollectionView.Header>
                 <StackLayout BackgroundColor="{DynamicResource Primary}">
                     <Label
                         Margin="10,0,0,0"
@@ -25,10 +25,10 @@
                         FontSize="24"
                         Text="Users" />
                 </StackLayout>
-            </ListView.Header>
-            <ListView.ItemTemplate>
+            </CollectionView.Header>
+            <CollectionView.ItemTemplate>
                 <DataTemplate x:DataType="model:User">
-                    <ViewCell Height="100">
+                    <Frame Height="100">
                         <Grid ColumnDefinitions="*,auto" ColumnSpacing="20">
 
                             <VerticalStackLayout
@@ -43,11 +43,10 @@
                             </VerticalStackLayout>
 
                             <HorizontalStackLayout Grid.Column="1" Spacing="20">
-                                <!--
-                                    Command="{Binding Source={RelativeSource AncestorType={x:Type viewModel:UsersViewModel}}, Path=UpsertUserCommand}"
-                                    CommandParameter="{Binding .}"
-                                -->
+
                                 <Button
+                                    Command="{Binding Source={RelativeSource AncestorType={x:Type viewModel:UsersViewModel}}, Path=UpsertElementCommand}"
+                                    CommandParameter="{Binding .}"
                                     HeightRequest="75"
                                     Text="Изменить"
                                     WidthRequest="75" />
@@ -60,10 +59,10 @@
                                     WidthRequest="75" />
                             </HorizontalStackLayout>
                         </Grid>
-                    </ViewCell>
+                    </Frame>
                 </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
 
         <HorizontalStackLayout
             Grid.Row="2"

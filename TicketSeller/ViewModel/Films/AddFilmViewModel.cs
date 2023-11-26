@@ -10,7 +10,6 @@ namespace TicketSeller.ViewModel.Films
 	public partial class AddFilmViewModel : BaseViewModel
 	{
 		[ObservableProperty] private Film film;
-		//[ObservableProperty] private DateTime dummyDateTime = DateTime.Today;
 
 		private FilmService service;
 
@@ -28,7 +27,7 @@ namespace TicketSeller.ViewModel.Films
 			try
 			{
 				IsBusy = true;
-				//Film.Date = DateOnly.FromDateTime(DummyDateTime);
+
 				var response = await service.UpsertAsync(Film);
 
 				if (response.Type == ResponseTypes.Ok)

@@ -129,6 +129,7 @@
             <inheritdoc/>
             <inheritdoc/>
             <inheritdoc/>
+            <inheritdoc/>
         </member>
         <member name="F:TicketSeller.ViewModel.AdminViewModel.goToFilmsPageCommand">
             <summary>The backing field for <see cref="P:TicketSeller.ViewModel.AdminViewModel.GoToFilmsPageCommand"/>.</summary>
@@ -153,6 +154,12 @@
         </member>
         <member name="P:TicketSeller.ViewModel.AdminViewModel.GoToHallsPageCommand">
             <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:TicketSeller.ViewModel.AdminViewModel.GoToHallsPageAsync"/>.</summary>
+        </member>
+        <member name="F:TicketSeller.ViewModel.AdminViewModel.goToSessionsPageCommand">
+            <summary>The backing field for <see cref="P:TicketSeller.ViewModel.AdminViewModel.GoToSessionsPageCommand"/>.</summary>
+        </member>
+        <member name="P:TicketSeller.ViewModel.AdminViewModel.GoToSessionsPageCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:TicketSeller.ViewModel.AdminViewModel.GoToSessionsPageAsync"/>.</summary>
         </member>
         <member name="T:TicketSeller.ViewModel.AuthorizationViewModel">
             <inheritdoc/>
@@ -189,6 +196,68 @@
         </member>
         <member name="P:TicketSeller.ViewModel.RegistrationViewModel.RegisterCommand">
             <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:TicketSeller.ViewModel.RegistrationViewModel.RegisterAsync"/>.</summary>
+        </member>
+        <member name="T:TicketSeller.ViewModel.Sessions.AddSessionViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:TicketSeller.ViewModel.Sessions.AddSessionViewModel.Session">
+            <inheritdoc cref="F:TicketSeller.ViewModel.Sessions.AddSessionViewModel.session"/>
+        </member>
+        <member name="P:TicketSeller.ViewModel.Sessions.AddSessionViewModel.Films">
+            <inheritdoc cref="F:TicketSeller.ViewModel.Sessions.AddSessionViewModel.films"/>
+        </member>
+        <member name="P:TicketSeller.ViewModel.Sessions.AddSessionViewModel.Cinemas">
+            <inheritdoc cref="F:TicketSeller.ViewModel.Sessions.AddSessionViewModel.cinemas"/>
+        </member>
+        <member name="P:TicketSeller.ViewModel.Sessions.AddSessionViewModel.Halls">
+            <inheritdoc cref="F:TicketSeller.ViewModel.Sessions.AddSessionViewModel.halls"/>
+        </member>
+        <member name="P:TicketSeller.ViewModel.Sessions.AddSessionViewModel.DummyDateTime">
+            <inheritdoc cref="F:TicketSeller.ViewModel.Sessions.AddSessionViewModel.dummyDateTime"/>
+        </member>
+        <member name="F:TicketSeller.ViewModel.Sessions.AddSessionViewModel.upsertCommand">
+            <summary>The backing field for <see cref="P:TicketSeller.ViewModel.Sessions.AddSessionViewModel.UpsertCommand"/>.</summary>
+        </member>
+        <member name="P:TicketSeller.ViewModel.Sessions.AddSessionViewModel.UpsertCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:TicketSeller.ViewModel.Sessions.AddSessionViewModel.UpsertAsync"/>.</summary>
+        </member>
+        <member name="F:TicketSeller.ViewModel.Sessions.AddSessionViewModel.selectedFilmCommand">
+            <summary>The backing field for <see cref="P:TicketSeller.ViewModel.Sessions.AddSessionViewModel.SelectedFilmCommand"/>.</summary>
+        </member>
+        <member name="P:TicketSeller.ViewModel.Sessions.AddSessionViewModel.SelectedFilmCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:TicketSeller.ViewModel.Sessions.AddSessionViewModel.SelectedFilm"/>.</summary>
+        </member>
+        <member name="T:TicketSeller.ViewModel.Sessions.SessionsViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="F:TicketSeller.ViewModel.Sessions.SessionsViewModel.deleteElementCommand">
+            <summary>The backing field for <see cref="P:TicketSeller.ViewModel.Sessions.SessionsViewModel.DeleteElementCommand"/>.</summary>
+        </member>
+        <member name="P:TicketSeller.ViewModel.Sessions.SessionsViewModel.DeleteElementCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:TicketSeller.ViewModel.Sessions.SessionsViewModel.DeleteElementAsync(System.Int32)"/>.</summary>
+        </member>
+        <member name="F:TicketSeller.ViewModel.Sessions.SessionsViewModel.goToAddElementPageCommand">
+            <summary>The backing field for <see cref="P:TicketSeller.ViewModel.Sessions.SessionsViewModel.GoToAddElementPageCommand"/>.</summary>
+        </member>
+        <member name="P:TicketSeller.ViewModel.Sessions.SessionsViewModel.GoToAddElementPageCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:TicketSeller.ViewModel.Sessions.SessionsViewModel.GoToAddElementPageAsync(TicketSellerLib.DTO.Session)"/>.</summary>
+        </member>
+        <member name="F:TicketSeller.ViewModel.Sessions.SessionsViewModel.loadElementsCommand">
+            <summary>The backing field for <see cref="P:TicketSeller.ViewModel.Sessions.SessionsViewModel.LoadElementsCommand"/>.</summary>
+        </member>
+        <member name="P:TicketSeller.ViewModel.Sessions.SessionsViewModel.LoadElementsCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:TicketSeller.ViewModel.Sessions.SessionsViewModel.LoadElementsAsync"/>.</summary>
+        </member>
+        <member name="F:TicketSeller.ViewModel.Sessions.SessionsViewModel.upsertElementCommand">
+            <summary>The backing field for <see cref="P:TicketSeller.ViewModel.Sessions.SessionsViewModel.UpsertElementCommand"/>.</summary>
+        </member>
+        <member name="P:TicketSeller.ViewModel.Sessions.SessionsViewModel.UpsertElementCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:TicketSeller.ViewModel.Sessions.SessionsViewModel.UpsertElementAsync(TicketSellerLib.DTO.Session)"/>.</summary>
         </member>
         <member name="T:TicketSeller.ViewModel.Users.AddUserViewModel">
             <inheritdoc/>
@@ -366,6 +435,18 @@
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.ConfirmPassword">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "ConfirmPassword" generated properties.</summary>
         </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Session">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Session" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Films">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Films" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Halls">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Halls" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.DummyDateTime">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "DummyDateTime" generated properties.</summary>
+        </member>
         <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs">
             <summary>
             A helper type providing cached, reusable <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instances
@@ -395,6 +476,18 @@
         </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.ConfirmPassword">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "ConfirmPassword" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Session">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Session" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Films">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Films" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Halls">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Halls" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.DummyDateTime">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "DummyDateTime" generated properties.</summary>
         </member>
     </members>
 </doc>

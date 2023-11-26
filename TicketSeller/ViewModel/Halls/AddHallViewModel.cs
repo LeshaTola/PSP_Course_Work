@@ -9,8 +9,6 @@ namespace TicketSeller.ViewModel.Halls
 	[QueryProperty("Hall", "Hall")]
 	public partial class AddHallViewModel : BaseViewModel
 	{
-		public event EventHandler OnNavigateTo;
-
 		[ObservableProperty] private Hall hall;
 		[ObservableProperty] private List<Cinema> cinemas;
 

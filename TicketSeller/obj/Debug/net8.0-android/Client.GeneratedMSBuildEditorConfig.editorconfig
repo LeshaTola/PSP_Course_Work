@@ -100,11 +100,17 @@ build_metadata.AdditionalFiles.ManifestResourceName = TicketSeller.View.Others.R
 build_metadata.AdditionalFiles.TargetPath = View\Others\Registration.xaml
 build_metadata.AdditionalFiles.RelativePath = View\Others\Registration.xaml
 
-[D:/University/3 course/PSP/CourseWork/TicketSeller/TicketSeller/View/Tickets/Sessions.xaml]
+[D:/University/3 course/PSP/CourseWork/TicketSeller/TicketSeller/View/Sessions/AddSession.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = TicketSeller.View.Tickets.Sessions.xaml
-build_metadata.AdditionalFiles.TargetPath = View\Tickets\Sessions.xaml
-build_metadata.AdditionalFiles.RelativePath = View\Tickets\Sessions.xaml
+build_metadata.AdditionalFiles.ManifestResourceName = TicketSeller.View.Sessions.AddSession.xaml
+build_metadata.AdditionalFiles.TargetPath = View\Sessions\AddSession.xaml
+build_metadata.AdditionalFiles.RelativePath = View\Sessions\AddSession.xaml
+
+[D:/University/3 course/PSP/CourseWork/TicketSeller/TicketSeller/View/Sessions/Sessions.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = TicketSeller.View.Sessions.Sessions.xaml
+build_metadata.AdditionalFiles.TargetPath = View\Sessions\Sessions.xaml
+build_metadata.AdditionalFiles.RelativePath = View\Sessions\Sessions.xaml
 
 [D:/University/3 course/PSP/CourseWork/TicketSeller/TicketSeller/View/Users/AddUser.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml

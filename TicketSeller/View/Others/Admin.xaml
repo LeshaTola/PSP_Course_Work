@@ -28,6 +28,7 @@
             Text="Фильмы"
             WidthRequest="200" />
         <Button
+            Command="{Binding GoToSessionsPageCommand}"
             FontAttributes="Bold"
             Text="Сеансы"
             WidthRequest="200" />

@@ -87,17 +87,23 @@ namespace Server
 							break;
 
 						case RequestTypes.GetSessions:
+							GetAllSessions();
 							break;
 						case RequestTypes.UpsertSession:
+							UpsertSession(request.Message);
 							break;
 						case RequestTypes.DeleteSession:
+							DeleteSession(request.Message);
 							break;
 
 						case RequestTypes.GetTickets:
+							GetAllTickets();
 							break;
 						case RequestTypes.UpsertTicket:
+							UpsertTicket(request.Message);
 							break;
 						case RequestTypes.DeleteTicket:
+							DeleteTicket(request.Message);
 							break;
 
 						default:
@@ -250,7 +256,7 @@ namespace Server
 			var cinema = cinemaService.Get(int.Parse(requestMessage));
 
 			cinemaService.Remove(cinema);
-			Response response = new Response(ResponseTypes.Ok, "Пользователь успешно удален");
+			Response response = new Response(ResponseTypes.Ok, "Кинотеатр успешно удален");
 			SendResponseAsync(response);
 		}
 
@@ -261,6 +267,7 @@ namespace Server
 			Response response = new Response(ResponseTypes.Ok, "", data);
 			SendResponseAsync(response);
 		}
+
 		private void UpsertHall(string requestMessage)
 		{
 			var requestHall = JsonConvert.DeserializeObject<Hall>(requestMessage);
@@ -276,7 +283,61 @@ namespace Server
 			var hall = hallService.Get(int.Parse(requestMessage));
 
 			hallService.Remove(hall);
-			Response response = new Response(ResponseTypes.Ok, "Пользователь успешно удален");
+			Response response = new Response(ResponseTypes.Ok, "Зал успешно удален");
+			SendResponseAsync(response);
+		}
+
+		private void GetAllSessions()
+		{
+			var sessions = sessionService.GetAll();
+			string data = JsonConvert.SerializeObject(sessions);
+			Response response = new Response(ResponseTypes.Ok, "", data);
+			SendResponseAsync(response);
+		}
+
+		private void UpsertSession(string requestMessage)
+		{
+			var requestSession = JsonConvert.DeserializeObject<Session>(requestMessage);
+
+			sessionService.Upsert(requestSession);
+			Response response = new Response(ResponseTypes.Ok, "Успешно");
+
+			SendResponseAsync(response);
+		}
+
+		private void DeleteSession(string requestMessage)
+		{
+			var session = sessionService.Get(int.Parse(requestMessage));
+
+			sessionService.Remove(session);
+			Response response = new Response(ResponseTypes.Ok, "Сеанс успешно удален");
+			SendResponseAsync(response);
+		}
+
+		private void GetAllTickets()
+		{
+			var tickets = ticketService.GetAll();
+			string data = JsonConvert.SerializeObject(tickets);
+			Response response = new Response(ResponseTypes.Ok, "", data);
+			SendResponseAsync(response);
+		}
+
+		private void UpsertTicket(string requestMessage)
+		{
+			var requestTicket = JsonConvert.DeserializeObject<Ticket>(requestMessage);
+
+			ticketService.Upsert(requestTicket);
+			Response response = new Response(ResponseTypes.Ok, "Успешно");
+
+			SendResponseAsync(response);
+		}
+
+		private void DeleteTicket(string requestMessage)
+		{
+			var ticket = ticketService.Get(int.Parse(requestMessage));
+
+			ticketService.Remove(ticket);
+			Response response = new Response(ResponseTypes.Ok, "Билет успешно удален");
 			SendResponseAsync(response);
 		}
 

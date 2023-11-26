@@ -66,6 +66,12 @@ build_metadata.AdditionalFiles.ManifestResourceName = TicketSeller.View.Halls.Ad
 build_metadata.AdditionalFiles.TargetPath = View\Halls\AddHall.xaml
 build_metadata.AdditionalFiles.RelativePath = View\Halls\AddHall.xaml
 
+[D:/University/3 course/PSP/CourseWork/TicketSeller/TicketSeller/View/Halls/Halls.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = TicketSeller.View.Halls.Halls.xaml
+build_metadata.AdditionalFiles.TargetPath = View\Halls\Halls.xaml
+build_metadata.AdditionalFiles.RelativePath = View\Halls\Halls.xaml
+
 [D:/University/3 course/PSP/CourseWork/TicketSeller/TicketSeller/View/Halls/Seats.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = TicketSeller.View.Halls.Seats.xaml

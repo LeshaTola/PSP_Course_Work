@@ -17,10 +17,10 @@ namespace Server
 
 		private UserService userService = new();
 		private FilmService filmService = new();
+		private CinemaService cinemaService = new();
 		private HallService hallService = new();
 		private SessionService sessionService = new();
 		private TicketService ticketService = new();
-		private CinemaService cinemaService = new();
 
 		public ClientHandler(Server server, TcpClient client)
 		{
@@ -62,6 +62,15 @@ namespace Server
 							break;
 						case RequestTypes.DeleteUser:
 							DeleteUser(request.Message);
+							break;
+						case RequestTypes.GetCinemas:
+							GetAllCinemas();
+							break;
+						case RequestTypes.UpsertCinema:
+							UpsertCinema(request.Message);
+							break;
+						case RequestTypes.DeleteCinema:
+							DeleteCinema(request.Message);
 							break;
 						default:
 							Console.WriteLine("Unknown request type");
@@ -187,6 +196,33 @@ namespace Server
 			var user = userService.Get(int.Parse(requestMessage));
 
 			userService.Remove(user);
+			Response response = new Response(ResponseTypes.Ok, "Пользователь успешно удален");
+			SendResponseAsync(response);
+		}
+
+
+		private void GetAllCinemas()
+		{
+			var Cinemas = cinemaService.GetAll();
+			string data = JsonConvert.SerializeObject(Cinemas);
+			Response response = new Response(ResponseTypes.Ok, "", data);
+			SendResponseAsync(response);
+		}
+		private void UpsertCinema(string requestMessage)
+		{
+			var requestCinema = JsonConvert.DeserializeObject<Cinema>(requestMessage);
+
+			cinemaService.Upsert(requestCinema);
+			Response response = new Response(ResponseTypes.Ok, "Успешно");
+
+			SendResponseAsync(response);
+		}
+
+		private void DeleteCinema(string requestMessage)
+		{
+			var cinema = cinemaService.Get(int.Parse(requestMessage));
+
+			cinemaService.Remove(cinema);
 			Response response = new Response(ResponseTypes.Ok, "Пользователь успешно удален");
 			SendResponseAsync(response);
 		}

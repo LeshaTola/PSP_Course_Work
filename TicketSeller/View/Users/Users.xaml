@@ -59,9 +59,7 @@
                                     Text="Удалить"
                                     WidthRequest="75" />
                             </HorizontalStackLayout>
-
                         </Grid>
-
                     </ViewCell>
                 </DataTemplate>
             </ListView.ItemTemplate>

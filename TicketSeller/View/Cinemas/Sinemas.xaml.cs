@@ -1,27 +1,12 @@
-using TicketSellerLib.DTO;
+using TicketSeller.ViewModel.Cinemas;
 
 namespace TicketSeller.View;
 
 public partial class Cinemas : ContentPage
 {
-	public Cinemas()
+	public Cinemas(CinemasViewModel viewModel)
 	{
 		InitializeComponent();
-
-		CinemasList.ItemsSource = new List<Cinema>
-		{
-			new Cinema
-			{
-				Id = 1,
-				Name = "Name1",
-				Address = "Address1"
-			},
-			new Cinema
-			{
-				Id = 2,
-				Name = "Name2",
-				Address = "Address2"
-			}
-		};
+		BindingContext = viewModel;
 	}
 }

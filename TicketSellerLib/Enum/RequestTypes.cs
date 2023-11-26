@@ -11,5 +11,9 @@
 		GetUsers,
 		UpsertUser,
 		DeleteUser,
+
+		GetCinemas,
+		UpsertCinema,
+		DeleteCinema,
 	}
 }

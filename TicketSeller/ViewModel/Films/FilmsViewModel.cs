@@ -10,9 +10,9 @@ namespace TicketSeller.ViewModel.Films
 	{
 		public ObservableCollection<Film> Films { get; private set; } = new();
 
-		private FilmServices service;
+		private FilmService service;
 
-		public FilmsViewModel(FilmServices service)
+		public FilmsViewModel(FilmService service)
 		{
 			Title = "Фильмы";
 			this.service = service;

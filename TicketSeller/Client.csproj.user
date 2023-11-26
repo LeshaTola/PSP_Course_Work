@@ -15,6 +15,9 @@
     <MauiXaml Update="View\Halls\AddHall.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
+    <MauiXaml Update="View\Halls\Halls.xaml">
+      <SubType>Designer</SubType>
+    </MauiXaml>
     <MauiXaml Update="View\Users\AddUser.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>

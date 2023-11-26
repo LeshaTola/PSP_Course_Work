@@ -1,19 +1,32 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:viewModel="clr-namespace:TicketSeller.ViewModel.Users"
-             x:DataType="viewModel:AddUserViewModel"
-             x:Class="TicketSeller.View.AddUser"
-             Title="{Binding Title}">
-    <VerticalStackLayout Spacing="20" VerticalOptions="Center" HorizontalOptions="CenterAndExpand">
-        <Label Text="Редактировать пользователя" FontAttributes="Bold" FontSize="Large"/>
-        <Entry Placeholder="Логин" Text="{Binding User.Login}"/>
-        <Entry Placeholder="Email" Text="{Binding User.Email}"/>
-        <Entry Placeholder="Пароль" Text="{Binding User.Password}"/>
+<ContentPage
+    x:Class="TicketSeller.View.AddUser"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:viewModel="clr-namespace:TicketSeller.ViewModel.Users"
+    Title="{Binding Title}"
+    x:DataType="viewModel:AddUserViewModel">
+    <VerticalStackLayout
+        HorizontalOptions="CenterAndExpand"
+        Spacing="20"
+        VerticalOptions="Center">
+        <Label
+            FontAttributes="Bold"
+            FontSize="Large"
+            Text="Редактировать пользователя" />
+        <Entry Placeholder="Логин" Text="{Binding User.Login}" />
+        <Entry Placeholder="Email" Text="{Binding User.Email}" />
+        <Entry Placeholder="Пароль" Text="{Binding User.Password}" />
         <HorizontalStackLayout Spacing="30">
-            <Label Text="ADMIN" VerticalOptions="Center" FontSize="20"/>
-            <CheckBox IsChecked="{Binding User.IsAdmin}"/>
+            <Label
+                FontSize="20"
+                Text="ADMIN"
+                VerticalOptions="Center" />
+            <CheckBox IsChecked="{Binding User.IsAdmin}" />
         </HorizontalStackLayout>
-        <Button Text = "Подтвердить" FontAttributes="Bold" Command="{Binding UpsertUserCommand}"/>
+        <Button
+            Command="{Binding UpsertUserCommand}"
+            FontAttributes="Bold"
+            Text="Подтвердить" />
     </VerticalStackLayout>
 </ContentPage>

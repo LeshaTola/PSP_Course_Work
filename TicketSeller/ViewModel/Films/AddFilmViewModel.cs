@@ -12,9 +12,9 @@ namespace TicketSeller.ViewModel.Films
 		[ObservableProperty] private Film film;
 		[ObservableProperty] private DateTime dummyDateTime = DateTime.Today;
 
-		private FilmServices service;
+		private FilmService service;
 
-		public AddFilmViewModel(FilmServices service)
+		public AddFilmViewModel(FilmService service)
 		{
 			Title = "Добавить";
 			this.service = service;

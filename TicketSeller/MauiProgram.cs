@@ -3,6 +3,7 @@ using Microsoft.Extensions.Logging;
 using TicketSeller.Services;
 using TicketSeller.View;
 using TicketSeller.ViewModel;
+using TicketSeller.ViewModel.Cinemas;
 using TicketSeller.ViewModel.Films;
 using TicketSeller.ViewModel.Users;
 
@@ -22,23 +23,37 @@ namespace TicketSeller
 				}).UseMauiCommunityToolkit();
 
 			builder.Services.AddSingleton<UserService>();
-			builder.Services.AddSingleton<FilmServices>();
+			builder.Services.AddSingleton<FilmService>();
+			builder.Services.AddSingleton<CinemaService>();
+
+			//#############################################################################################
 
 			builder.Services.AddSingleton<AdminViewModel>();
 			builder.Services.AddSingleton<AuthorizationViewModel>();
 			builder.Services.AddTransient<RegistrationViewModel>();
+
 			builder.Services.AddSingleton<FilmsViewModel>();
 			builder.Services.AddTransient<AddFilmViewModel>();
+
 			builder.Services.AddSingleton<UsersViewModel>();
 			builder.Services.AddTransient<AddUserViewModel>();
 
+			builder.Services.AddSingleton<CinemasViewModel>();
+			builder.Services.AddTransient<AddCinemaViewModel>();
+
+			//#############################################################################################
 			builder.Services.AddSingleton<Admin>();
 			builder.Services.AddSingleton<Authorization>();
 			builder.Services.AddTransient<Registration>();
+
 			builder.Services.AddSingleton<Films>();
 			builder.Services.AddTransient<AddFilm>();
+
 			builder.Services.AddSingleton<Users>();
 			builder.Services.AddTransient<AddUser>();
+
+			builder.Services.AddTransient<Cinemas>();
+			builder.Services.AddTransient<AddCinema>();
 
 #if DEBUG
 			builder.Logging.AddDebug();

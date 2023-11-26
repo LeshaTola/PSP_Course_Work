@@ -14,7 +14,7 @@ namespace TicketSeller.Model
 
 		public ApplicationContext()
 		{
-			/*Database.EnsureDeleted();*/
+			//Database.EnsureDeleted();
 			Database.EnsureCreated();
 		}
 

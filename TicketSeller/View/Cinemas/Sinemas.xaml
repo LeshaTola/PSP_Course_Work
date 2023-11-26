@@ -1,48 +1,86 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:model ="clr-namespace:TicketSellerLib.DTO;assembly=TicketSellerLib"
-             x:Class="TicketSeller.View.Cinemas"
-             Title="ShowCinemas">
-    
-    <VerticalStackLayout>
+<ContentPage
+    x:Class="TicketSeller.View.Cinemas"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:model="clr-namespace:TicketSellerLib.DTO;assembly=TicketSellerLib"
+    xmlns:viewModel="clr-namespace:TicketSeller.ViewModel.Cinemas"
+    Title="{Binding Title}"
+    x:DataType="viewModel:CinemasViewModel">
 
-        <ListView x:Name="CinemasList" Margin="20">
+    <Grid
+        ColumnDefinitions="*,*"
+        ColumnSpacing="10"
+        RowDefinitions="*,auto"
+        RowSpacing="4">
+        <ListView
+            Grid.ColumnSpan="2"
+            Margin="20"
+            ItemsSource="{Binding Cinemas}">
             <ListView.Header>
-                <StackLayout BackgroundColor = "{DynamicResource Primary}">
-                    <Label Margin="10,0,0,0"
-            Text="Cinemas"
-            FontSize="24"
-            FontAttributes="Bold" />
+                <StackLayout BackgroundColor="{DynamicResource Primary}">
+                    <Label
+                        Margin="10,0,0,0"
+                        FontAttributes="Bold"
+                        FontSize="24"
+                        Text="Cinemas" />
                 </StackLayout>
             </ListView.Header>
             <ListView.ItemTemplate>
                 <DataTemplate x:DataType="model:Cinema">
-                    <ViewCell>
-                        <VerticalStackLayout Padding="10">
-                            <HorizontalStackLayout Spacing="2">
-                                <Label Text="Id: " FontAttributes="Bold"/>
-                                <Label Text="{Binding Id}"/>
+                    <ViewCell Height="100">
+                        <Grid ColumnDefinitions="*,auto" ColumnSpacing="20">
+
+                            <VerticalStackLayout
+                                Grid.Column="0"
+                                Padding="10"
+                                HeightRequest="100">
+                                <Label Text="{Binding Id, StringFormat='Id: {0}'}" />
+                                <Label Text="{Binding Name, StringFormat='Название: {0}'}" />
+                                <Label Text="{Binding Address, StringFormat='Адресс: {0}'}" />
+
+                            </VerticalStackLayout>
+
+                            <HorizontalStackLayout Grid.Column="1" Spacing="20">
+                                <!--
+                                    Command="{Binding Source={RelativeSource AncestorType={x:Type viewModel:CinemaViewModel}}, Path=UpsertCinemaCommand}"
+                                    CommandParameter="{Binding .}"
+                                -->
+                                <Button
+                                    HeightRequest="75"
+                                    Text="Изменить"
+                                    WidthRequest="75" />
+
+
+                                <Button
+                                    Command="{Binding Source={RelativeSource AncestorType={x:Type viewModel:CinemasViewModel}}, Path=DeleteCinemaCommand}"
+                                    CommandParameter="{Binding Id}"
+                                    HeightRequest="75"
+                                    Text="Удалить"
+                                    WidthRequest="75" />
                             </HorizontalStackLayout>
 
-                            <HorizontalStackLayout Spacing="2">
-                                <Label Text="Name: " FontAttributes="Bold"/>
-                                <Label Text="{Binding Name}"/>
-                            </HorizontalStackLayout>
+                        </Grid>
 
-                            <HorizontalStackLayout Spacing="2">
-                                <Label Text="Address: " FontAttributes="Bold"/>
-                                <Label Text="{Binding Address}"/>
-                            </HorizontalStackLayout>
-                        </VerticalStackLayout>
                     </ViewCell>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
 
-        <HorizontalStackLayout Spacing="20" HorizontalOptions ="Center">
-            <Button Text="Add"  WidthRequest="100"/>
-            <Button Text="Delete" WidthRequest="100"/>
+        <HorizontalStackLayout
+            Grid.Row="2"
+            Grid.ColumnSpan="2"
+            HorizontalOptions="Center"
+            Spacing="20">
+            <Button
+                Command="{Binding UpsertCinemaCommand}"
+                CommandParameter="{x:Null}"
+                Text="Добавить"
+                WidthRequest="100" />
+            <Button
+                Command="{Binding LoadCinemasCommand}"
+                Text="Обновить"
+                WidthRequest="100" />
         </HorizontalStackLayout>
-    </VerticalStackLayout>
+    </Grid>
 </ContentPage>

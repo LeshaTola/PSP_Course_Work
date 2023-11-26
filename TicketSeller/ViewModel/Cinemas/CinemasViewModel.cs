@@ -6,7 +6,7 @@ using TicketSellerLib.DTO;
 
 namespace TicketSeller.ViewModel.Cinemas
 {
-	public partial class CinemasViewModel : BaseViewModel
+	public partial class CinemasViewModel : BaseViewModel, ICrudViewModel<Cinema>
 	{
 		public ObservableCollection<Cinema> Cinemas { get; private set; } = new();
 
@@ -16,11 +16,11 @@ namespace TicketSeller.ViewModel.Cinemas
 		{
 			Title = "Кинотеатры";
 			this.service = service;
-			_ = LoadCinemasAsync();
+			_ = LoadElementsAsync();
 		}
 
 		[RelayCommand]
-		public async Task LoadCinemasAsync()
+		public async Task LoadElementsAsync()
 		{
 			try
 			{
@@ -40,7 +40,7 @@ namespace TicketSeller.ViewModel.Cinemas
 			}
 		}
 
-		private async Task GoToAddCinemaPageAsync(Cinema cinema)
+		public async Task GoToAddElementPageAsync(Cinema cinema)
 		{
 			await Shell.Current.GoToAsync($"{nameof(AddCinema)}", true, new Dictionary<string, object>
 			{
@@ -49,7 +49,7 @@ namespace TicketSeller.ViewModel.Cinemas
 		}
 
 		[RelayCommand]
-		private async Task UpsertCinemaAsync(Cinema cinema)
+		public async Task UpsertElementAsync(Cinema cinema)
 		{
 			if (IsBusy) return;
 
@@ -58,7 +58,7 @@ namespace TicketSeller.ViewModel.Cinemas
 				IsBusy = true;
 
 				cinema ??= new();
-				await GoToAddCinemaPageAsync(cinema);
+				await GoToAddElementPageAsync(cinema);
 			}
 			catch (Exception ex)
 			{
@@ -72,7 +72,7 @@ namespace TicketSeller.ViewModel.Cinemas
 
 
 		[RelayCommand]
-		private async Task DeleteCinemaAsync(int id)
+		public async Task DeleteElementAsync(int id)
 		{
 			if (IsBusy) return;
 
@@ -80,7 +80,7 @@ namespace TicketSeller.ViewModel.Cinemas
 			{
 				IsBusy = true;
 				var response = await service.DeleteAsync(id);
-				await LoadCinemasAsync();
+				await LoadElementsAsync();
 			}
 			catch (Exception ex)
 			{

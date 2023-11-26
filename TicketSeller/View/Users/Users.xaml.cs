@@ -10,4 +10,9 @@ public partial class Users : ContentPage
 
 		BindingContext = viewModel;
 	}
+
+	private void ContentPage_NavigatedTo(object sender, NavigatedToEventArgs e)
+	{
+
+	}
 }

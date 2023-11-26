@@ -9,7 +9,7 @@ namespace Server.DAO
 		{
 			using (ApplicationContext db = new ApplicationContext())
 			{
-				var ticket = Get(item.Id);
+				/*var ticket = Get(item.Id);
 				if (ticket != null)
 				{
 					db.Tickets.Update(item);
@@ -17,7 +17,9 @@ namespace Server.DAO
 				else
 				{
 					db.Tickets.Add(item);
-				}
+				}*/
+				db.Tickets.Update(item);
+
 				db.SaveChanges();
 			}
 		}

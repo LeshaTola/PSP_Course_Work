@@ -6,7 +6,7 @@ using TicketSellerLib.DTO;
 
 namespace TicketSeller.ViewModel.Users
 {
-	public partial class UsersViewModel : BaseViewModel
+	public partial class UsersViewModel : BaseViewModel, ICrudViewModel<User>
 	{
 		public ObservableCollection<User> Users { get; private set; } = new();
 
@@ -16,11 +16,11 @@ namespace TicketSeller.ViewModel.Users
 		{
 			Title = "Пользователи";
 			this.service = service;
-			_ = LoadUsersAsync();
+			_ = LoadElementsAsync();
 		}
 
 		[RelayCommand]
-		public async Task LoadUsersAsync()
+		public async Task LoadElementsAsync()
 		{
 			try
 			{
@@ -40,7 +40,7 @@ namespace TicketSeller.ViewModel.Users
 			}
 		}
 
-		private async Task GoToAddUsersPageAsync(User user)
+		public async Task GoToAddElementPageAsync(User user)
 		{
 			await Shell.Current.GoToAsync($"{nameof(AddUser)}", true, new Dictionary<string, object>
 			{
@@ -49,7 +49,7 @@ namespace TicketSeller.ViewModel.Users
 		}
 
 		[RelayCommand]
-		private async Task UpsertUserAsync(User user)
+		public async Task UpsertElementAsync(User user)
 		{
 			if (IsBusy) return;
 
@@ -58,8 +58,8 @@ namespace TicketSeller.ViewModel.Users
 				IsBusy = true;
 
 				user ??= new();
-				await GoToAddUsersPageAsync(user);
-				await LoadUsersAsync();
+				await GoToAddElementPageAsync(user);
+				await LoadElementsAsync();
 			}
 			catch (Exception ex)
 			{
@@ -73,7 +73,7 @@ namespace TicketSeller.ViewModel.Users
 
 
 		[RelayCommand]
-		private async Task DeleteUserAsync(int id)
+		public async Task DeleteElementAsync(int id)
 		{
 			if (IsBusy) return;
 
@@ -81,7 +81,7 @@ namespace TicketSeller.ViewModel.Users
 			{
 				IsBusy = true;
 				var response = await service.DeleteAsync(id);
-				await LoadUsersAsync();
+				await LoadElementsAsync();
 			}
 			catch (Exception ex)
 			{

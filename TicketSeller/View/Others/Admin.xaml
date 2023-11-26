@@ -18,6 +18,7 @@
             Text="Кинотеатры"
             WidthRequest="200" />
         <Button
+            Command="{Binding GoToHallsPageCommand}"
             FontAttributes="Bold"
             Text="Залы"
             WidthRequest="200" />

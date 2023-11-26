@@ -1,9 +1,9 @@
-using TicketSeller.ViewModel.Cinemas;
+using TicketSeller.ViewModel.Users;
 
 namespace TicketSeller.View;
 public partial class AddUser : ContentPage
 {
-	public AddUser(AddCinemaViewModel viewModel)
+	public AddUser(AddUserViewModel viewModel)
 	{
 		InitializeComponent();
 		BindingContext = viewModel;

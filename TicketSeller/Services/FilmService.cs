@@ -6,7 +6,7 @@ using TicketSellerLib.TCP;
 
 namespace TicketSeller.Services
 {
-	public class FilmService
+	public class FilmService : IClientService<Film>
 	{
 		public async Task<List<Film>> GetAllAsync()
 		{

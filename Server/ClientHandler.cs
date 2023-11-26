@@ -45,6 +45,7 @@ namespace Server
 						case RequestTypes.Login:
 							Login(request.Message);
 							break;
+
 						case RequestTypes.GetFilms:
 							GetAllFilms();
 							break;
@@ -54,6 +55,7 @@ namespace Server
 						case RequestTypes.DeleteFilm:
 							DeleteFilm(request.Message);
 							break;
+
 						case RequestTypes.GetUsers:
 							GetAllUsers();
 							break;
@@ -63,6 +65,7 @@ namespace Server
 						case RequestTypes.DeleteUser:
 							DeleteUser(request.Message);
 							break;
+
 						case RequestTypes.GetCinemas:
 							GetAllCinemas();
 							break;
@@ -72,6 +75,31 @@ namespace Server
 						case RequestTypes.DeleteCinema:
 							DeleteCinema(request.Message);
 							break;
+
+						case RequestTypes.GetHalls:
+							GetAllHalls();
+							break;
+						case RequestTypes.UpsertHall:
+							UpsertHall(request.Message);
+							break;
+						case RequestTypes.DeleteHall:
+							DeleteHall(request.Message);
+							break;
+
+						case RequestTypes.GetSessions:
+							break;
+						case RequestTypes.UpsertSession:
+							break;
+						case RequestTypes.DeleteSession:
+							break;
+
+						case RequestTypes.GetTickets:
+							break;
+						case RequestTypes.UpsertTicket:
+							break;
+						case RequestTypes.DeleteTicket:
+							break;
+
 						default:
 							Console.WriteLine("Unknown request type");
 							break;
@@ -200,7 +228,6 @@ namespace Server
 			SendResponseAsync(response);
 		}
 
-
 		private void GetAllCinemas()
 		{
 			var Cinemas = cinemaService.GetAll();
@@ -223,6 +250,32 @@ namespace Server
 			var cinema = cinemaService.Get(int.Parse(requestMessage));
 
 			cinemaService.Remove(cinema);
+			Response response = new Response(ResponseTypes.Ok, "Пользователь успешно удален");
+			SendResponseAsync(response);
+		}
+
+		private void GetAllHalls()
+		{
+			var halls = hallService.GetAll();
+			string data = JsonConvert.SerializeObject(halls);
+			Response response = new Response(ResponseTypes.Ok, "", data);
+			SendResponseAsync(response);
+		}
+		private void UpsertHall(string requestMessage)
+		{
+			var requestHall = JsonConvert.DeserializeObject<Hall>(requestMessage);
+
+			hallService.Upsert(requestHall);
+			Response response = new Response(ResponseTypes.Ok, "Успешно");
+
+			SendResponseAsync(response);
+		}
+
+		private void DeleteHall(string requestMessage)
+		{
+			var hall = hallService.Get(int.Parse(requestMessage));
+
+			hallService.Remove(hall);
 			Response response = new Response(ResponseTypes.Ok, "Пользователь успешно удален");
 			SendResponseAsync(response);
 		}

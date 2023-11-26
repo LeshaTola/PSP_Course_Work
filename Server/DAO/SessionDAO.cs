@@ -9,7 +9,7 @@ namespace Server.DAO
 		{
 			using (ApplicationContext db = new ApplicationContext())
 			{
-				var session = Get(item.Id);
+				/*var session = Get(item.Id);
 				if (session != null)
 				{
 					db.Sessions.Update(item);
@@ -17,7 +17,9 @@ namespace Server.DAO
 				else
 				{
 					db.Sessions.Add(item);
-				}
+				}*/
+
+				db.Sessions.Update(item);
 				db.SaveChanges();
 			}
 		}

@@ -1,4 +1,5 @@
 ﻿using CommunityToolkit.Mvvm.Input;
+using TicketSeller.View;
 
 namespace TicketSeller.ViewModel
 {
@@ -57,6 +58,26 @@ namespace TicketSeller.ViewModel
 			{
 				IsBusy = true;
 				await Shell.Current.GoToAsync($"{nameof(Cinemas)}", true);
+
+			}
+			catch (Exception ex)
+			{
+				await Shell.Current.DisplayAlert("Ошибка!", ex.Message, "Хорошо");
+			}
+			finally
+			{
+				IsBusy = false;
+			}
+		}
+
+		[RelayCommand]
+		private async Task GoToHallsPageAsync()
+		{
+			if (IsBusy) return;
+			try
+			{
+				IsBusy = true;
+				await Shell.Current.GoToAsync($"{nameof(Halls)}", true);
 
 			}
 			catch (Exception ex)

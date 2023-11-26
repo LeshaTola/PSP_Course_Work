@@ -29,7 +29,7 @@
             Placeholder="Цена"
             Text="{Binding Film.Cost}" />
 
-        <HorizontalStackLayout>
+        <!--<HorizontalStackLayout>
             <Label Text="Дата начала" VerticalTextAlignment="Center" />
             <DatePicker Date="{Binding DummyDateTime}" MinimumDate="{x:Static sys:DateTime.Today}" />
         </HorizontalStackLayout>
@@ -37,7 +37,7 @@
         <HorizontalStackLayout>
             <Label Text="Время начала" VerticalTextAlignment="Center" />
             <TimePicker Time="{Binding Film.Time}" />
-        </HorizontalStackLayout>
+        </HorizontalStackLayout>-->
 
         <Button
             Command="{Binding UpsertFilmCommand}"

@@ -53,7 +53,7 @@
 
 
                                 <Button
-                                    Command="{Binding Source={RelativeSource AncestorType={x:Type viewModel:CinemasViewModel}}, Path=DeleteCinemaCommand}"
+                                    Command="{Binding Source={RelativeSource AncestorType={x:Type viewModel:CinemasViewModel}}, Path=DeleteElementCommand}"
                                     CommandParameter="{Binding Id}"
                                     HeightRequest="75"
                                     Text="Удалить"
@@ -73,12 +73,12 @@
             HorizontalOptions="Center"
             Spacing="20">
             <Button
-                Command="{Binding UpsertCinemaCommand}"
+                Command="{Binding UpsertElementCommand}"
                 CommandParameter="{x:Null}"
                 Text="Добавить"
                 WidthRequest="100" />
             <Button
-                Command="{Binding LoadCinemasCommand}"
+                Command="{Binding LoadElementsCommand}"
                 Text="Обновить"
                 WidthRequest="100" />
         </HorizontalStackLayout>

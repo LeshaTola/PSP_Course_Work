@@ -6,7 +6,7 @@ using TicketSellerLib.DTO;
 
 namespace TicketSeller.ViewModel.Films
 {
-	public partial class FilmsViewModel : BaseViewModel
+	public partial class FilmsViewModel : BaseViewModel, ICrudViewModel<Film>
 	{
 		public ObservableCollection<Film> Films { get; private set; } = new();
 
@@ -16,10 +16,11 @@ namespace TicketSeller.ViewModel.Films
 		{
 			Title = "Фильмы";
 			this.service = service;
-			LoadFilms();
+			_ = LoadElementsAsync();
 		}
 
-		public async void LoadFilms()
+		[RelayCommand]
+		public async Task LoadElementsAsync()
 		{
 			List<Film> films = await service.GetAllAsync();
 
@@ -35,21 +36,40 @@ namespace TicketSeller.ViewModel.Films
 		}
 
 		[RelayCommand]
-		private async Task GoToAddFilmPageAsync(Film film)
+		public async Task UpsertElementAsync(Film element)
 		{
-			film = film ??= new();
+			if (IsBusy) return;
+
+			try
+			{
+				IsBusy = true;
+
+				element ??= new();
+				await GoToAddElementPageAsync(element);
+			}
+			catch (Exception ex)
+			{
+				await Shell.Current.DisplayAlert("Ошибка!", ex.Message, "Хорошо");
+			}
+			finally
+			{
+				IsBusy = false;
+			}
+		}
+
+		public async Task GoToAddElementPageAsync(Film film)
+		{
 			await Shell.Current.GoToAsync($"{nameof(AddFilm)}", true, new Dictionary<string, object>
 			{
 				{"Film", film}
 			});
-			LoadFilms();
 		}
 
 		[RelayCommand]
-		private async Task DeleteFilmAsync(int id)
+		public async Task DeleteElementAsync(int id)
 		{
 			await service.DeleteAsync(id);
-			LoadFilms();
+			await LoadElementsAsync();
 		}
 	}
 }

@@ -6,7 +6,7 @@ using TicketSellerLib.TCP;
 
 namespace TicketSeller.Services
 {
-	public class UserService
+	public class UserService : IClientService<User>
 	{
 		public async Task<Response> AuthorizeAsync(User user)
 		{

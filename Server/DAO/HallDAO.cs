@@ -9,7 +9,7 @@ namespace Server.DAO
 		{
 			using (ApplicationContext db = new ApplicationContext())
 			{
-				var hall = Get(item.Id);
+				/*var hall = Get(item.Id);
 				if (hall != null)
 				{
 					db.Halls.Update(item);
@@ -17,7 +17,9 @@ namespace Server.DAO
 				else
 				{
 					db.Halls.Add(item);
-				}
+				}*/
+				db.Halls.Update(item);
+
 				db.SaveChanges();
 			}
 		}

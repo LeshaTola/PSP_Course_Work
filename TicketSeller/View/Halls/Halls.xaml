@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="TicketSeller.View.Halls"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:model="clr-namespace:TicketSellerLib.DTO;assembly=TicketSellerLib"
+    xmlns:viewModel="clr-namespace:TicketSeller.ViewModel.Halls"
+    Title="{Binding Title}"
+    x:DataType="viewModel:HallsViewModel">
+
+    <Grid
+        ColumnDefinitions="*,*"
+        ColumnSpacing="10"
+        RowDefinitions="*,auto"
+        RowSpacing="4">
+        <ListView
+            Grid.ColumnSpan="2"
+            Margin="20"
+            ItemsSource="{Binding Halls}">
+            <ListView.Header>
+                <StackLayout BackgroundColor="{DynamicResource Primary}">
+                    <Label
+                        Margin="10,0,0,0"
+                        FontAttributes="Bold"
+                        FontSize="24"
+                        Text="Залы" />
+                </StackLayout>
+            </ListView.Header>
+            <ListView.ItemTemplate>
+                <DataTemplate x:DataType="model:Hall">
+                    <ViewCell Height="100">
+                        <Grid ColumnDefinitions="*,auto" ColumnSpacing="20">
+
+                            <VerticalStackLayout
+                                Grid.Column="0"
+                                Padding="10"
+                                HeightRequest="100">
+                                <Label Text="{Binding Id, StringFormat='Id: {0}'}" />
+                                <Label Text="{Binding Rows, StringFormat='Рядов: {0}'}" />
+                                <Label Text="{Binding Columns, StringFormat='Мест: {0}'}" />
+                                <Label Text="{Binding Cinema.Name, StringFormat='Кинотеатр: {0}'}" />
+
+                            </VerticalStackLayout>
+
+                            <HorizontalStackLayout Grid.Column="1" Spacing="20">
+                                <!--
+                                    Command="{Binding Source={RelativeSource AncestorType={x:Type viewModel:CinemaViewModel}}, Path=UpsertCinemaCommand}"
+                                    CommandParameter="{Binding .}"
+                                -->
+                                <Button
+                                    HeightRequest="75"
+                                    Text="Изменить"
+                                    WidthRequest="75" />
+
+
+                                <Button
+                                    Command="{Binding Source={RelativeSource AncestorType={x:Type viewModel:HallsViewModel}}, Path=DeleteElementCommand}"
+                                    CommandParameter="{Binding Id}"
+                                    HeightRequest="75"
+                                    Text="Удалить"
+                                    WidthRequest="75" />
+                            </HorizontalStackLayout>
+
+                        </Grid>
+
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+        <HorizontalStackLayout
+            Grid.Row="2"
+            Grid.ColumnSpan="2"
+            HorizontalOptions="Center"
+            Spacing="20">
+            <Button
+                Command="{Binding UpsertElementCommand}"
+                CommandParameter="{x:Null}"
+                Text="Добавить"
+                WidthRequest="100" />
+            <Button
+                Command="{Binding LoadElementsCommand}"
+                Text="Обновить"
+                WidthRequest="100" />
+        </HorizontalStackLayout>
+    </Grid>
+</ContentPage>

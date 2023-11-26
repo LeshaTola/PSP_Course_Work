@@ -76,6 +76,9 @@
 	  <MauiXaml Update="View\Halls\Halls.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="View\Tickets\Sessions.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="View\Users\AddUser.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
@@ -122,7 +125,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Folder Include="ViewModel\Halls\" />
+	  <Folder Include="ViewModel\Sessions\" />
+	  <Folder Include="ViewModel\Tickets\" />
+	  <Folder Include="View\Sessions\" />
 	</ItemGroup>
 
 	<!-- Build Properties must be defined within these property groups to ensure successful publishing

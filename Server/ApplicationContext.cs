@@ -20,7 +20,8 @@ namespace TicketSeller.Model
 
 		protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 		{
-			optionsBuilder.UseNpgsql("Host=localhost;Port=8888;Database=TicketSaleDB;Username=postgres;Password=admin");
+			optionsBuilder.UseNpgsql("Host=localhost;Port=8888;Database=TicketSaleDB;Username=postgres;Password=postgres;IncludeErrorDetail=True;")
+				.EnableDetailedErrors();
 		}
 	}
 }

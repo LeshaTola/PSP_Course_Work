@@ -15,5 +15,17 @@
 		GetCinemas,
 		UpsertCinema,
 		DeleteCinema,
+
+		GetHalls,
+		UpsertHall,
+		DeleteHall,
+
+		GetSessions,
+		UpsertSession,
+		DeleteSession,
+
+		GetTickets,
+		UpsertTicket,
+		DeleteTicket,
 	}
 }

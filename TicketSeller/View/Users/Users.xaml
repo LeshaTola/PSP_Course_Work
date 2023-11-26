@@ -53,7 +53,7 @@
                                     WidthRequest="75" />
 
                                 <Button
-                                    Command="{Binding Source={RelativeSource AncestorType={x:Type viewModel:UsersViewModel}}, Path=DeleteUserCommand}"
+                                    Command="{Binding Source={RelativeSource AncestorType={x:Type viewModel:UsersViewModel}}, Path=DeleteElementCommand}"
                                     CommandParameter="{Binding Id}"
                                     HeightRequest="75"
                                     Text="Удалить"
@@ -71,12 +71,12 @@
             HorizontalOptions="Center"
             Spacing="20">
             <Button
-                Command="{Binding UpsertUserCommand}"
+                Command="{Binding UpsertElementCommand}"
                 CommandParameter="{x:Null}"
                 Text="Добавить"
                 WidthRequest="100" />
             <Button
-                Command="{Binding LoadUsersCommand}"
+                Command="{Binding LoadElementsCommand}"
                 Text="Обновить"
                 WidthRequest="100" />
         </HorizontalStackLayout>

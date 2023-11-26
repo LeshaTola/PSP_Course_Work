@@ -108,5 +108,25 @@ namespace TicketSeller.ViewModel
 				IsBusy = false;
 			}
 		}
+
+		[RelayCommand]
+		private async Task GoToTicketsPageAsync()
+		{
+			if (IsBusy) return;
+			try
+			{
+				IsBusy = true;
+				await Shell.Current.GoToAsync($"{nameof(Tickets)}", true);
+
+			}
+			catch (Exception ex)
+			{
+				await Shell.Current.DisplayAlert("Ошибка!", ex.Message, "Хорошо");
+			}
+			finally
+			{
+				IsBusy = false;
+			}
+		}
 	}
 }

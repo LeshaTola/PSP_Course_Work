@@ -82,6 +82,12 @@
 	  <MauiXaml Update="View\Sessions\Sessions.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="View\Tickets\AddTicket.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="View\Tickets\Tickets.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="View\Users\AddUser.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
@@ -122,14 +128,15 @@
 	  <Compile Update="View\Others\Admin.xaml.cs">
 	    <DependentUpon>Admin.xaml</DependentUpon>
 	  </Compile>
+	  <Compile Update="View\Tickets\AddTicket.xaml.cs">
+	    <DependentUpon>AddTicket.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="View\Tickets\Tickets.xaml.cs">
+	    <DependentUpon>Tickets.xaml</DependentUpon>
+	  </Compile>
 	  <Compile Update="View\Users\Users.xaml.cs">
 	    <DependentUpon>Users.xaml</DependentUpon>
 	  </Compile>
-	</ItemGroup>
-
-	<ItemGroup>
-	  <Folder Include="ViewModel\Tickets\" />
-	  <Folder Include="View\Tickets\" />
 	</ItemGroup>
 
 	<!-- Build Properties must be defined within these property groups to ensure successful publishing

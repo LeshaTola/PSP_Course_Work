@@ -32,5 +32,14 @@
             FontAttributes="Bold"
             Text="Сеансы"
             WidthRequest="200" />
+        <Button
+            Command="{Binding GoToTicketsPageCommand}"
+            FontAttributes="Bold"
+            Text="Билеты"
+            WidthRequest="200" />
+        <Button
+            FontAttributes="Bold"
+            Text="Меню пользователя"
+            WidthRequest="200" />
     </VerticalStackLayout>
 </ContentPage>

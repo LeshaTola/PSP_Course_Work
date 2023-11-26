@@ -7,6 +7,7 @@ using TicketSeller.ViewModel.Cinemas;
 using TicketSeller.ViewModel.Films;
 using TicketSeller.ViewModel.Halls;
 using TicketSeller.ViewModel.Sessions;
+using TicketSeller.ViewModel.Tickets;
 using TicketSeller.ViewModel.Users;
 
 namespace TicketSeller
@@ -52,6 +53,9 @@ namespace TicketSeller
 			builder.Services.AddSingleton<SessionsViewModel>();
 			builder.Services.AddTransient<AddSessionViewModel>();
 
+			builder.Services.AddSingleton<TicketsViewModel>();
+			builder.Services.AddTransient<AddTicketViewModel>();
+
 			//#############################################################################################
 			builder.Services.AddSingleton<Admin>();
 			builder.Services.AddSingleton<Authorization>();
@@ -72,6 +76,9 @@ namespace TicketSeller
 
 			builder.Services.AddSingleton<Sessions>();
 			builder.Services.AddTransient<AddSession>();
+
+			builder.Services.AddSingleton<Tickets>();
+			builder.Services.AddTransient<AddTicket>();
 
 #if DEBUG
 			builder.Logging.AddDebug();

@@ -4,17 +4,17 @@ using TicketSeller.Services;
 using TicketSeller.View;
 using TicketSellerLib.DTO;
 
-namespace TicketSeller.ViewModel.Sessions
+namespace TicketSeller.ViewModel.Tickets
 {
-	public partial class SessionsViewModel : BaseViewModel, ICrudViewModel<Session>
+	public partial class TicketsViewModel : BaseViewModel, ICrudViewModel<Ticket>
 	{
-		public ObservableCollection<Session> Sessions { get; private set; } = new();
+		public ObservableCollection<Ticket> Tickets { get; private set; } = new();
 
-		private SessionService service;
+		private TicketService service;
 
-		public SessionsViewModel(SessionService service)
+		public TicketsViewModel(TicketService service)
 		{
-			Title = "Сеансы";
+			Title = "Билеты";
 			this.service = service;
 			_ = LoadElementsAsync();
 		}
@@ -42,32 +42,32 @@ namespace TicketSeller.ViewModel.Sessions
 		}
 
 		[RelayCommand]
-		public async Task GoToAddElementPageAsync(Session element)
+		public async Task GoToAddElementPageAsync(Ticket element)
 		{
 			await Shell.Current.GoToAsync($"{nameof(AddTicket)}", true, new Dictionary<string, object>
 			{
-				{"Session", element}
+				{"Ticket", element}
 			});
 		}
 
 		[RelayCommand]
 		public async Task LoadElementsAsync()
 		{
-			List<Session> sessions = await service.GetAllAsync();
+			List<Ticket> tickets = await service.GetAllAsync();
 
-			if (sessions.Count == 0)
+			if (tickets.Count == 0)
 				return;
 
 
-			Sessions.Clear();
-			foreach (Session session in sessions)
+			Tickets.Clear();
+			foreach (Ticket ticket in tickets)
 			{
-				Sessions.Add(session);
+				Tickets.Add(ticket);
 			}
 		}
 
 		[RelayCommand]
-		public async Task UpsertElementAsync(Session element)
+		public async Task UpsertElementAsync(Ticket element)
 		{
 			if (IsBusy) return;
 

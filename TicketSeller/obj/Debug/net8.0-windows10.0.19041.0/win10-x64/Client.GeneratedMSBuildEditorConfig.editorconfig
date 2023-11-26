@@ -108,6 +108,18 @@ build_metadata.AdditionalFiles.ManifestResourceName = TicketSeller.View.Sessions
 build_metadata.AdditionalFiles.TargetPath = View\Sessions\Sessions.xaml
 build_metadata.AdditionalFiles.RelativePath = View\Sessions\Sessions.xaml
 
+[D:/University/3 course/PSP/CourseWork/TicketSeller/TicketSeller/View/Tickets/AddTicket.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = TicketSeller.View.Tickets.AddTicket.xaml
+build_metadata.AdditionalFiles.TargetPath = View\Tickets\AddTicket.xaml
+build_metadata.AdditionalFiles.RelativePath = View\Tickets\AddTicket.xaml
+
+[D:/University/3 course/PSP/CourseWork/TicketSeller/TicketSeller/View/Tickets/Tickets.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = TicketSeller.View.Tickets.Tickets.xaml
+build_metadata.AdditionalFiles.TargetPath = View\Tickets\Tickets.xaml
+build_metadata.AdditionalFiles.RelativePath = View\Tickets\Tickets.xaml
+
 [D:/University/3 course/PSP/CourseWork/TicketSeller/TicketSeller/View/Users/AddUser.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = TicketSeller.View.Users.AddUser.xaml

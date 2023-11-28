@@ -2,9 +2,9 @@ using TicketSeller.ViewModel.Tickets;
 
 namespace TicketSeller.View;
 
-public partial class AddCinema : ContentPage
+public partial class AddTicket : ContentPage
 {
-	public AddCinema(AddTicketViewModel viewModel)
+	public AddTicket(AddTicketViewModel viewModel)
 	{
 		InitializeComponent();
 		BindingContext = viewModel;

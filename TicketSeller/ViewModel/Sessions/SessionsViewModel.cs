@@ -44,7 +44,7 @@ namespace TicketSeller.ViewModel.Sessions
 		[RelayCommand]
 		public async Task GoToAddElementPageAsync(Session element)
 		{
-			await Shell.Current.GoToAsync($"{nameof(AddTicket)}", true, new Dictionary<string, object>
+			await Shell.Current.GoToAsync($"{nameof(AddSession)}", true, new Dictionary<string, object>
 			{
 				{"Session", element}
 			});

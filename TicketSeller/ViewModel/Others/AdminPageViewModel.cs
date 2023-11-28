@@ -1,4 +1,5 @@
 ﻿using CommunityToolkit.Mvvm.Input;
+using TicketSeller.View.Others.UserOthers;
 
 namespace TicketSeller.ViewModel
 {
@@ -7,6 +8,26 @@ namespace TicketSeller.ViewModel
 		public AdminViewModel()
 		{
 			Title = "Панель администратора";
+		}
+
+		[RelayCommand]
+		private async Task GoToUserPageAsync()
+		{
+			if (IsBusy) return;
+			try
+			{
+				IsBusy = true;
+				await Shell.Current.GoToAsync($"{nameof(UserPanel)}", true);
+
+			}
+			catch (Exception ex)
+			{
+				await Shell.Current.DisplayAlert("Ошибка!", ex.Message, "Хорошо");
+			}
+			finally
+			{
+				IsBusy = false;
+			}
 		}
 
 		[RelayCommand]

@@ -3,6 +3,7 @@ using CommunityToolkit.Mvvm.Input;
 using Newtonsoft.Json;
 using TicketSeller.Services;
 using TicketSeller.View;
+using TicketSeller.View.Others.UserOthers;
 using TicketSellerLib.DTO;
 using TicketSellerLib.Enum;
 
@@ -39,7 +40,7 @@ namespace TicketSeller.ViewModel
 			}
 			else
 			{
-				await Shell.Current.GoToAsync($"{nameof(Films)}", true, new Dictionary<string, object>
+				await Shell.Current.GoToAsync($"{nameof(UserPanel)}", true, new Dictionary<string, object>
 				{
 					{"user", User}
 				});
@@ -69,6 +70,7 @@ namespace TicketSeller.ViewModel
 					if (response.Type == ResponseTypes.Ok)
 					{
 						User responseUser = JsonConvert.DeserializeObject<User>(response.Data);
+						Client.Client.Instance.CurrentUser = responseUser;
 						await GoToMainPageAsync(responseUser);
 					}
 					else

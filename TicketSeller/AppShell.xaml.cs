@@ -1,4 +1,5 @@
 ﻿using TicketSeller.View;
+using TicketSeller.View.Others.UserOthers;
 
 namespace TicketSeller
 {
@@ -9,6 +10,9 @@ namespace TicketSeller
 			InitializeComponent();
 
 			Routing.RegisterRoute(nameof(Admin), typeof(Admin));
+			Routing.RegisterRoute(nameof(UserPanel), typeof(UserPanel));
+			Routing.RegisterRoute(nameof(EditUserForUser), typeof(EditUserForUser));
+			Routing.RegisterRoute(nameof(AboutMe), typeof(AboutMe));
 			Routing.RegisterRoute(nameof(Registration), typeof(Registration));
 
 			Routing.RegisterRoute(nameof(AddFilm), typeof(AddFilm));

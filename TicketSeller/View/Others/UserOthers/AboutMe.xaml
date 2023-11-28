@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="TicketSeller.View.Others.UserOthers.AboutMe"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:viewModel="clr-namespace:TicketSeller.ViewModel.UserOthers"
+    Title="{Binding Title}"
+    x:DataType="viewModel:AboutMeViewModel">
+    <VerticalStackLayout
+        HorizontalOptions="CenterAndExpand"
+        Spacing="10"
+        VerticalOptions="CenterAndExpand"
+        WidthRequest="200">
+        <Label Text="{Binding Me.Login, StringFormat='Login: {0}'}" />
+        <Label Text="{Binding Me.Password, StringFormat='Password: {0}'}" />
+        <Label Text="{Binding Me.Email, StringFormat='Email: {0}'}" />
+        <Label Text="{Binding Me.IsAdmin, StringFormat='IsAdmin: {0}'}" />
+        <Button Command="{Binding UpsertElementCommand}" Text="Изменить" />
+    </VerticalStackLayout>
+</ContentPage>

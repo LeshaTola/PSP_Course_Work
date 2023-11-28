@@ -1,5 +1,6 @@
 ﻿using Newtonsoft.Json;
 using System.Net.Sockets;
+using TicketSellerLib.DTO;
 using TicketSellerLib.TCP;
 
 namespace TicketSeller.Client
@@ -24,6 +25,8 @@ namespace TicketSeller.Client
 			}
 			set => instance = value;
 		}// TODO: incorrect
+
+		public User CurrentUser { get; set; }
 
 		public Client(string hostName, int port)
 		{

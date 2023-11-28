@@ -2,12 +2,14 @@
 using Microsoft.Extensions.Logging;
 using TicketSeller.Services;
 using TicketSeller.View;
+using TicketSeller.View.Others.UserOthers;
 using TicketSeller.ViewModel;
 using TicketSeller.ViewModel.Cinemas;
 using TicketSeller.ViewModel.Films;
 using TicketSeller.ViewModel.Halls;
 using TicketSeller.ViewModel.Sessions;
 using TicketSeller.ViewModel.Tickets;
+using TicketSeller.ViewModel.UserOthers;
 using TicketSeller.ViewModel.Users;
 
 namespace TicketSeller
@@ -35,6 +37,9 @@ namespace TicketSeller
 			//#############################################################################################
 
 			builder.Services.AddSingleton<AdminViewModel>();
+			builder.Services.AddSingleton<UserViewModel>();
+			builder.Services.AddTransient<EditUserForUserViewModel>();
+			builder.Services.AddTransient<AboutMeViewModel>();
 			builder.Services.AddSingleton<AuthorizationViewModel>();
 			builder.Services.AddTransient<RegistrationViewModel>();
 
@@ -58,6 +63,9 @@ namespace TicketSeller
 
 			//#############################################################################################
 			builder.Services.AddSingleton<Admin>();
+			builder.Services.AddSingleton<UserPanel>();
+			builder.Services.AddTransient<AboutMe>();
+			builder.Services.AddTransient<EditUserForUser>();
 			builder.Services.AddSingleton<Authorization>();
 			builder.Services.AddTransient<Registration>();
 

@@ -76,6 +76,15 @@
 	  <MauiXaml Update="View\Halls\Halls.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="View\Others\UserOthers\AboutMe.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="View\Others\UserOthers\EditUserForUser.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="View\Others\UserOthers\UserPanel.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="View\Sessions\AddSession.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
@@ -127,6 +136,15 @@
 	  </Compile>
 	  <Compile Update="View\Others\Admin.xaml.cs">
 	    <DependentUpon>Admin.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="View\Others\UserOthers\AboutMe.xaml.cs">
+	    <DependentUpon>AboutMe.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="View\Others\UserOthers\EditUserForUser.xaml.cs">
+	    <DependentUpon>EditUserForUser.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="View\Others\UserOthers\UserPanel.xaml.cs">
+	    <DependentUpon>UserPanel.xaml</DependentUpon>
 	  </Compile>
 	  <Compile Update="View\Tickets\AddTicket.xaml.cs">
 	    <DependentUpon>AddTicket.xaml</DependentUpon>

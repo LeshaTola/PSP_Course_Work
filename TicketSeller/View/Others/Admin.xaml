@@ -6,6 +6,7 @@
     xmlns:viewModel="clr-namespace:TicketSeller.ViewModel"
     Title="{Binding Title}"
     x:DataType="viewModel:AdminViewModel">
+
     <VerticalStackLayout Spacing="10" VerticalOptions="CenterAndExpand">
         <Button
             Command="{Binding GoToUsersPageCommand}"
@@ -38,6 +39,7 @@
             Text="Билеты"
             WidthRequest="200" />
         <Button
+            Command="{Binding GoToUserPageCommand}"
             FontAttributes="Bold"
             Text="Меню пользователя"
             WidthRequest="200" />

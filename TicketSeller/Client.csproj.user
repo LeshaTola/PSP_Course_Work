@@ -18,6 +18,15 @@
     <MauiXaml Update="View\Halls\Halls.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
+    <MauiXaml Update="View\Others\UserOthers\AboutMe.xaml">
+      <SubType>Designer</SubType>
+    </MauiXaml>
+    <MauiXaml Update="View\Others\UserOthers\EditUserForUser.xaml">
+      <SubType>Designer</SubType>
+    </MauiXaml>
+    <MauiXaml Update="View\Others\UserOthers\UserPanel.xaml">
+      <SubType>Designer</SubType>
+    </MauiXaml>
     <MauiXaml Update="View\Sessions\AddSession.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>

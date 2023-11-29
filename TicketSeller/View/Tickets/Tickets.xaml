@@ -4,9 +4,13 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:model="clr-namespace:TicketSellerLib.DTO;assembly=TicketSellerLib"
+    xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
     xmlns:viewModel="clr-namespace:TicketSeller.ViewModel.Tickets"
     Title="{Binding Title}"
     x:DataType="viewModel:TicketsViewModel">
+    <ContentPage.Behaviors>
+        <toolkit:EventToCommandBehavior Command="{Binding LoadElementsCommand}" EventName="NavigatedTo" />
+    </ContentPage.Behaviors>
 
     <Grid
         ColumnDefinitions="*,*"

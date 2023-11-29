@@ -16,7 +16,6 @@ namespace TicketSeller.ViewModel.Tickets
 		{
 			Title = "Билеты";
 			this.service = service;
-			_ = LoadElementsAsync();
 		}
 
 

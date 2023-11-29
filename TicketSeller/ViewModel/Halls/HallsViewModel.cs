@@ -16,7 +16,6 @@ namespace TicketSeller.ViewModel.Halls
 		{
 			Title = "Кинотеатры";
 			this.service = service;
-			_ = LoadElementsAsync();
 		}
 
 		[RelayCommand]

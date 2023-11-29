@@ -3,9 +3,9 @@
     x:Class="TicketSeller.View.Others.UserOthers.EditUserForUser"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:viewModel="clr-namespace:TicketSeller.ViewModel.UserOthers"
+    xmlns:viewModel="clr-namespace:TicketSeller.ViewModel.Users"
     Title="{Binding Title}"
-    x:DataType="viewModel:EditUserForUserViewModel">
+    x:DataType="viewModel:AddUserViewModel">
 
     <VerticalStackLayout
         HorizontalOptions="CenterAndExpand"

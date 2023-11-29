@@ -24,6 +24,9 @@
     <MauiXaml Update="View\Others\UserOthers\EditUserForUser.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
+    <MauiXaml Update="View\Others\UserOthers\UserFilms.xaml">
+      <SubType>Designer</SubType>
+    </MauiXaml>
     <MauiXaml Update="View\Others\UserOthers\UserPanel.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>

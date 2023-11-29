@@ -82,6 +82,9 @@
 	  <MauiXaml Update="View\Others\UserOthers\EditUserForUser.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="View\Others\UserOthers\UserFilms.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="View\Others\UserOthers\UserPanel.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

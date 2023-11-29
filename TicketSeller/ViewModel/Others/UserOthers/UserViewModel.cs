@@ -30,5 +30,25 @@ namespace TicketSeller.ViewModel.UserOthers
 				IsBusy = false;
 			}
 		}
+
+		[RelayCommand]
+		private async Task GoToUserFilmsPageAsync()
+		{
+			if (IsBusy) return;
+			try
+			{
+				IsBusy = true;
+				await Shell.Current.GoToAsync($"{nameof(UserFilms)}", true);
+
+			}
+			catch (Exception ex)
+			{
+				await Shell.Current.DisplayAlert("Ошибка!", ex.Message, "Хорошо");
+			}
+			finally
+			{
+				IsBusy = false;
+			}
+		}
 	}
 }

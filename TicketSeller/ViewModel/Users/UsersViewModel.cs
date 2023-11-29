@@ -16,7 +16,6 @@ namespace TicketSeller.ViewModel.Users
 		{
 			Title = "Пользователи";
 			this.service = service;
-			_ = LoadElementsAsync();
 		}
 
 		[RelayCommand]

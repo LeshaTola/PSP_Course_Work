@@ -14,6 +14,7 @@
             Text="Обо мне"
             WidthRequest="200" />
         <Button
+            Command="{Binding GoToUserFilmsPageCommand}"
             FontAttributes="Bold"
             Text="Заказать билет"
             WidthRequest="200" />

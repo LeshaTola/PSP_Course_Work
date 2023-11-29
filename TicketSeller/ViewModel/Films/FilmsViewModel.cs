@@ -16,7 +16,6 @@ namespace TicketSeller.ViewModel.Films
 		{
 			Title = "Фильмы";
 			this.service = service;
-			_ = LoadElementsAsync();
 		}
 
 		[RelayCommand]

@@ -244,17 +244,37 @@
             <inheritdoc/>
             <inheritdoc/>
         </member>
-        <member name="F:TicketSeller.ViewModel.Others.UserOthers.UserFilmsViewModel.loadFilmsCommand">
-            <summary>The backing field for <see cref="P:TicketSeller.ViewModel.Others.UserOthers.UserFilmsViewModel.LoadFilmsCommand"/>.</summary>
+        <member name="F:TicketSeller.ViewModel.Others.UserOthers.UserFilmsViewModel.loadElementsCommand">
+            <summary>The backing field for <see cref="P:TicketSeller.ViewModel.Others.UserOthers.UserFilmsViewModel.LoadElementsCommand"/>.</summary>
         </member>
-        <member name="P:TicketSeller.ViewModel.Others.UserOthers.UserFilmsViewModel.LoadFilmsCommand">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:TicketSeller.ViewModel.Others.UserOthers.UserFilmsViewModel.LoadFilmsAsync"/>.</summary>
+        <member name="P:TicketSeller.ViewModel.Others.UserOthers.UserFilmsViewModel.LoadElementsCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:TicketSeller.ViewModel.Others.UserOthers.UserFilmsViewModel.LoadElementsAsync"/>.</summary>
         </member>
         <member name="F:TicketSeller.ViewModel.Others.UserOthers.UserFilmsViewModel.chooseFilmCommand">
             <summary>The backing field for <see cref="P:TicketSeller.ViewModel.Others.UserOthers.UserFilmsViewModel.ChooseFilmCommand"/>.</summary>
         </member>
         <member name="P:TicketSeller.ViewModel.Others.UserOthers.UserFilmsViewModel.ChooseFilmCommand">
             <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:TicketSeller.ViewModel.Others.UserOthers.UserFilmsViewModel.ChooseFilm(TicketSellerLib.DTO.Film)"/>.</summary>
+        </member>
+        <member name="T:TicketSeller.ViewModel.Others.UserOthers.UserSessionsByFilmViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:TicketSeller.ViewModel.Others.UserOthers.UserSessionsByFilmViewModel.Film">
+            <inheritdoc cref="F:TicketSeller.ViewModel.Others.UserOthers.UserSessionsByFilmViewModel.film"/>
+        </member>
+        <member name="F:TicketSeller.ViewModel.Others.UserOthers.UserSessionsByFilmViewModel.loadElementsCommand">
+            <summary>The backing field for <see cref="P:TicketSeller.ViewModel.Others.UserOthers.UserSessionsByFilmViewModel.LoadElementsCommand"/>.</summary>
+        </member>
+        <member name="P:TicketSeller.ViewModel.Others.UserOthers.UserSessionsByFilmViewModel.LoadElementsCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:TicketSeller.ViewModel.Others.UserOthers.UserSessionsByFilmViewModel.LoadElementsAsync"/>.</summary>
+        </member>
+        <member name="F:TicketSeller.ViewModel.Others.UserOthers.UserSessionsByFilmViewModel.chooseSessionCommand">
+            <summary>The backing field for <see cref="P:TicketSeller.ViewModel.Others.UserOthers.UserSessionsByFilmViewModel.ChooseSessionCommand"/>.</summary>
+        </member>
+        <member name="P:TicketSeller.ViewModel.Others.UserOthers.UserSessionsByFilmViewModel.ChooseSessionCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:TicketSeller.ViewModel.Others.UserOthers.UserSessionsByFilmViewModel.ChooseSession(TicketSellerLib.DTO.Session)"/>.</summary>
         </member>
         <member name="T:TicketSeller.ViewModel.Sessions.AddSessionViewModel">
             <inheritdoc/>

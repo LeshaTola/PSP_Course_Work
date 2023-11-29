@@ -9,7 +9,7 @@
     Title="{Binding Title}"
     x:DataType="viewModel:UserFilmsViewModel">
     <ContentPage.Behaviors>
-        <toolkit:EventToCommandBehavior Command="{Binding LoadFilmsCommand}" EventName="NavigatedTo" />
+        <toolkit:EventToCommandBehavior Command="{Binding LoadElementsCommand}" EventName="NavigatedTo" />
     </ContentPage.Behaviors>
 
     <Grid

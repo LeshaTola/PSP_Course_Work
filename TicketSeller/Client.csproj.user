@@ -30,6 +30,9 @@
     <MauiXaml Update="View\Others\UserOthers\UserPanel.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
+    <MauiXaml Update="View\Others\UserOthers\UserSessionsByFilm.xaml">
+      <SubType>Designer</SubType>
+    </MauiXaml>
     <MauiXaml Update="View\Sessions\AddSession.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>

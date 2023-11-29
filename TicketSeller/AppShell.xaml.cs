@@ -15,6 +15,7 @@ namespace TicketSeller
 			Routing.RegisterRoute(nameof(AboutMe), typeof(AboutMe));
 			Routing.RegisterRoute(nameof(EditUserForUser), typeof(EditUserForUser));
 			Routing.RegisterRoute(nameof(UserFilms), typeof(UserFilms));
+			Routing.RegisterRoute(nameof(UserSessionsByFilm), typeof(UserSessionsByFilm));
 
 			Routing.RegisterRoute(nameof(Registration), typeof(Registration));
 

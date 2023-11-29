@@ -7,7 +7,5 @@
 		public string Description { get; set; } = string.Empty;
 		public float Cost { get; set; }
 		public float Duration { get; set; }
-		public List<Session> Sessions { get; set; }
-
 	}
 }

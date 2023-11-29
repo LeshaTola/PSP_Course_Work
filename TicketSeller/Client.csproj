@@ -88,6 +88,9 @@
 	  <MauiXaml Update="View\Others\UserOthers\UserPanel.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="View\Others\UserOthers\UserSessionsByFilm.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="View\Sessions\AddSession.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

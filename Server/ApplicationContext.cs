@@ -15,13 +15,14 @@ namespace TicketSeller.Model
 		public ApplicationContext()
 		{
 			//Database.EnsureDeleted();
-			Database.EnsureCreated();
+			//Database.EnsureCreated();
 		}
 
 		protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 		{
+			//optionsBuilder.UseNpgsql("Host=localhost;Port=8888;Database=TicketsDB;Username=postgres;Password=postgres;IncludeErrorDetail=True;")
 			optionsBuilder.UseNpgsql("Host=localhost;Port=8888;Database=TicketSaleDB;Username=postgres;Password=postgres;IncludeErrorDetail=True;")
-				.EnableDetailedErrors();
+			.EnableDetailedErrors();
 		}
 	}
 }

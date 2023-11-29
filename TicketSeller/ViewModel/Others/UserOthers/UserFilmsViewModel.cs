@@ -18,7 +18,7 @@ namespace TicketSeller.ViewModel.Others.UserOthers
 		}
 
 		[RelayCommand]
-		private async Task LoadFilmsAsync()
+		private async Task LoadElementsAsync()
 		{
 			List<Film> films = await service.GetAllAsync();
 
@@ -47,7 +47,7 @@ namespace TicketSeller.ViewModel.Others.UserOthers
 
 		private async Task GoToChooseSession(Film film)
 		{
-			await Shell.Current.GoToAsync(nameof(UserPanel), true, new Dictionary<string, object>()
+			await Shell.Current.GoToAsync(nameof(UserSessionsByFilm), true, new Dictionary<string, object>()
 			{
 				{"Film", film}
 			});

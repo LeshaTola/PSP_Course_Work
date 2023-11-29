@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="TicketSeller.View.Others.UserOthers.UserSessionsByFilm"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:model="clr-namespace:TicketSellerLib.DTO;assembly=TicketSellerLib"
+    xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+    xmlns:viewModel="clr-namespace:TicketSeller.ViewModel.Others.UserOthers"
+    Title="{Binding Title}"
+    x:DataType="viewModel:UserSessionsByFilmViewModel">
+    <ContentPage.Behaviors>
+        <toolkit:EventToCommandBehavior Command="{Binding LoadElementsCommand}" EventName="NavigatedTo" />
+    </ContentPage.Behaviors>
+
+    <Grid
+        ColumnDefinitions="*,*"
+        ColumnSpacing="10"
+        RowDefinitions="*,auto"
+        RowSpacing="4">
+        <CollectionView
+            Grid.ColumnSpan="2"
+            Margin="20"
+            ItemsSource="{Binding Sessions}">
+            <CollectionView.Header>
+                <StackLayout BackgroundColor="{DynamicResource Primary}">
+                    <Label
+                        Margin="10,0,0,0"
+                        FontAttributes="Bold"
+                        FontSize="24"
+                        Text="Сеансы" />
+                </StackLayout>
+            </CollectionView.Header>
+            <CollectionView.ItemTemplate>
+                <DataTemplate x:DataType="model:Session">
+                    <Frame Height="100">
+                        <Grid ColumnDefinitions="*,auto" ColumnSpacing="20">
+                            <VerticalStackLayout
+                                Grid.Column="0"
+                                Padding="10"
+                                HeightRequest="100">
+                                <Label Text="{Binding Time, StringFormat='Время: {0}'}" />
+                                <Label Text="{Binding Date, StringFormat='Дата: {0}'}" />
+                                <Label Text="{Binding Hall.Cinema.Name, StringFormat='Кинотеатр: {0}'}" />
+                                <Label Text="{Binding Hall.Id, StringFormat='Зал: {0}'}" />
+                            </VerticalStackLayout>
+                        </Grid>
+                    </Frame>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </Grid>
+</ContentPage>

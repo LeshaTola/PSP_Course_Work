@@ -1,4 +1,5 @@
-﻿using TicketSeller.Model;
+﻿using Microsoft.EntityFrameworkCore;
+using TicketSeller.Model;
 using TicketSellerLib.DTO;
 
 namespace Server.DAO
@@ -36,7 +37,7 @@ namespace Server.DAO
 		{
 			using (ApplicationContext db = new ApplicationContext())
 			{
-				return db.Tickets.ToList();
+				return db.Tickets.Include(t => t.User).Include(t => t.Session).ThenInclude(s => s.Hall).ThenInclude(h => h.Cinema).ToList();
 			}
 		}
 

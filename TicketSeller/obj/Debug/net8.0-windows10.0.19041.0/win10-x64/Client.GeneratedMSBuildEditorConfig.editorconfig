@@ -120,6 +120,12 @@ build_metadata.AdditionalFiles.ManifestResourceName = TicketSeller.View.Others.U
 build_metadata.AdditionalFiles.TargetPath = View\Others\UserOthers\UserPanel.xaml
 build_metadata.AdditionalFiles.RelativePath = View\Others\UserOthers\UserPanel.xaml
 
+[D:/University/3 course/PSP/CourseWork/TicketSeller/TicketSeller/View/Others/UserOthers/UserSessionsByFilm.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = TicketSeller.View.Others.UserOthers.UserSessionsByFilm.xaml
+build_metadata.AdditionalFiles.TargetPath = View\Others\UserOthers\UserSessionsByFilm.xaml
+build_metadata.AdditionalFiles.RelativePath = View\Others\UserOthers\UserSessionsByFilm.xaml
+
 [D:/University/3 course/PSP/CourseWork/TicketSeller/TicketSeller/View/Sessions/AddSession.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = TicketSeller.View.Sessions.AddSession.xaml

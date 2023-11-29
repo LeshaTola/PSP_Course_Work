@@ -32,16 +32,15 @@
             </CollectionView.Header>
             <CollectionView.ItemTemplate>
                 <DataTemplate x:DataType="model:Session">
-                    <Frame Height="100">
+                    <Frame>
                         <Grid ColumnDefinitions="*,auto" ColumnSpacing="20">
 
-                            <VerticalStackLayout
-                                Grid.Column="0"
-                                Padding="10"
-                                HeightRequest="100">
+                            <VerticalStackLayout Grid.Column="0" Padding="10">
                                 <Label Text="{Binding Id, StringFormat='Id: {0}'}" />
                                 <Label Text="{Binding Date, StringFormat='Дата: {0}'}" />
                                 <Label Text="{Binding Time, StringFormat='Время: {0}'}" />
+                                <Label Text="{Binding Hall.Cinema.Name, StringFormat='Кинотеатр: {0}'}" />
+                                <Label Text="{Binding Hall.Id, StringFormat='Зал: {0}'}" />
                             </VerticalStackLayout>
 
                             <HorizontalStackLayout Grid.Column="1" Spacing="20">

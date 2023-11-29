@@ -42,6 +42,7 @@ namespace TicketSeller
 
 			builder.Services.AddTransient<AboutMeViewModel>();
 			builder.Services.AddTransient<UserFilmsViewModel>();
+			builder.Services.AddTransient<UserSessionsByFilmViewModel>();
 
 			builder.Services.AddSingleton<AuthorizationViewModel>();
 			builder.Services.AddTransient<RegistrationViewModel>();
@@ -71,6 +72,7 @@ namespace TicketSeller
 			builder.Services.AddTransient<AboutMe>();
 			builder.Services.AddTransient<EditUserForUser>();
 			builder.Services.AddTransient<UserFilms>();
+			builder.Services.AddTransient<UserSessionsByFilm>();
 
 			builder.Services.AddSingleton<Authorization>();
 			builder.Services.AddTransient<Registration>();

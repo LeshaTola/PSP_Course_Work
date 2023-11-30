@@ -17,7 +17,7 @@ namespace TicketSeller.ViewModel
 			try
 			{
 				IsBusy = true;
-				await Shell.Current.GoToAsync($"{nameof(UserPanel)}", true);
+				await Shell.Current.GoToAsync($"{nameof(UserPage)}", true);
 
 			}
 			catch (Exception ex)

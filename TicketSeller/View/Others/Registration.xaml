@@ -7,7 +7,7 @@
              Title="{Binding Title}">
     
     <VerticalStackLayout HorizontalOptions="Center" Spacing="30" VerticalOptions="Center">
-        <Label Text="Registration" FontSize="30" FontAttributes="Bold"/>
+        <Label Text="Регистрация" FontSize="30" FontAttributes="Bold"/>
         <Entry Placeholder="Логин" Text="{Binding User.Login}"/>
         <Entry Placeholder="Email" Text="{Binding User.Email}"/>
         <Entry Placeholder="Пароль" IsPassword="True" Text="{Binding User.Password}"/>

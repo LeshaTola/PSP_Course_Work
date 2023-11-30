@@ -21,9 +21,8 @@ namespace TicketSeller.ViewModel.Tickets
 		{
 			this.ticketService = ticketService;
 			this.sessionService = sessionService;
-			Title = "Редактирование";
+			Title = "Редактирование Билета";
 			_ = LoadSessions();
-
 		}
 
 		private async Task LoadSessions()

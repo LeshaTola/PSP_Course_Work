@@ -19,7 +19,7 @@ namespace TicketSeller.ViewModel.Halls
 		{
 			this.hallService = hallService;
 			this.cinemaService = cinemaService;
-			Title = "Редактирование";
+			Title = "Редактирование зала";
 			_ = LoadCinemas();
 		}
 

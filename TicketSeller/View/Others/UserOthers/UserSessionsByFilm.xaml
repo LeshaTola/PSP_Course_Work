@@ -33,6 +33,9 @@
             <CollectionView.ItemTemplate>
                 <DataTemplate x:DataType="model:Session">
                     <Frame Height="100">
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding Source={RelativeSource AncestorType={x:Type viewModel:UserSessionsByFilmViewModel}}, Path=ChooseSessionCommand}" CommandParameter="{Binding .}" />
+                        </Frame.GestureRecognizers>
                         <Grid ColumnDefinitions="*,auto" ColumnSpacing="20">
                             <VerticalStackLayout
                                 Grid.Column="0"
@@ -41,7 +44,7 @@
                                 <Label Text="{Binding Time, StringFormat='Время: {0}'}" />
                                 <Label Text="{Binding Date, StringFormat='Дата: {0}'}" />
                                 <Label Text="{Binding Hall.Cinema.Name, StringFormat='Кинотеатр: {0}'}" />
-                                <Label Text="{Binding Hall.Id, StringFormat='Зал: {0}'}" />
+                                <Label Text="{Binding Hall.Name, StringFormat='Зал: {0}'}" />
                             </VerticalStackLayout>
                         </Grid>
                     </Frame>

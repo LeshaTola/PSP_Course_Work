@@ -1,116 +1,22 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="TicketSeller.View.Seats"
-             Title="Seats">
+<ContentPage
+    x:Class="TicketSeller.View.Seats"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:viewModel="clr-namespace:TicketSeller.ViewModel.Halls"
+    Title="{Binding Title}"
+    x:DataType="viewModel:SeatsViewModel">
 
-    <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-        </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="*"/>
-        </Grid.RowDefinitions>
-        <VerticalStackLayout Grid.Column="1" 
-                             Spacing="10" 
-                             Padding= "20"
-                             VerticalOptions="FillAndExpand"
-                             BackgroundColor="#20FFFFFF">
-            <Label 
-                Text="Name" 
-                HorizontalTextAlignment="Center" 
-                FontSize="Large"
-                FontAttributes="Bold"
-                VerticalOptions="Start"
-                />
-
-            <Label 
-                Text="DescriptionDescription...Description......Description...Description...Description...Description...Description...Description...Description...Description...Description...Description...Description..." 
-                HorizontalTextAlignment="Start" 
-                FontSize="Large"
-                FontAttributes="Bold"
-                TextColor="Gray"
-                Margin="20,10,20,10"
-                VerticalOptions="Start"
-                />
-
-            <Button Text="Buy"  
-                    FontSize="24" 
-                    FontAttributes="Bold"
-                    VerticalOptions="EndAndExpand"
-                    />
+    <Grid ColumnDefinitions="*,500">
+        <Grid
+            x:Name="grid"
+            Margin="40"
+            ColumnSpacing="20"
+            RowSpacing="20" />
+        <VerticalStackLayout Grid.Column="1">
+            <Label Text="Билеты" />
+            <Label Text="Описание..." />
+            <Button VerticalOptions="End" />
         </VerticalStackLayout>
-
-        <VerticalStackLayout  Padding="100, 200 ,100,200">
-            <Grid ColumnSpacing="10" RowSpacing="10">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
-                </Grid.ColumnDefinitions>
-                <Grid.RowDefinitions>
-                    <RowDefinition/>
-                    <RowDefinition/>
-                    <RowDefinition/>
-                </Grid.RowDefinitions>
-                <Button BackgroundColor="Cyan"
-                     Grid.Column="0" Grid.Row="0"
-                     CornerRadius="45"/>
-                <Button BackgroundColor="Cyan"
-                     Grid.Column="1" Grid.Row="0"
-                     CornerRadius="45"/>
-                <Button BackgroundColor="Cyan"
-         Grid.Column="2" Grid.Row="0"
-                     CornerRadius="45"/>
-                <Button BackgroundColor="Cyan"
-         Grid.Column="3" Grid.Row="0"
-                     CornerRadius="45"/>
-                <Button BackgroundColor="Cyan"
-                    Grid.Column="4" Grid.Row="0"
-            CornerRadius="45"/>
-                <Button BackgroundColor="Cyan"
-                     Grid.Column="1" Grid.Row="1"
-                     CornerRadius="45"/>
-                <Button BackgroundColor="Cyan"
-         Grid.Column="0" Grid.Row="1"
-         CornerRadius="45"/>
-                <Button BackgroundColor="Cyan"
-         Grid.Column="1" Grid.Row="1"
-                     CornerRadius="45"/>
-                <Button BackgroundColor="Cyan"
-         Grid.Column="2" Grid.Row="1"
-                     CornerRadius="45"/>
-                <Button BackgroundColor="Cyan"
-         Grid.Column="3" Grid.Row="1"
-                     CornerRadius="45"/>
-                <Button BackgroundColor="Cyan"
-Grid.Column="4" Grid.Row="1"
-            CornerRadius="45"/>
-                <Button BackgroundColor="Cyan"
-         Grid.Column="0" Grid.Row="2"
-         CornerRadius="45"/>
-                <Button BackgroundColor="Cyan"
-                     Grid.Column="2" Grid.Row="2"
-                     CornerRadius="45"/>
-                <Button BackgroundColor="Cyan"
-         Grid.Column="1" Grid.Row="2"
-                     CornerRadius="45"/>
-                <Button BackgroundColor="Cyan"
-         Grid.Column="2" Grid.Row="2"
-                     CornerRadius="45"/>
-                <Button BackgroundColor="Cyan"
-         Grid.Column="3" Grid.Row="2"
-                     CornerRadius="45"/>
-                <Button BackgroundColor="Cyan"
-Grid.Column="4" Grid.Row="2"
-            CornerRadius="45"/>
-
-            </Grid>
-        </VerticalStackLayout>
-        
     </Grid>
-
 </ContentPage>

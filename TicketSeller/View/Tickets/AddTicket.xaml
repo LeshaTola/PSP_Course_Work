@@ -15,8 +15,7 @@
             FontAttributes="Bold"
             FontSize="Large"
             HorizontalTextAlignment="Center"
-            Text="Редактировать" />
-
+            Text="Редактировать билет" />
 
         <Button
             Command="{Binding UpsertCommand}"

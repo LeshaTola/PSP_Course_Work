@@ -78,11 +78,11 @@ build_metadata.AdditionalFiles.ManifestResourceName = TicketSeller.View.Halls.Se
 build_metadata.AdditionalFiles.TargetPath = View\Halls\Seats.xaml
 build_metadata.AdditionalFiles.RelativePath = View\Halls\Seats.xaml
 
-[D:/University/3 course/PSP/CourseWork/TicketSeller/TicketSeller/View/Others/Admin.xaml]
+[D:/University/3 course/PSP/CourseWork/TicketSeller/TicketSeller/View/Others/AdminPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = TicketSeller.View.Others.Admin.xaml
-build_metadata.AdditionalFiles.TargetPath = View\Others\Admin.xaml
-build_metadata.AdditionalFiles.RelativePath = View\Others\Admin.xaml
+build_metadata.AdditionalFiles.ManifestResourceName = TicketSeller.View.Others.AdminPage.xaml
+build_metadata.AdditionalFiles.TargetPath = View\Others\AdminPage.xaml
+build_metadata.AdditionalFiles.RelativePath = View\Others\AdminPage.xaml
 
 [D:/University/3 course/PSP/CourseWork/TicketSeller/TicketSeller/View/Others/Authorization.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
@@ -114,11 +114,17 @@ build_metadata.AdditionalFiles.ManifestResourceName = TicketSeller.View.Others.U
 build_metadata.AdditionalFiles.TargetPath = View\Others\UserOthers\UserFilms.xaml
 build_metadata.AdditionalFiles.RelativePath = View\Others\UserOthers\UserFilms.xaml
 
-[D:/University/3 course/PSP/CourseWork/TicketSeller/TicketSeller/View/Others/UserOthers/UserPanel.xaml]
+[D:/University/3 course/PSP/CourseWork/TicketSeller/TicketSeller/View/Others/UserOthers/UserPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = TicketSeller.View.Others.UserOthers.UserPanel.xaml
-build_metadata.AdditionalFiles.TargetPath = View\Others\UserOthers\UserPanel.xaml
-build_metadata.AdditionalFiles.RelativePath = View\Others\UserOthers\UserPanel.xaml
+build_metadata.AdditionalFiles.ManifestResourceName = TicketSeller.View.Others.UserOthers.UserPage.xaml
+build_metadata.AdditionalFiles.TargetPath = View\Others\UserOthers\UserPage.xaml
+build_metadata.AdditionalFiles.RelativePath = View\Others\UserOthers\UserPage.xaml
+
+[D:/University/3 course/PSP/CourseWork/TicketSeller/TicketSeller/View/Others/UserOthers/UserSessionHistory.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = TicketSeller.View.Others.UserOthers.UserSessionHistory.xaml
+build_metadata.AdditionalFiles.TargetPath = View\Others\UserOthers\UserSessionHistory.xaml
+build_metadata.AdditionalFiles.RelativePath = View\Others\UserOthers\UserSessionHistory.xaml
 
 [D:/University/3 course/PSP/CourseWork/TicketSeller/TicketSeller/View/Others/UserOthers/UserSessionsByFilm.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml

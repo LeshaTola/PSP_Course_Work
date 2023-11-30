@@ -14,7 +14,7 @@ namespace TicketSeller.ViewModel.Halls
 
 		public HallsViewModel(HallService service)
 		{
-			Title = "Кинотеатры";
+			Title = "Залы";
 			this.service = service;
 		}
 

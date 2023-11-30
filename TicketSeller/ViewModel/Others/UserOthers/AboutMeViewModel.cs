@@ -32,7 +32,6 @@ namespace TicketSeller.ViewModel.UserOthers
 			{
 				IsBusy = true;
 
-
 				await GoToAddElementPageAsync(Me);
 			}
 			catch (Exception ex)

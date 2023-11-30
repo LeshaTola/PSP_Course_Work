@@ -10,10 +10,18 @@ namespace TicketSeller.ViewModel.Sessions
 	public partial class AddSessionViewModel : BaseViewModel
 	{
 		[ObservableProperty] private Session session;
-		[ObservableProperty] private List<Film> films;
-		[ObservableProperty] private List<Cinema> cinemas;
-		[ObservableProperty] private List<Hall> halls;
+		[ObservableProperty] private List<string> filmNames;
+		[ObservableProperty] private List<string> cinemaNames;
+		[ObservableProperty] private List<string> hallNames;
+
+		[ObservableProperty] private int filmId = -1;
+		[ObservableProperty] private int cinemaId = -1;
+		[ObservableProperty] private int hallId = -1;
 		[ObservableProperty] private DateTime dummyDateTime = DateTime.Today;
+
+		private List<Film> films;
+		private List<Cinema> cinemas;
+		private List<Hall> halls;
 
 		private HallService hallService;
 		private CinemaService cinemaService;
@@ -26,7 +34,7 @@ namespace TicketSeller.ViewModel.Sessions
 			this.filmService = filmService;
 			this.sessionService = sessionService;
 			this.cinemaService = cinemaService;
-			Title = "Редактирование";
+			Title = "Редактирование сеанса";
 			_ = LoadAtOneTime();
 
 		}
@@ -40,17 +48,21 @@ namespace TicketSeller.ViewModel.Sessions
 
 		private async Task LoadCinemas()
 		{
-			Cinemas = await cinemaService.GetAllAsync();
+			cinemas = await cinemaService.GetAllAsync();
+			CinemaNames = cinemas.Select(cinema => cinema.Name).ToList();
 		}
 
-		private async Task LoadHalls()
+		private async Task LoadHalls(Cinema cinema)
 		{
-			Halls = await hallService.GetAllAsync();
+			halls = await hallService.GetAllAsync();
+			halls = halls.Where(hall => hall.Cinema.Id == cinema.Id).ToList();
+			HallNames = halls.Select(hall => hall.Name).ToList();
 		}
 
 		private async Task LoadFilms()
 		{
-			Films = await filmService.GetAllAsync();
+			films = await filmService.GetAllAsync();
+			FilmNames = films.Select(film => film.Name).ToList();
 		}
 
 		[RelayCommand]
@@ -63,6 +75,8 @@ namespace TicketSeller.ViewModel.Sessions
 				IsBusy = true;
 
 				Session.Date = DateOnly.FromDateTime(DummyDateTime);
+				Session.Film = films[FilmId];
+				Session.Hall = halls[HallId];
 				var response = await sessionService.UpsertAsync(Session);
 
 				if (response.Type == ResponseTypes.Ok)
@@ -70,26 +84,16 @@ namespace TicketSeller.ViewModel.Sessions
 					await Shell.Current.DisplayAlert("Внимание!", response.Message, "Хорошо");
 					await Shell.Current.Navigation.PopAsync(true);
 				}
-				else
-				{
-					await Shell.Current.DisplayAlert("Ошибка!", response.Message, "Хорошо");
-				}
-
+				else { await Shell.Current.DisplayAlert("Ошибка!", response.Message, "Хорошо"); }
 			}
-			catch (Exception ex)
-			{
-				await Shell.Current.DisplayAlert("Ошибка!", ex.Message, "Хорошо");
-			}
-			finally
-			{
-				IsBusy = false;
-			}
+			catch (Exception ex) { await Shell.Current.DisplayAlert("Ошибка!", ex.Message, "Хорошо"); }
+			finally { IsBusy = false; }
 		}
 
 		[RelayCommand]
-		private async Task SelectedFilm()
+		private async Task SelectedCinema()
 		{
-			await LoadHalls();
+			await LoadHalls(cinemas[CinemaId]);
 		}
 	}
 }

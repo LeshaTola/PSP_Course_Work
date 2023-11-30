@@ -8,11 +8,11 @@ namespace Server
 	{
 		static async Task Main(string[] args)
 		{
-			/*AddUser(new User()
+			using (var context = new ApplicationContext())
 			{
-				Login = "admin",
-				Password = "admin",
-			});*/
+				context.Init();
+				context.SaveChanges();
+			}
 			Server server = new Server(IPAddress.Any, 14447);
 			await server.StartServerAsync();
 		}

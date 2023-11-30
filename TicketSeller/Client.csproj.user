@@ -27,7 +27,10 @@
     <MauiXaml Update="View\Others\UserOthers\UserFilms.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
-    <MauiXaml Update="View\Others\UserOthers\UserPanel.xaml">
+    <MauiXaml Update="View\Others\UserOthers\UserPage.xaml">
+      <SubType>Designer</SubType>
+    </MauiXaml>
+    <MauiXaml Update="View\Others\UserOthers\UserSessionHistory.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
     <MauiXaml Update="View\Others\UserOthers\UserSessionsByFilm.xaml">
@@ -48,7 +51,7 @@
     <MauiXaml Update="View\Users\AddUser.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
-    <MauiXaml Update="View\Others\Admin.xaml">
+    <MauiXaml Update="View\Others\AdminPage.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
     <MauiXaml Update="View\Others\Authorization.xaml">

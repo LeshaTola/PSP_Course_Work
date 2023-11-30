@@ -21,18 +21,21 @@
 
         <Picker
             Title="Фильм"
-            ItemsSource="{Binding Films}"
-            SelectedItem="{Binding Session.Film}" />
+            ItemsSource="{Binding FilmNames}"
+            SelectedIndex="{Binding FilmId}" />
 
-        <Picker Title="Кинотеатр" ItemsSource="{Binding Cinemas}">
+        <Picker
+            Title="Кинотеатр"
+            ItemsSource="{Binding CinemaNames}"
+            SelectedIndex="{Binding CinemaId}">
             <Picker.Behaviors>
-                <toolkit:EventToCommandBehavior Command="{Binding SelectedFilmCommand}" EventName="SelectedIndexChanged" />
+                <toolkit:EventToCommandBehavior Command="{Binding SelectedCinemaCommand}" EventName="SelectedIndexChanged" />
             </Picker.Behaviors>
         </Picker>
         <Picker
             Title="Зал"
-            ItemsSource="{Binding Halls}"
-            SelectedItem="{Binding Session.Hall}" />
+            ItemsSource="{Binding HallNames}"
+            SelectedIndex="{Binding HallId}" />
 
         <HorizontalStackLayout>
             <Label Text="Дата начала" VerticalTextAlignment="Center" />

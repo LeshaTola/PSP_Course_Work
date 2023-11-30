@@ -18,7 +18,7 @@ namespace TicketSeller.ViewModel.Others.UserOthers
 		public UserSessionsByFilmViewModel(SessionService service)
 		{
 			this.service = service;
-			Title = $"Сеансы на фильм";
+			Title = "Сеансы на фильм";
 		}
 
 		[RelayCommand]
@@ -29,6 +29,7 @@ namespace TicketSeller.ViewModel.Others.UserOthers
 			if (sessions.Count == 0)
 				return;
 
+			sessions = sessions.Where(session => session.FilmId == Film.Id).ToList();
 
 			Sessions.Clear();
 			foreach (Session session in sessions)

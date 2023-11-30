@@ -85,7 +85,10 @@
 	  <MauiXaml Update="View\Others\UserOthers\UserFilms.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="View\Others\UserOthers\UserPanel.xaml">
+	  <MauiXaml Update="View\Others\UserOthers\UserPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="View\Others\UserOthers\UserSessionHistory.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="View\Others\UserOthers\UserSessionsByFilm.xaml">
@@ -106,7 +109,7 @@
 	  <MauiXaml Update="View\Users\AddUser.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="View\Others\Admin.xaml">
+	  <MauiXaml Update="View\Others\AdminPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="View\Others\Authorization.xaml">
@@ -140,8 +143,8 @@
 	  <Compile Update="View\Films\Films.xaml.cs">
 	    <DependentUpon>Films.xaml</DependentUpon>
 	  </Compile>
-	  <Compile Update="View\Others\Admin.xaml.cs">
-	    <DependentUpon>Admin.xaml</DependentUpon>
+	  <Compile Update="View\Others\AdminPage.xaml.cs">
+	    <DependentUpon>AdminPage.xaml</DependentUpon>
 	  </Compile>
 	  <Compile Update="View\Others\UserOthers\AboutMe.xaml.cs">
 	    <DependentUpon>AboutMe.xaml</DependentUpon>
@@ -149,8 +152,8 @@
 	  <Compile Update="View\Others\UserOthers\EditUserForUser.xaml.cs">
 	    <DependentUpon>EditUserForUser.xaml</DependentUpon>
 	  </Compile>
-	  <Compile Update="View\Others\UserOthers\UserPanel.xaml.cs">
-	    <DependentUpon>UserPanel.xaml</DependentUpon>
+	  <Compile Update="View\Others\UserOthers\UserPage.xaml.cs">
+	    <DependentUpon>UserPage.xaml</DependentUpon>
 	  </Compile>
 	  <Compile Update="View\Tickets\AddTicket.xaml.cs">
 	    <DependentUpon>AddTicket.xaml</DependentUpon>

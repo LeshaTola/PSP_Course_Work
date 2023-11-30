@@ -38,11 +38,12 @@ namespace TicketSeller
 			//#############################################################################################
 
 			builder.Services.AddSingleton<AdminViewModel>();
-			builder.Services.AddSingleton<UserViewModel>();
+			builder.Services.AddSingleton<UserPageViewModel>();
 
 			builder.Services.AddTransient<AboutMeViewModel>();
 			builder.Services.AddTransient<UserFilmsViewModel>();
 			builder.Services.AddTransient<UserSessionsByFilmViewModel>();
+			builder.Services.AddTransient<UserSessionHistoryViewModel>();
 
 			builder.Services.AddSingleton<AuthorizationViewModel>();
 			builder.Services.AddTransient<RegistrationViewModel>();
@@ -58,6 +59,7 @@ namespace TicketSeller
 
 			builder.Services.AddSingleton<HallsViewModel>();
 			builder.Services.AddTransient<AddHallViewModel>();
+			builder.Services.AddTransient<SeatsViewModel>();
 
 			builder.Services.AddSingleton<SessionsViewModel>();
 			builder.Services.AddTransient<AddSessionViewModel>();
@@ -66,13 +68,14 @@ namespace TicketSeller
 			builder.Services.AddTransient<AddTicketViewModel>();
 
 			//#############################################################################################
-			builder.Services.AddSingleton<Admin>();
-			builder.Services.AddSingleton<UserPanel>();
+			builder.Services.AddSingleton<AdminPage>();
+			builder.Services.AddSingleton<UserPage>();
 
 			builder.Services.AddTransient<AboutMe>();
 			builder.Services.AddTransient<EditUserForUser>();
 			builder.Services.AddTransient<UserFilms>();
 			builder.Services.AddTransient<UserSessionsByFilm>();
+			builder.Services.AddTransient<UserSessionHistory>();
 
 			builder.Services.AddSingleton<Authorization>();
 			builder.Services.AddTransient<Registration>();

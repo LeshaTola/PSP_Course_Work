@@ -16,7 +16,7 @@ namespace TicketSeller.ViewModel.Cinemas
 		public AddCinemaViewModel(CinemaService service)
 		{
 			this.service = service;
-			Title = "Редактирование ";
+			Title = "Редактирование кинотеатра";
 		}
 
 

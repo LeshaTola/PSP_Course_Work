@@ -23,8 +23,8 @@ namespace TicketSeller.ViewModel.Films
 		[ObservableProperty] private string searchString;
 		[ObservableProperty] private List<string> orderTypesList = new() { "От А до Я", "От Я до А", "Цена (убывание)", "Цена (возрастание)" };
 		[ObservableProperty] private int orderTypeId = (int)FilmOrderType.NameFromAToZ;
-		private List<Film> films;
 
+		private List<Film> films;
 		private FilmService service;
 
 		public FilmsViewModel(FilmService service)

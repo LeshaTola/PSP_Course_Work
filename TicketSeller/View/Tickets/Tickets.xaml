@@ -27,7 +27,7 @@
                         Margin="10,0,0,0"
                         FontAttributes="Bold"
                         FontSize="24"
-                        Text="Cinemas" />
+                        Text="Билеты" />
                 </StackLayout>
             </CollectionView.Header>
             <CollectionView.ItemTemplate>

@@ -43,10 +43,5 @@ namespace TicketSeller.ViewModel.UserOthers
 				IsBusy = false;
 			}
 		}
-
-		private Task LoadElementsAsync()
-		{
-			throw new NotImplementedException();
-		}
 	}
 }

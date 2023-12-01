@@ -37,7 +37,7 @@ namespace Server.DAO
 		{
 			using (ApplicationContext db = new ApplicationContext())
 			{
-				return db.Tickets.Include(t => t.User).Include(t => t.Session).ThenInclude(s => s.Hall).ThenInclude(h => h.Cinema).ToList();
+				return db.Tickets.Include(t => t.User).Include(t => t.Session).ThenInclude(s => s.Hall).ThenInclude(h => h.Cinema).Include(t => t.Session).ThenInclude(s => s.Film).ToList();
 			}
 		}
 

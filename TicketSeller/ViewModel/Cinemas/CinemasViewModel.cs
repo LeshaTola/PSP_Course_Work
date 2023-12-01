@@ -1,4 +1,5 @@
-﻿using CommunityToolkit.Mvvm.Input;
+﻿using CommunityToolkit.Mvvm.ComponentModel;
+using CommunityToolkit.Mvvm.Input;
 using System.Collections.ObjectModel;
 using TicketSeller.Services;
 using TicketSeller.View;
@@ -6,9 +7,20 @@ using TicketSellerLib.DTO;
 
 namespace TicketSeller.ViewModel.Cinemas
 {
+	public enum CinemaOrderType
+	{
+		NameFromAToZ,
+		NameFromZToA,
+	}
+
 	public partial class CinemasViewModel : BaseViewModel, ICrudViewModel<Cinema>
 	{
-		public ObservableCollection<Cinema> Cinemas { get; private set; } = new();
+		public ObservableCollection<Cinema> ValidCinemas { get; private set; } = new();
+
+		[ObservableProperty] private string searchString;
+		[ObservableProperty] private List<string> orderTypesList = new() { "От А до Я", "От Я до А" };
+		[ObservableProperty] private int orderTypeId = (int)CinemaOrderType.NameFromAToZ;
+		private List<Cinema> cinemas;
 
 		private CinemaService service;
 
@@ -23,15 +35,11 @@ namespace TicketSeller.ViewModel.Cinemas
 		{
 			try
 			{
-				List<Cinema> cinemas = await service.GetAllAsync();
-				if (cinemas.Count == 0)
+				List<Cinema> loadedCinemas = await service.GetAllAsync();
+				if (loadedCinemas.Count == 0)
 					return;
-
-				Cinemas.Clear();
-				foreach (Cinema cinema in cinemas)
-				{
-					Cinemas.Add(cinema);
-				}
+				cinemas = loadedCinemas;
+				ValidateElements();
 			}
 			catch (Exception ex)
 			{
@@ -89,6 +97,47 @@ namespace TicketSeller.ViewModel.Cinemas
 			{
 				IsBusy = false;
 			}
+		}
+
+		[RelayCommand]
+		private void ValidateElements()
+		{
+			List<Cinema> searchedElements = SearchElements(cinemas);
+			var searchedAndOrderedElements = OrderElements(searchedElements);
+
+			ValidCinemas.Clear();
+			foreach (var element in searchedAndOrderedElements)
+			{
+				ValidCinemas.Add(element);
+			}
+		}
+
+		private List<Cinema> SearchElements(List<Cinema> unsearchedFilms)
+		{
+			if (string.IsNullOrEmpty(SearchString))
+			{
+				return unsearchedFilms;
+			}
+
+			List<Cinema> searchedFilms = new();
+			searchedFilms = unsearchedFilms.Where(c => c.Name.Contains(SearchString)).ToList();
+			return searchedFilms;
+		}
+
+		private List<Cinema> OrderElements(List<Cinema> unorderedFilms)
+		{
+			List<Cinema> orderedFilms = new();
+			var orderType = (CinemaOrderType)OrderTypeId;
+			switch (orderType)
+			{
+				case CinemaOrderType.NameFromAToZ:
+					orderedFilms = unorderedFilms.OrderBy((f) => f.Name).ToList();
+					break;
+				case CinemaOrderType.NameFromZToA:
+					orderedFilms = unorderedFilms.OrderByDescending((f) => f.Name).ToList();
+					break;
+			}
+			return orderedFilms;
 		}
 	}
 }

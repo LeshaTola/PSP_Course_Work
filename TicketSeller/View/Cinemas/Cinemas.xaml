@@ -15,12 +15,13 @@
     <Grid
         ColumnDefinitions="*,*"
         ColumnSpacing="10"
-        RowDefinitions="*,auto"
+        RowDefinitions="auto,*"
         RowSpacing="4">
         <CollectionView
+            Grid.Row="1"
             Grid.ColumnSpan="2"
             Margin="20"
-            ItemsSource="{Binding Cinemas}">
+            ItemsSource="{Binding ValidCinemas}">
             <CollectionView.Header>
                 <StackLayout BackgroundColor="{DynamicResource Primary}">
                     <Label
@@ -32,13 +33,10 @@
             </CollectionView.Header>
             <CollectionView.ItemTemplate>
                 <DataTemplate x:DataType="model:Cinema">
-                    <Frame Height="100">
+                    <Frame>
                         <Grid ColumnDefinitions="*,auto" ColumnSpacing="20">
 
-                            <VerticalStackLayout
-                                Grid.Column="0"
-                                Padding="10"
-                                HeightRequest="100">
+                            <VerticalStackLayout Grid.Column="0" Padding="10">
                                 <Label Text="{Binding Id, StringFormat='Id: {0}'}" />
                                 <Label Text="{Binding Name, StringFormat='Название: {0}'}" />
                                 <Label Text="{Binding Address, StringFormat='Адресс: {0}'}" />
@@ -68,21 +66,35 @@
                 </DataTemplate>
             </CollectionView.ItemTemplate>
         </CollectionView>
-
-        <HorizontalStackLayout
-            Grid.Row="2"
+        <Grid
+            Grid.Row="0"
             Grid.ColumnSpan="2"
-            HorizontalOptions="Center"
-            Spacing="20">
+            Margin="10"
+            ColumnDefinitions="*,*,*,*"
+            ColumnSpacing="40">
+            <Entry
+                Grid.ColumnSpan="2"
+                Placeholder="Поиск"
+                Text="{Binding SearchString}">
+                <Entry.Behaviors>
+                    <toolkit:EventToCommandBehavior Command="{Binding ValidateElementsCommand}" EventName="TextChanged" />
+                </Entry.Behaviors>
+            </Entry>
+            <Picker
+                Grid.Column="2"
+                BackgroundColor="#25FFFFFF"
+                ItemsSource="{Binding OrderTypesList}"
+                SelectedIndex="{Binding OrderTypeId}">
+                <Picker.Behaviors>
+                    <toolkit:EventToCommandBehavior Command="{Binding ValidateElementsCommand}" EventName="SelectedIndexChanged" />
+                </Picker.Behaviors>
+            </Picker>
             <Button
+                Grid.Column="3"
                 Command="{Binding UpsertElementCommand}"
                 CommandParameter="{x:Null}"
-                Text="Добавить"
-                WidthRequest="100" />
-            <Button
-                Command="{Binding LoadElementsCommand}"
-                Text="Обновить"
-                WidthRequest="100" />
-        </HorizontalStackLayout>
+                FontAttributes="Bold"
+                Text="Добавить" />
+        </Grid>
     </Grid>
 </ContentPage>

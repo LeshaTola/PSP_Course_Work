@@ -63,7 +63,7 @@
     <MauiXaml Update="View\Halls\Seats.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
-    <MauiXaml Update="View\Cinemas\Sinemas.xaml">
+    <MauiXaml Update="View\Cinemas\Cinemas.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
     <MauiXaml Update="View\Films\Films.xaml">

@@ -121,7 +121,7 @@
 	  <MauiXaml Update="View\Halls\Seats.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="View\Cinemas\Sinemas.xaml">
+	  <MauiXaml Update="View\Cinemas\Cinemas.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="View\Films\Films.xaml">
@@ -137,8 +137,8 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Compile Update="View\Cinemas\Sinemas.xaml.cs">
-	    <DependentUpon>Sinemas.xaml</DependentUpon>
+	  <Compile Update="View\Cinemas\Cinemas.xaml.cs">
+	    <DependentUpon>Cinemas.xaml</DependentUpon>
 	  </Compile>
 	  <Compile Update="View\Films\Films.xaml.cs">
 	    <DependentUpon>Films.xaml</DependentUpon>

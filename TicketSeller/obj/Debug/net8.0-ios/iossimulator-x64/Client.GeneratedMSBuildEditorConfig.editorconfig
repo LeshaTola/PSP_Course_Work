@@ -46,11 +46,11 @@ build_metadata.AdditionalFiles.ManifestResourceName = TicketSeller.View.Cinemas.
 build_metadata.AdditionalFiles.TargetPath = View\Cinemas\AddCinema.xaml
 build_metadata.AdditionalFiles.RelativePath = View\Cinemas\AddCinema.xaml
 
-[D:/University/3 course/PSP/CourseWork/TicketSeller/TicketSeller/View/Cinemas/Sinemas.xaml]
+[D:/University/3 course/PSP/CourseWork/TicketSeller/TicketSeller/View/Cinemas/Cinemas.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = TicketSeller.View.Cinemas.Sinemas.xaml
-build_metadata.AdditionalFiles.TargetPath = View\Cinemas\Sinemas.xaml
-build_metadata.AdditionalFiles.RelativePath = View\Cinemas\Sinemas.xaml
+build_metadata.AdditionalFiles.ManifestResourceName = TicketSeller.View.Cinemas.Cinemas.xaml
+build_metadata.AdditionalFiles.TargetPath = View\Cinemas\Cinemas.xaml
+build_metadata.AdditionalFiles.RelativePath = View\Cinemas\Cinemas.xaml
 
 [D:/University/3 course/PSP/CourseWork/TicketSeller/TicketSeller/View/Films/AddFilm.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml

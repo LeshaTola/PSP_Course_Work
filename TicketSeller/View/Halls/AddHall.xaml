@@ -27,8 +27,8 @@
             Text="{Binding Hall.Columns}" />
         <Picker
             Title="Кинотеатр"
-            ItemsSource="{Binding Cinemas}"
-            SelectedItem="{Binding Hall.Cinema}" />
+            ItemsSource="{Binding CinemaNames}"
+            SelectedIndex="{Binding CinemaId}" />
 
         <Button
             Command="{Binding UpsertCommand}"

@@ -1,6 +1,5 @@
 ﻿using System.Net;
 using TicketSeller.Model;
-using TicketSellerLib.DTO;
 
 namespace Server
 {
@@ -15,15 +14,6 @@ namespace Server
 			}
 			Server server = new Server(IPAddress.Any, 14447);
 			await server.StartServerAsync();
-		}
-
-		public static void AddUser(User user)
-		{
-			using (ApplicationContext db = new ApplicationContext())
-			{
-				db.Users.Add(user);
-				db.SaveChanges();
-			}
 		}
 	}
 }

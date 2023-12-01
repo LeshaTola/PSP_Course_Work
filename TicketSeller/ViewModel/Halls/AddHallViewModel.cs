@@ -10,7 +10,10 @@ namespace TicketSeller.ViewModel.Halls
 	public partial class AddHallViewModel : BaseViewModel
 	{
 		[ObservableProperty] private Hall hall;
-		[ObservableProperty] private List<Cinema> cinemas;
+		[ObservableProperty] private List<string> cinemaNames;
+		[ObservableProperty] private int cinemaId = -1;
+
+		private List<Cinema> cinemas;
 
 		private HallService hallService;
 		private CinemaService cinemaService;
@@ -25,7 +28,8 @@ namespace TicketSeller.ViewModel.Halls
 
 		private async Task LoadCinemas()
 		{
-			Cinemas = await cinemaService.GetAllAsync();
+			cinemas = await cinemaService.GetAllAsync();
+			CinemaNames = cinemas.Select(c => c.Name).ToList();
 		}
 
 		[RelayCommand]
@@ -37,6 +41,7 @@ namespace TicketSeller.ViewModel.Halls
 			{
 				IsBusy = true;
 
+				Hall.Cinema = cinemas[CinemaId];
 				var response = await hallService.UpsertAsync(Hall);
 
 				if (response.Type == ResponseTypes.Ok)

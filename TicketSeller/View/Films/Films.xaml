@@ -15,26 +15,30 @@
     <Grid
         ColumnDefinitions="*,*"
         ColumnSpacing="10"
-        RowDefinitions="*,auto"
+        RowDefinitions="Auto,*"
         RowSpacing="4">
-        <CollectionView Grid.ColumnSpan="2" ItemsSource="{Binding Films}">
+        <CollectionView
+            Grid.Row="1"
+            Grid.ColumnSpan="2"
+            ItemsSource="{Binding ValidFilms}">
             <CollectionView.ItemTemplate>
                 <DataTemplate x:DataType="model:Film">
                     <Grid Padding="10">
-                        <Frame HeightRequest="400">
+                        <Frame>
                             <Grid
-                                ColumnDefinitions="300,*,100"
+                                ColumnDefinitions="300,*,*"
                                 ColumnSpacing="40"
-                                RowDefinitions="*,*,*"
+                                RowDefinitions="*,*,*,100"
                                 RowSpacing="10">
                                 <Image
-                                    Grid.RowSpan="3"
+                                    Grid.RowSpan="4"
                                     Aspect="Fill"
                                     Source="https://aka.ms/campus.jpg" />
 
                                 <Label
                                     Grid.Row="0"
                                     Grid.Column="1"
+                                    Grid.ColumnSpan="2"
                                     FontAttributes="Bold"
                                     FontSize="32"
                                     HorizontalTextAlignment="Center"
@@ -44,6 +48,7 @@
                                 <Label
                                     Grid.Row="1"
                                     Grid.Column="1"
+                                    Grid.ColumnSpan="2"
                                     FontAttributes="Bold"
                                     FontSize="16"
                                     HorizontalTextAlignment="Start"
@@ -54,6 +59,7 @@
                                 <Label
                                     Grid.Row="2"
                                     Grid.Column="1"
+                                    Grid.ColumnSpan="2"
                                     FontSize="16"
                                     HorizontalTextAlignment="Start"
                                     Text="{Binding Cost, StringFormat='Стоимость: {0} BYN'}"
@@ -63,47 +69,64 @@
                                 <Label
                                     Grid.Row="2"
                                     Grid.Column="1"
+                                    Grid.ColumnSpan="2"
                                     FontSize="16"
                                     HorizontalTextAlignment="End"
                                     Text="{Binding Duration, StringFormat='Длительность: {0} минут'}"
                                     VerticalTextAlignment="Center" />
 
-                                <VerticalStackLayout
-                                    Grid.Row="1"
+
+                                <Button
+                                    Grid.Row="4"
+                                    Grid.Column="1"
+                                    Command="{Binding Source={RelativeSource AncestorType={x:Type viewModel:FilmsViewModel}}, Path=DeleteElementCommand}"
+                                    CommandParameter="{Binding Id}"
+                                    FontAttributes="Bold"
+                                    HeightRequest="20"
+                                    Text="Удалить" />
+                                <Button
+                                    Grid.Row="4"
                                     Grid.Column="2"
-                                    Spacing="10">
-                                    <Button
-                                        BackgroundColor="Red"
-                                        Command="{Binding Source={RelativeSource AncestorType={x:Type viewModel:FilmsViewModel}}, Path=DeleteElementCommand}"
-                                        CommandParameter="{Binding Id}"
-                                        FontAttributes="Bold"
-                                        FontSize="24"
-                                        HeightRequest="50"
-                                        Text="X"
-                                        TextColor="White"
-                                        WidthRequest="50" />
-                                    <Button
-                                        BackgroundColor="Green"
-                                        Command="{Binding Source={RelativeSource AncestorType={x:Type viewModel:FilmsViewModel}}, Path=UpsertElementCommand}"
-                                        CommandParameter="{Binding .}"
-                                        FontAttributes="Bold"
-                                        FontSize="24"
-                                        HeightRequest="50"
-                                        Text="E"
-                                        TextColor="White"
-                                        WidthRequest="50" />
-                                </VerticalStackLayout>
+                                    Command="{Binding Source={RelativeSource AncestorType={x:Type viewModel:FilmsViewModel}}, Path=UpsertElementCommand}"
+                                    CommandParameter="{Binding .}"
+                                    FontAttributes="Bold"
+                                    HeightRequest="20"
+                                    Text="Изменить" />
                             </Grid>
                         </Frame>
                     </Grid>
                 </DataTemplate>
             </CollectionView.ItemTemplate>
         </CollectionView>
-        <Button
-            Grid.Row="1"
-            Margin="8"
-            Command="{Binding UpsertElementCommand}"
-            CommandParameter="{x:Null}"
-            Text="Add" />
+        <Grid
+            Grid.Row="0"
+            Grid.ColumnSpan="2"
+            Margin="10"
+            ColumnDefinitions="*,*,*,*"
+            ColumnSpacing="40">
+            <Entry
+                Grid.ColumnSpan="2"
+                Placeholder="Поиск"
+                Text="{Binding SearchString}">
+                <Entry.Behaviors>
+                    <toolkit:EventToCommandBehavior Command="{Binding ValidateElementsCommand}" EventName="TextChanged" />
+                </Entry.Behaviors>
+            </Entry>
+            <Picker
+                Grid.Column="2"
+                BackgroundColor="#25FFFFFF"
+                ItemsSource="{Binding OrderTypesList}"
+                SelectedIndex="{Binding OrderTypeId}">
+                <Picker.Behaviors>
+                    <toolkit:EventToCommandBehavior Command="{Binding ValidateElementsCommand}" EventName="SelectedIndexChanged" />
+                </Picker.Behaviors>
+            </Picker>
+            <Button
+                Grid.Column="3"
+                Command="{Binding UpsertElementCommand}"
+                CommandParameter="{x:Null}"
+                FontAttributes="Bold"
+                Text="Добавить" />
+        </Grid>
     </Grid>
 </ContentPage>

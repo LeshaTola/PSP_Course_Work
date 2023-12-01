@@ -6,6 +6,12 @@ using TicketSellerLib.TCP;
 
 namespace TicketSeller.Services
 {
+	public enum UserOrderType
+	{
+		NameFromAToZ,
+		NameFromZToA,
+	}
+
 	public class UserService : IClientService<User>
 	{
 		public async Task<Response> AuthorizeAsync(User user)

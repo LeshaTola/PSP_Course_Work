@@ -1,4 +1,5 @@
-﻿using CommunityToolkit.Mvvm.Input;
+﻿using CommunityToolkit.Mvvm.ComponentModel;
+using CommunityToolkit.Mvvm.Input;
 using System.Collections.ObjectModel;
 using TicketSeller.Services;
 using TicketSeller.View;
@@ -8,8 +9,13 @@ namespace TicketSeller.ViewModel.Users
 {
 	public partial class UsersViewModel : BaseViewModel, ICrudViewModel<User>
 	{
-		public ObservableCollection<User> Users { get; private set; } = new();
+		public ObservableCollection<User> ValidUsers { get; private set; } = new();
 
+		[ObservableProperty] private string searchString;
+		[ObservableProperty] private List<string> orderTypesList = new() { "От А до Я", "От Я до А" };
+		[ObservableProperty] private int orderTypeId = (int)UserOrderType.NameFromAToZ;
+
+		private List<User> users;
 		private UserService service;
 
 		public UsersViewModel(UserService service)
@@ -23,15 +29,11 @@ namespace TicketSeller.ViewModel.Users
 		{
 			try
 			{
-				List<User> users = await service.GetAllAsync();
-				if (users.Count == 0)
+				List<User> loadedUsers = await service.GetAllAsync();
+				if (loadedUsers.Count == 0)
 					return;
-
-				Users.Clear();
-				foreach (User user in users)
-				{
-					Users.Add(user);
-				}
+				users = loadedUsers;
+				ValidateElements();
 			}
 			catch (Exception ex)
 			{
@@ -90,6 +92,47 @@ namespace TicketSeller.ViewModel.Users
 			{
 				IsBusy = false;
 			}
+		}
+
+		[RelayCommand]
+		private void ValidateElements()
+		{
+			List<User> searchedElements = SearchElements(users);
+			var searchedAndOrderedElements = OrderElements(searchedElements);
+
+			ValidUsers.Clear();
+			foreach (var element in searchedAndOrderedElements)
+			{
+				ValidUsers.Add(element);
+			}
+		}
+
+		private List<User> SearchElements(List<User> unsearchedElements)
+		{
+			if (string.IsNullOrEmpty(SearchString))
+			{
+				return unsearchedElements;
+			}
+
+			List<User> searchedElements = new();
+			searchedElements = unsearchedElements.Where(c => c.Login.Contains(SearchString)).ToList();
+			return searchedElements;
+		}
+
+		private List<User> OrderElements(List<User> unorderedElements)
+		{
+			List<User> orderedElements = new();
+			var orderType = (UserOrderType)OrderTypeId;
+			switch (orderType)
+			{
+				case UserOrderType.NameFromAToZ:
+					orderedElements = unorderedElements.OrderBy((u) => u.Login).ToList();
+					break;
+				case UserOrderType.NameFromZToA:
+					orderedElements = unorderedElements.OrderByDescending((f) => f.Login).ToList();
+					break;
+			}
+			return orderedElements;
 		}
 	}
 }

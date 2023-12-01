@@ -6,6 +6,17 @@ using TicketSellerLib.TCP;
 
 namespace TicketSeller.Services
 {
+
+	public enum SessionsOrderType
+	{
+		NameFromAToZCinema,
+		NameFromZToACinema,
+		NameFromAToZFilms,
+		NameFromZToAFilms,
+		CostDown,
+		CostUp,
+	}
+
 	public class SessionService : IClientService<Session>
 	{
 		public async Task<List<Session>> GetAllAsync()

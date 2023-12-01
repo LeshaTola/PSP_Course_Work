@@ -6,6 +6,12 @@ using TicketSellerLib.TCP;
 
 namespace TicketSeller.Services
 {
+	public enum HallOrderType
+	{
+		NameFromAToZ,
+		NameFromZToA,
+	}
+
 	public class HallService : IClientService<Hall>
 	{
 		public async Task<List<Hall>> GetAllAsync()

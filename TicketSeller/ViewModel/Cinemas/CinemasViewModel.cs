@@ -20,8 +20,8 @@ namespace TicketSeller.ViewModel.Cinemas
 		[ObservableProperty] private string searchString;
 		[ObservableProperty] private List<string> orderTypesList = new() { "От А до Я", "От Я до А" };
 		[ObservableProperty] private int orderTypeId = (int)CinemaOrderType.NameFromAToZ;
-		private List<Cinema> cinemas;
 
+		private List<Cinema> cinemas;
 		private CinemaService service;
 
 		public CinemasViewModel(CinemaService service)

@@ -1,4 +1,5 @@
-﻿using CommunityToolkit.Mvvm.Input;
+﻿using CommunityToolkit.Mvvm.ComponentModel;
+using CommunityToolkit.Mvvm.Input;
 using System.Collections.ObjectModel;
 using TicketSeller.Services;
 using TicketSeller.View;
@@ -8,8 +9,13 @@ namespace TicketSeller.ViewModel.Halls
 {
 	public partial class HallsViewModel : BaseViewModel, ICrudViewModel<Hall>
 	{
-		public ObservableCollection<Hall> Halls { get; private set; } = new();
+		public ObservableCollection<Hall> ValidHalls { get; private set; } = new();
 
+		[ObservableProperty] private string searchString;
+		[ObservableProperty] private List<string> orderTypesList = new() { "От А до Я", "От Я до А" };
+		[ObservableProperty] private int orderTypeId = (int)HallOrderType.NameFromAToZ;
+
+		private List<Hall> halls;
 		private HallService service;
 
 		public HallsViewModel(HallService service)
@@ -23,15 +29,12 @@ namespace TicketSeller.ViewModel.Halls
 		{
 			try
 			{
-				List<Hall> halls = await service.GetAllAsync();
-				if (halls.Count == 0)
+				List<Hall> loadedHalls = await service.GetAllAsync();
+				if (loadedHalls.Count == 0)
 					return;
 
-				Halls.Clear();
-				foreach (Hall hall in halls)
-				{
-					Halls.Add(hall);
-				}
+				halls = loadedHalls;
+				ValidateElements();
 			}
 			catch (Exception ex)
 			{
@@ -89,6 +92,47 @@ namespace TicketSeller.ViewModel.Halls
 			{
 				IsBusy = false;
 			}
+		}
+
+		[RelayCommand]
+		private void ValidateElements()
+		{
+			List<Hall> searchedElements = SearchElements(halls);
+			var searchedAndOrderedElements = OrderElements(searchedElements);
+
+			ValidHalls.Clear();
+			foreach (var element in searchedAndOrderedElements)
+			{
+				ValidHalls.Add(element);
+			}
+		}
+
+		private List<Hall> SearchElements(List<Hall> unsearchedElements)
+		{
+			if (string.IsNullOrEmpty(SearchString))
+			{
+				return unsearchedElements;
+			}
+
+			List<Hall> searchedElements = new();
+			searchedElements = unsearchedElements.Where(s => s.Name.Contains(SearchString)).ToList();
+			return searchedElements;
+		}
+
+		private List<Hall> OrderElements(List<Hall> unorderedElements)
+		{
+			List<Hall> orderedElements = new();
+			var orderType = (HallOrderType)OrderTypeId;
+			switch (orderType)
+			{
+				case HallOrderType.NameFromAToZ:
+					orderedElements = unorderedElements.OrderBy((h) => h.Name).ToList();
+					break;
+				case HallOrderType.NameFromZToA:
+					orderedElements = unorderedElements.OrderByDescending((h) => h.Name).ToList();
+					break;
+			}
+			return orderedElements;
 		}
 	}
 }

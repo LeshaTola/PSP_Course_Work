@@ -33,7 +33,7 @@ namespace TicketSeller.Model
 			var film2 = new Film { Name = "Человек Паук", Description = "Описание...", Cost = 16f, Duration = 180 };
 			var film3 = new Film { Name = "Интерстеллар", Description = "Описание...", Cost = 10f, Duration = 111 };
 
-			Sessions.Add(new Session { Date = DateOnly.FromDateTime(DateTime.Now), Film = film, Hall = hall, Time = new TimeSpan(15, 20, 0) });
+			Sessions.Add(new Session { Date = DateOnly.FromDateTime(new DateTime(2022, 10, 10)), Film = film, Hall = hall, Time = new TimeSpan(15, 20, 0) });
 			Sessions.Add(new Session { Date = DateOnly.FromDateTime(DateTime.Now), Film = film2, Hall = hall, Time = new TimeSpan(10, 20, 0) });
 			Sessions.Add(new Session { Date = DateOnly.FromDateTime(DateTime.Now), Film = film2, Hall = hall2, Time = new TimeSpan(22, 20, 0) });
 			Sessions.Add(new Session { Date = DateOnly.FromDateTime(DateTime.Now), Film = film3, Hall = hall3, Time = new TimeSpan(11, 20, 0) });

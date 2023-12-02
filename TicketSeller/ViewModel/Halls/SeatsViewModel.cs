@@ -10,6 +10,7 @@ namespace TicketSeller.ViewModel.Halls
 	public partial class SeatsViewModel : BaseViewModel
 	{
 		[ObservableProperty] private Session session;
+		public List<Ticket> Tickets { get; private set; } = new();
 
 		private TicketService service;
 
@@ -17,6 +18,13 @@ namespace TicketSeller.ViewModel.Halls
 		{
 			this.service = service;
 			Title = "Места";
+			LoadElements();
+		}
+
+		public async void LoadElements()
+		{
+			Tickets = await service.GetAllAsync();
+			Tickets = Tickets.Where(t => t.Session.Id == Session.Id).ToList();
 		}
 
 		[RelayCommand]
@@ -29,7 +37,7 @@ namespace TicketSeller.ViewModel.Halls
 			try
 			{
 				IsBusy = true;
-				int row = seatId % Session.Hall.Columns;
+				int row = seatId / Session.Hall.Columns;
 				int column = seatId - Session.Hall.Columns * row;
 
 				var ticket = new Ticket

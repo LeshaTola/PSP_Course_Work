@@ -7,16 +7,16 @@
     Title="{Binding Title}"
     x:DataType="viewModel:SeatsViewModel">
 
-    <Grid ColumnDefinitions="*,500">
+    <Grid ColumnDefinitions="*,auto">
         <Grid
             x:Name="grid"
             Margin="40"
-            ColumnSpacing="20"
-            RowSpacing="20" />
-        <VerticalStackLayout Grid.Column="1">
+            ColumnSpacing="8"
+            RowSpacing="8" />
+        <!--<VerticalStackLayout Grid.Column="1">
             <Label Text="Билеты" />
             <Label Text="Описание..." />
             <Button VerticalOptions="End" />
-        </VerticalStackLayout>
+        </VerticalStackLayout>-->
     </Grid>
 </ContentPage>

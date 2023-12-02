@@ -5,12 +5,16 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:model="clr-namespace:TicketSellerLib.DTO;assembly=TicketSellerLib"
     xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+    xmlns:utils="clr-namespace:TicketSeller.Utils"
     xmlns:viewModel="clr-namespace:TicketSeller.ViewModel.Others.UserOthers"
     Title="{Binding Title}"
     x:DataType="viewModel:UserSessionHistoryViewModel">
     <ContentPage.Behaviors>
         <toolkit:EventToCommandBehavior Command="{Binding LoadElementsCommand}" EventName="NavigatedTo" />
     </ContentPage.Behaviors>
+    <ContentPage.Resources>
+        <utils:DateToBooleanConverter x:Key="DateToBooleanConverter" />
+    </ContentPage.Resources>
 
     <Grid
         ColumnDefinitions="*,*"
@@ -63,13 +67,20 @@
                         <Grid ColumnDefinitions="*,auto" ColumnSpacing="20">
 
                             <VerticalStackLayout Grid.Column="0" Padding="10">
-                                <Label Text="{Binding Session.Film.Name, StringFormat='Фмльм: {0}'}" />
+                                <Label Text="{Binding Session.Film.Name, StringFormat='Фильм: {0}'}" />
                                 <Label Text="{Binding Session.Hall.Cinema.Name, StringFormat='Кинотеатр: {0}'}" />
                                 <Label Text="{Binding Session.Hall.Name, StringFormat='Зал: {0}'}" />
                                 <Label Text="{Binding Row, StringFormat='Ряд: {0}'}" />
                                 <Label Text="{Binding Column, StringFormat='Место: {0}'}" />
                                 <Label Text="{Binding Session.Date, StringFormat='Дата: {0}'}" />
                                 <Label Text="{Binding Session.Time, StringFormat='Время: {0}'}" />
+                            </VerticalStackLayout>
+                            <VerticalStackLayout Grid.Column="1" VerticalOptions="CenterAndExpand">
+                                <Button
+                                    Command="{Binding Source={RelativeSource AncestorType={x:Type viewModel:UserSessionHistoryViewModel}}, Path=unorderTicketCommand}"
+                                    CommandParameter="{Binding .}"
+                                    IsVisible="{Binding Session.Date, Converter={StaticResource DateToBooleanConverter}}"
+                                    Text="Отменить" />
                             </VerticalStackLayout>
                         </Grid>
                     </Frame>

@@ -50,7 +50,7 @@
             <CollectionView.ItemTemplate>
                 <DataTemplate x:DataType="model:Film">
                     <Grid Padding="10">
-                        <Frame HeightRequest="400">
+                        <Frame>
                             <Frame.GestureRecognizers>
                                 <TapGestureRecognizer Command="{Binding Source={RelativeSource AncestorType={x:Type viewModel:UserFilmsViewModel}}, Path=ChooseFilmCommand}" CommandParameter="{Binding .}" />
                             </Frame.GestureRecognizers>

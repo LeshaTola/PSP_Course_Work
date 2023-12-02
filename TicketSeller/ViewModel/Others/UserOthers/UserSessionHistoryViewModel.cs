@@ -44,6 +44,29 @@ namespace TicketSeller.ViewModel.Others.UserOthers
 			}
 		}
 
+
+		[RelayCommand]
+		private async Task unorderTicketAsync(Ticket ticket)
+		{
+			if (IsBusy) return;
+
+			try
+			{
+				IsBusy = true;
+
+				var response = await service.DeleteAsync(ticket.Id);
+				await LoadElementsAsync();
+			}
+			catch (Exception ex)
+			{
+				await Shell.Current.DisplayAlert("Ошибка!", ex.Message, "Хорошо");
+			}
+			finally
+			{
+				IsBusy = false;
+			}
+		}
+
 		[RelayCommand]
 		private void ValidateElements()
 		{

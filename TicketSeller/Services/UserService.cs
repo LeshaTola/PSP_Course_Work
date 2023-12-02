@@ -76,5 +76,65 @@ namespace TicketSeller.Services
 				return null;
 			}
 		}
+
+		public async Task<bool> CheckUserPropertiesAsync(User user)
+		{
+			if (!await CheckLoginAsync(user))
+				return false;
+
+			if (!await CheckPasswordAsync(user))
+				return false;
+
+			if (!await CheckEmailAsync(user))
+				return false;
+
+			return true;
+		}
+
+		private async Task<bool> CheckLoginAsync(User user)
+		{
+			int minLoginLength = 4;
+			if (user.Login.Length < minLoginLength)
+			{
+				await Shell.Current.DisplayAlert("Ошибка!", $"Логин должен состоять из как минимум {minLoginLength} символов", "Хорошо");
+				return false;
+			}
+
+			int maxLoginLength = 20;
+			if (user.Login.Length > maxLoginLength)
+			{
+				await Shell.Current.DisplayAlert("Ошибка!", $"Логин слишком длинный! Он не должен быть больше {maxLoginLength} символов", "Хорошо");
+				return false;
+			}
+			return true;
+		}
+
+		private async Task<bool> CheckPasswordAsync(User user)
+		{
+			int minPasswordLength = 4;
+			if (user.Password.Length < minPasswordLength)
+			{
+				await Shell.Current.DisplayAlert("Ошибка!", $"Пароль должен состоять из как минимум {minPasswordLength} символов", "Хорошо");
+				return false;
+			}
+
+			int maxPasswordLength = 20;
+			if (user.Password.Length > maxPasswordLength)
+			{
+				await Shell.Current.DisplayAlert("Ошибка!", $"Пароль слишком длинный! Он не должен быть больше {maxPasswordLength} символов", "Хорошо");
+				return false;
+			}
+			return true;
+		}
+
+		private async Task<bool> CheckEmailAsync(User user)
+		{
+			if (!user.Email.Contains('@'))
+			{
+				await Shell.Current.DisplayAlert("Ошибка!", $"Почта не подходить. Пример example@gmail.com", "Хорошо");
+				return false;
+			}
+			return true;
+		}
 	}
 }

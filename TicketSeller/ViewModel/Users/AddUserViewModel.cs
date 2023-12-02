@@ -28,6 +28,8 @@ namespace TicketSeller.ViewModel.Users
 			try
 			{
 				IsBusy = true;
+				if (!await service.CheckUserPropertiesAsync(User)) return;
+
 				var response = await service.UpsertAsync(User);
 
 				if (response.Type == ResponseTypes.Ok)

@@ -23,7 +23,7 @@
             ItemsSource="{Binding ValidFilms}">
             <CollectionView.ItemTemplate>
                 <DataTemplate x:DataType="model:Film">
-                    <Grid Padding="10">
+                    <Grid Padding="10" HeightRequest="500">
                         <Frame>
                             <Grid
                                 ColumnDefinitions="300,*,*"
@@ -32,8 +32,8 @@
                                 RowSpacing="10">
                                 <Image
                                     Grid.RowSpan="4"
-                                    Aspect="Fill"
-                                    Source="https://aka.ms/campus.jpg" />
+                                    Aspect="AspectFit"
+                                    Source="{Binding ImageURL}" />
 
                                 <Label
                                     Grid.Row="0"
@@ -51,10 +51,8 @@
                                     Grid.ColumnSpan="2"
                                     FontAttributes="Bold"
                                     FontSize="16"
-                                    HorizontalTextAlignment="Start"
-                                    LineBreakMode="TailTruncation"
-                                    Text="{Binding Description}"
-                                    VerticalTextAlignment="Start" />
+                                    LineBreakMode="WordWrap"
+                                    Text="{Binding Description}" />
 
                                 <Label
                                     Grid.Row="2"

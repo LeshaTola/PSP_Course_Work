@@ -49,7 +49,7 @@
             ItemsSource="{Binding ValidFilms}">
             <CollectionView.ItemTemplate>
                 <DataTemplate x:DataType="model:Film">
-                    <Grid Padding="10">
+                    <Grid Padding="10" HeightRequest="500">
                         <Frame>
                             <Frame.GestureRecognizers>
                                 <TapGestureRecognizer Command="{Binding Source={RelativeSource AncestorType={x:Type viewModel:UserFilmsViewModel}}, Path=ChooseFilmCommand}" CommandParameter="{Binding .}" />
@@ -60,9 +60,9 @@
                                 RowDefinitions="*,*,*"
                                 RowSpacing="10">
                                 <Image
-                                    Grid.RowSpan="3"
-                                    Aspect="Fill"
-                                    Source="https://aka.ms/campus.jpg" />
+                                    Grid.RowSpan="4"
+                                    Aspect="AspectFit"
+                                    Source="{Binding ImageURL}" />
 
                                 <Label
                                     Grid.Row="0"
@@ -79,7 +79,7 @@
                                     FontAttributes="Bold"
                                     FontSize="16"
                                     HorizontalTextAlignment="Start"
-                                    LineBreakMode="TailTruncation"
+                                    LineBreakMode="WordWrap"
                                     Text="{Binding Description}"
                                     VerticalTextAlignment="Start" />
 

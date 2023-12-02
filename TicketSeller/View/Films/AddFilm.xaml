@@ -12,15 +12,22 @@
     <VerticalStackLayout
         HorizontalOptions="Center"
         Spacing="10"
-        VerticalOptions="Center">
+        VerticalOptions="Center"
+        WidthRequest="400">
         <Label
             FontAttributes="Bold"
             FontSize="Large"
             HorizontalTextAlignment="Center"
             Text="Редактировать Фильм" />
 
+        <Entry Placeholder="Картинка (Ссылка)" Text="{Binding Film.ImageURL}" />
         <Entry Placeholder="Название" Text="{Binding Film.Name}" />
-        <Editor Placeholder="Описание " Text="{Binding Film.Description}" />
+        <Editor
+            AutoSize="TextChanges"
+            HeightRequest="100"
+            Placeholder="Описание "
+            Text="{Binding Film.Description}"
+            WidthRequest="400" />
         <Entry Placeholder="Длительность (минуты)" Text="{Binding Film.Duration}" />
         <Entry Placeholder="Цена" Text="{Binding Film.Cost}" />
 

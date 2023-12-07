@@ -1,6 +1,7 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using TicketSeller.Services;
+using TicketSeller.View.Others.UserOthers;
 using TicketSellerLib.DTO;
 using TicketSellerLib.Enum;
 
@@ -43,7 +44,7 @@ namespace TicketSeller.ViewModel
 				var response = await userService.UpsertAsync(User);
 				if (response.Type == ResponseTypes.Ok)
 				{
-					await GoToFilmsPageAsync(User);
+					await GoToUserPageAsync(User);
 				}
 				else
 				{
@@ -60,12 +61,12 @@ namespace TicketSeller.ViewModel
 			}
 		}
 
-		private async Task GoToFilmsPageAsync(User user)
+		private async Task GoToUserPageAsync(User user)
 		{
 			if (user == null)
 				return;
 
-			await Shell.Current.GoToAsync($"{nameof(Films)}", true, new Dictionary<string, object>
+			await Shell.Current.GoToAsync($"{nameof(UserPage)}", true, new Dictionary<string, object>
 			{
 				{"user", User}
 			});

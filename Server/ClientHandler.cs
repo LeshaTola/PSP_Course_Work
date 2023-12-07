@@ -40,76 +40,7 @@ namespace Server
 				while (true)
 				{
 					var request = await GetRequestAsync();
-					switch (request.Type)
-					{
-						case RequestTypes.Login:
-							Login(request.Message);
-							break;
-
-						case RequestTypes.GetFilms:
-							GetAllFilms();
-							break;
-						case RequestTypes.UpsertFilm:
-							UpsertFilm(request.Message);
-							break;
-						case RequestTypes.DeleteFilm:
-							DeleteFilm(request.Message);
-							break;
-
-						case RequestTypes.GetUsers:
-							GetAllUsers();
-							break;
-						case RequestTypes.UpsertUser:
-							UpsertUser(request.Message);
-							break;
-						case RequestTypes.DeleteUser:
-							DeleteUser(request.Message);
-							break;
-
-						case RequestTypes.GetCinemas:
-							GetAllCinemas();
-							break;
-						case RequestTypes.UpsertCinema:
-							UpsertCinema(request.Message);
-							break;
-						case RequestTypes.DeleteCinema:
-							DeleteCinema(request.Message);
-							break;
-
-						case RequestTypes.GetHalls:
-							GetAllHalls();
-							break;
-						case RequestTypes.UpsertHall:
-							UpsertHall(request.Message);
-							break;
-						case RequestTypes.DeleteHall:
-							DeleteHall(request.Message);
-							break;
-
-						case RequestTypes.GetSessions:
-							GetAllSessions();
-							break;
-						case RequestTypes.UpsertSession:
-							UpsertSession(request.Message);
-							break;
-						case RequestTypes.DeleteSession:
-							DeleteSession(request.Message);
-							break;
-
-						case RequestTypes.GetTickets:
-							GetAllTickets();
-							break;
-						case RequestTypes.UpsertTicket:
-							UpsertTicket(request.Message);
-							break;
-						case RequestTypes.DeleteTicket:
-							DeleteTicket(request.Message);
-							break;
-
-						default:
-							Console.WriteLine("Unknown request type");
-							break;
-					}
+					DeterminateRequest(request);
 				}
 			}
 			catch (Exception ex)
@@ -121,6 +52,79 @@ namespace Server
 				await Console.Out.WriteLineAsync($"Client {client.Client.RemoteEndPoint} is Disconnected");
 				server.RemoveClient(this);
 				Close();
+			}
+		}
+
+		public void DeterminateRequest(Request request)
+		{
+			switch (request.Type)
+			{
+				case RequestTypes.Login:
+					Login(request.Message);
+					break;
+
+				case RequestTypes.GetFilms:
+					GetAllFilms();
+					break;
+				case RequestTypes.UpsertFilm:
+					UpsertFilm(request.Message);
+					break;
+				case RequestTypes.DeleteFilm:
+					DeleteFilm(request.Message);
+					break;
+
+				case RequestTypes.GetUsers:
+					GetAllUsers();
+					break;
+				case RequestTypes.UpsertUser:
+					UpsertUser(request.Message);
+					break;
+				case RequestTypes.DeleteUser:
+					DeleteUser(request.Message);
+					break;
+
+				case RequestTypes.GetCinemas:
+					GetAllCinemas();
+					break;
+				case RequestTypes.UpsertCinema:
+					UpsertCinema(request.Message);
+					break;
+				case RequestTypes.DeleteCinema:
+					DeleteCinema(request.Message);
+					break;
+
+				case RequestTypes.GetHalls:
+					GetAllHalls();
+					break;
+				case RequestTypes.UpsertHall:
+					UpsertHall(request.Message);
+					break;
+				case RequestTypes.DeleteHall:
+					DeleteHall(request.Message);
+					break;
+
+				case RequestTypes.GetSessions:
+					GetAllSessions();
+					break;
+				case RequestTypes.UpsertSession:
+					UpsertSession(request.Message);
+					break;
+				case RequestTypes.DeleteSession:
+					DeleteSession(request.Message);
+					break;
+
+				case RequestTypes.GetTickets:
+					GetAllTickets();
+					break;
+				case RequestTypes.UpsertTicket:
+					UpsertTicket(request.Message);
+					break;
+				case RequestTypes.DeleteTicket:
+					DeleteTicket(request.Message);
+					break;
+				default:
+					Console.WriteLine("Unknown request type");
+					break;
 			}
 		}
 

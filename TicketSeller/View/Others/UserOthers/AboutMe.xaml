@@ -3,9 +3,14 @@
     x:Class="TicketSeller.View.Others.UserOthers.AboutMe"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
     xmlns:viewModel="clr-namespace:TicketSeller.ViewModel.UserOthers"
     Title="{Binding Title}"
     x:DataType="viewModel:AboutMeViewModel">
+    <ContentPage.Behaviors>
+        <toolkit:EventToCommandBehavior Command="{Binding LoadMyInfoCommand}" EventName="NavigatedTo" />
+    </ContentPage.Behaviors>
+
     <VerticalStackLayout
         HorizontalOptions="CenterAndExpand"
         Spacing="10"

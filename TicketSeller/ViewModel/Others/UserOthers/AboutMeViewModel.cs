@@ -11,11 +11,10 @@ namespace TicketSeller.ViewModel.UserOthers
 
 		public AboutMeViewModel()
 		{
-			Me = Client.Client.Instance.CurrentUser;
 			Title = "Обо мне";
 		}
 
-		public async Task GoToAddElementPageAsync(User user)
+		private async Task GoToAddElementPageAsync(User user)
 		{
 			await Shell.Current.GoToAsync($"{nameof(EditUserForUser)}", true, new Dictionary<string, object>
 			{
@@ -24,7 +23,7 @@ namespace TicketSeller.ViewModel.UserOthers
 		}
 
 		[RelayCommand]
-		public async Task UpsertElementAsync()
+		private async Task UpsertElementAsync()
 		{
 			if (IsBusy) return;
 
@@ -43,5 +42,20 @@ namespace TicketSeller.ViewModel.UserOthers
 				IsBusy = false;
 			}
 		}
+
+		[RelayCommand]
+		private async Task LoadMyInfo()
+		{
+			try
+			{
+				Me = null;
+				Me = Client.Client.Instance.CurrentUser;
+			}
+			catch (Exception ex)
+			{
+				await Shell.Current.DisplayAlert("Ошибка!", ex.Message, "Хорошо");
+			}
+		}
+
 	}
 }

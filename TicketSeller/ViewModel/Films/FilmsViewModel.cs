@@ -38,9 +38,6 @@ namespace TicketSeller.ViewModel.Films
 		{
 			List<Film> loadedFilms = await service.GetAllAsync();
 
-			if (loadedFilms.Count == 0)
-				return;
-
 			films = loadedFilms;
 			ValidateElements();
 		}

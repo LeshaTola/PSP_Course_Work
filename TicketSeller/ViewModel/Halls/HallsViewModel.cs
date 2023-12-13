@@ -30,8 +30,6 @@ namespace TicketSeller.ViewModel.Halls
 			try
 			{
 				List<Hall> loadedHalls = await service.GetAllAsync();
-				if (loadedHalls.Count == 0)
-					return;
 
 				halls = loadedHalls;
 				ValidateElements();

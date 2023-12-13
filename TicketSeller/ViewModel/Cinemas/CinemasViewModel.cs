@@ -36,8 +36,7 @@ namespace TicketSeller.ViewModel.Cinemas
 			try
 			{
 				List<Cinema> loadedCinemas = await service.GetAllAsync();
-				if (loadedCinemas.Count == 0)
-					return;
+
 				cinemas = loadedCinemas;
 				ValidateElements();
 			}

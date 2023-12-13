@@ -30,8 +30,7 @@ namespace TicketSeller.ViewModel.Users
 			try
 			{
 				List<User> loadedUsers = await service.GetAllAsync();
-				if (loadedUsers.Count == 0)
-					return;
+
 				users = loadedUsers;
 				ValidateElements();
 			}

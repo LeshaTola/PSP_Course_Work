@@ -62,9 +62,6 @@ namespace TicketSeller.ViewModel.Sessions
 		{
 			List<Session> loadedSessions = await service.GetAllAsync();
 
-			if (loadedSessions.Count == 0)
-				return;
-
 			sessions = loadedSessions;
 			ValidateElements();
 		}

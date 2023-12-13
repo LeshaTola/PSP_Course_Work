@@ -31,11 +31,10 @@ namespace TicketSeller.ViewModel.Others.UserOthers
 			try
 			{
 				List<Ticket> loadedTickets = await service.GetAllAsync();
-				if (loadedTickets.Count == 0)
-					return;
 
 				loadedTickets = loadedTickets.Where(t => t.UserId == Client.Client.Instance.CurrentUser.Id).ToList();
 				tickets = loadedTickets;
+
 				ValidateElements();
 			}
 			catch (Exception ex)

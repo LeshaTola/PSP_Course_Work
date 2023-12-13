@@ -61,8 +61,6 @@ namespace TicketSeller.ViewModel.Tickets
 		public async Task LoadElementsAsync()
 		{
 			List<Ticket> loadedTickets = await service.GetAllAsync();
-			if (loadedTickets.Count == 0)
-				return;
 
 			tickets = loadedTickets;
 			ValidateElements();

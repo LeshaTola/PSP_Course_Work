@@ -17,6 +17,15 @@
             HorizontalTextAlignment="Center"
             Text="Редактировать билет" />
 
+        <Picker
+            Title="Сеанс"
+            ItemsSource="{Binding SessionNames}"
+            SelectedIndex="{Binding SessionId}" />
+        <Picker
+            Title="Пользователь"
+            ItemsSource="{Binding UserNames}"
+            SelectedIndex="{Binding UserId}" />
+
         <Button
             Command="{Binding UpsertCommand}"
             CommandParameter="{Binding Ticket}"

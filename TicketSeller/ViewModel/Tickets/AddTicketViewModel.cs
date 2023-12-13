@@ -11,23 +11,46 @@ namespace TicketSeller.ViewModel.Tickets
 	{
 		[ObservableProperty] private Ticket ticket;
 
-		[ObservableProperty] private List<Session> sessions;
+		private List<Session> sessions;
+		private List<User> users;
 
+		[ObservableProperty] private List<string> sessionNames;
+		[ObservableProperty] private List<string> userNames;
+
+		[ObservableProperty] private int sessionId;
+		[ObservableProperty] private int userId;
 
 		private SessionService sessionService;
+		private UserService userService;
+
 		private TicketService ticketService;
 
-		public AddTicketViewModel(SessionService sessionService, TicketService ticketService)
+		public AddTicketViewModel(SessionService sessionService, TicketService ticketService, UserService userService)
 		{
 			this.ticketService = ticketService;
 			this.sessionService = sessionService;
+			this.userService = userService;
+
 			Title = "Редактирование Билета";
-			_ = LoadSessions();
+
+			_ = LoadAllAsync();
+		}
+		private async Task LoadAllAsync()
+		{
+			await LoadSessionsAsync();
+			await LoadUsersAsync();
 		}
 
-		private async Task LoadSessions()
+		private async Task LoadSessionsAsync()
 		{
-			Sessions = await sessionService.GetAllAsync();
+			sessions = await sessionService.GetAllAsync();
+			SessionNames = sessions.Select(s => s.Film.Name + " " + s.Date + " " + s.Time).ToList();
+		}
+
+		private async Task LoadUsersAsync()
+		{
+			users = await userService.GetAllAsync();
+			UserNames = users.Select(u => u.Login).ToList();
 		}
 
 		[RelayCommand]
@@ -38,7 +61,8 @@ namespace TicketSeller.ViewModel.Tickets
 			try
 			{
 				IsBusy = true;
-
+				Ticket.Session = sessions[SessionId];
+				Ticket.User = users[UserId];
 				var response = await ticketService.UpsertAsync(Ticket);
 
 				if (response.Type == ResponseTypes.Ok)

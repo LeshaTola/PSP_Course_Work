@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Server.Services.CinemaService">
+    <Position X="11" Y="5.25" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAAAAAABAAAAABAAAAAAAAQAAAgAAAAAAAAA=</HashCode>
+      <FileName>Services\CinemaService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Server.Services.FilmService">
+    <Position X="15.5" Y="5.25" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAAAAAABAAAAABAAAAAAAAQAAAgAAAAAAAAA=</HashCode>
+      <FileName>Services\FilmService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Server.Services.HallService">
+    <Position X="20" Y="5.25" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAAAAAABAAAAABAAAAAAAAQAAAgAAAAAAAAA=</HashCode>
+      <FileName>Services\HallService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Server.Services.Service&lt;T&gt;" Collapsed="true">
+    <Position X="16.5" Y="4" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAABAAAAABAAAAAAAAQAAAgAAAAAAAAA=</HashCode>
+      <FileName>Services\Service.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Server.Services.SessionService">
+    <Position X="22.25" Y="5.25" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAAAAAABAAAAABAAAAAAAAQAAAgAAAAAAAAA=</HashCode>
+      <FileName>Services\SessionService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Server.Services.TicketService">
+    <Position X="13.25" Y="5.25" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAAAAAABAAAAABAAAAAAAAQAAAgAAAAAAAAA=</HashCode>
+      <FileName>Services\TicketService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Server.Services.UserService">
+    <Position X="17.75" Y="5.25" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAAAAAABAAAAABAAAAAAAAQAAAgAAAAAAAAA=</HashCode>
+      <FileName>Services\UserService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Server.DAO.CinemaDAO" Collapsed="true">
+    <Position X="15.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAABAAAAABAAAAAAAAQAAAgAAAAAAAAA=</HashCode>
+      <FileName>DAO\CinemaDAO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Server.DAO.DAO&lt;T&gt;">
+    <Position X="16.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAABAAAAABAAAAAAAAQAAAgAAAAAAAAA=</HashCode>
+      <FileName>DAO\DAO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Server.DAO.FilmDAO" Collapsed="true">
+    <Position X="22.25" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAABAAAAABAAAAAAAAQAAAgAAAAAAAAA=</HashCode>
+      <FileName>DAO\FilmDAO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Server.DAO.HallDAO" Collapsed="true">
+    <Position X="11" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAABAAAAABAAAAAAAAQAAAgAAAAAAAAA=</HashCode>
+      <FileName>DAO\HallDAO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Server.DAO.SessionDAO" Collapsed="true">
+    <Position X="13.25" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAABAAAAABAAAAAAAAQAAAgAAAAAAAAA=</HashCode>
+      <FileName>DAO\SessionDAO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Server.DAO.TicketDAO" Collapsed="true">
+    <Position X="17.75" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAABAAAAABAAAAAAAAQAAAgAAAAAAAAA=</HashCode>
+      <FileName>DAO\TicketDAO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Server.DAO.UserDAO" Collapsed="true">
+    <Position X="20" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAABAAAAABAAAAAAAAQAAAgAAAAAAAAA=</HashCode>
+      <FileName>DAO\UserDAO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TicketSeller.Model.ApplicationContext" Collapsed="true">
+    <Position X="24.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAACAAAQAAAAAAADAAAAAAAAAACAAAAAACAAAAgAA=</HashCode>
+      <FileName>ApplicationContext.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Server.ClientHandler" Collapsed="true">
+    <Position X="26.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEgBgggBAAYACEBABAAAQQCggAAAIAAQAQVCGQAAI=</HashCode>
+      <FileName>ClientHandler.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Server.Program" Collapsed="true">
+    <Position X="24.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Server.Server" Collapsed="true">
+    <Position X="26.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAgAAABAAAABAAAEAAAAAA=</HashCode>
+      <FileName>Server.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="TicketSellerLib.DTO.Cinema">
+    <Position X="6.5" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAQAAAAAAAACAAAAAAAAAAA=</HashCode>
+      <FileName>DTO\Cinema.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TicketSellerLib.DTO.Film">
+    <Position X="11.75" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAiAAAABAAAABQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DTO\Film.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TicketSellerLib.DTO.Hall">
+    <Position X="9" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAACAAAAAAEAAEAAAAAAAAQAAAAAAAAAAAAAAAgAAAA=</HashCode>
+      <FileName>DTO\Hall.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Cinema" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="TicketSellerLib.DTO.Session">
+    <Position X="11.5" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAACAAAAIAAAAAAAAAAAAAAAAAAABAABAAAAAgAAAQA=</HashCode>
+      <FileName>DTO\Session.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Hall" />
+      <Property Name="Film" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="TicketSellerLib.DTO.Ticket">
+    <Position X="9" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAADAAAAAAAAAQAAAABAAAgIAAAAAgAAAAAAAAAAAAA=</HashCode>
+      <FileName>DTO\Ticket.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Session" />
+      <Property Name="User" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="TicketSellerLib.DTO.User">
+    <Position X="6.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAACAAAAAAAAAAAAAACAAAAAACAAAQAAAAAAA=</HashCode>
+      <FileName>DTO\User.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TicketSellerLib.TCP.Request">
+    <Position X="1.75" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAIAAAAAA=</HashCode>
+      <FileName>TCP\Request.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Type" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="TicketSellerLib.TCP.Response">
+    <Position X="1.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAQAAIAAAAAA=</HashCode>
+      <FileName>TCP\Response.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Type" />
+    </ShowAsAssociation>
+  </Class>
+  <Enum Name="TicketSellerLib.Enum.RequestTypes" Collapsed="true">
+    <Position X="4" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IQAEgAAgoBAAQAAEAABAAAQAQAAAAAICAQAQQAAIAAA=</HashCode>
+      <FileName>Enum\RequestTypes.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="TicketSellerLib.Enum.ResponseTypes" Collapsed="true">
+    <Position X="4" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAwAAAAAAAAAAAAAAAAAAAAABAAAAAAA=</HashCode>
+      <FileName>Enum\ResponceTypes.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

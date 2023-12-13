@@ -19,25 +19,25 @@ namespace TicketSeller.Client
 		{
 			get
 			{
-				//if (instance == null)
-				//instance = new Client(IPAddress.Any.ToString(), 8080);
+				if (instance == null)
+					instance = new Client();
 				return instance;
 			}
 			set => instance = value;
-		}// TODO: incorrect
+		}
 
 		public User CurrentUser { get; set; }
 
-		public Client(string hostName, int port)
+		private Client()
 		{
-			this.hostName = hostName;
-			this.port = port;
 			client = new TcpClient();
 			instance = this;
 		}
 
-		public void Connect()
+		public void Connect(string hostName, int port)
 		{
+			this.hostName = hostName;
+			this.port = port;
 			try
 			{
 				client.Connect(hostName, port);

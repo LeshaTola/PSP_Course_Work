@@ -103,8 +103,8 @@ namespace TicketSeller
 			builder.Logging.AddDebug();
 #endif
 
-			Client.Client client = new("127.0.0.1", 14447);
-			client.Connect();
+
+			Client.Client.Instance.Connect("127.0.0.1", 14447);
 
 			return builder.Build();
 		}

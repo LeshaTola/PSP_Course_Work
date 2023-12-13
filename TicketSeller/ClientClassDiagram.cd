@@ -1,0 +1,444 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="TicketSeller.View.AddCinema" Collapsed="true">
+    <Position X="50.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>View\Cinemas\AddCinema.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TicketSeller.View.Cinemas" Collapsed="true">
+    <Position X="54" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>View\Cinemas\Cinemas.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TicketSeller.View.AddFilm" Collapsed="true">
+    <Position X="52.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>View\Films\AddFilm.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TicketSeller.View.Films" Collapsed="true">
+    <Position X="52.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>View\Films\Films.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TicketSeller.View.AddHall" Collapsed="true">
+    <Position X="54" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>View\Halls\AddHall.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TicketSeller.View.Halls" Collapsed="true">
+    <Position X="55.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>View\Halls\Halls.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TicketSeller.View.Seats" Collapsed="true">
+    <Position X="54" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAQAgQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>View\Halls\Seats.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TicketSeller.View.AdminPage" Collapsed="true">
+    <Position X="50.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>View\Others\AdminPage.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TicketSeller.View.Authorization" Collapsed="true">
+    <Position X="52.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>View\Others\Authorization.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TicketSeller.View.Registration" Collapsed="true">
+    <Position X="52.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>View\Others\Registration.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TicketSeller.View.AddSession" Collapsed="true">
+    <Position X="55.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>View\Sessions\AddSession.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TicketSeller.View.Sessions" Collapsed="true">
+    <Position X="55.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>View\Sessions\Sessions.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TicketSeller.View.AddTicket" Collapsed="true">
+    <Position X="57.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>View\Tickets\AddTicket.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TicketSeller.View.Tickets" Collapsed="true">
+    <Position X="48.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>View\Tickets\Tickets.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TicketSeller.View.AddUser" Collapsed="true">
+    <Position X="48.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>View\Users\AddUser.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TicketSeller.View.Users" Collapsed="true">
+    <Position X="55.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>View\Users\Users.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TicketSeller.View.Others.UserOthers.AboutMe" Collapsed="true">
+    <Position X="48.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>View\Others\UserOthers\AboutMe.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TicketSeller.View.Others.UserOthers.EditUserForUser" Collapsed="true">
+    <Position X="50.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>View\Others\UserOthers\EditUserForUser.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TicketSeller.View.Others.UserOthers.UserFilms" Collapsed="true">
+    <Position X="52.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>View\Others\UserOthers\UserFilms.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TicketSeller.View.Others.UserOthers.UserPage" Collapsed="true">
+    <Position X="54" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>View\Others\UserOthers\UserPage.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TicketSeller.View.Others.UserOthers.UserSessionHistory" Collapsed="true">
+    <Position X="48.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>View\Others\UserOthers\UserSessionHistory.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TicketSeller.View.Others.UserOthers.UserSessionsByFilm" Collapsed="true">
+    <Position X="50.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>View\Others\UserOthers\UserSessionsByFilm.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TicketSeller.MainActivity" Collapsed="true">
+    <Position X="48.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Platforms\Android\MainActivity.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TicketSeller.MainApplication" Collapsed="true">
+    <Position X="50.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Platforms\Android\MainApplication.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TicketSeller.Client.Client" Collapsed="true">
+    <Position X="57.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAIAAAAAAAAAAAIAAAABAAAgAQBAEBAEAAgA=</HashCode>
+      <FileName>Client\Client.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TicketSeller.ViewModel.Cinemas.AddCinemaViewModel" Collapsed="true">
+    <Position X="8" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAAAAAAAAAAAAAAAAAAAAgAAAAAEAAAAAAAAA=</HashCode>
+      <FileName>ViewModel\Cinemas\AddCinemaViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TicketSeller.ViewModel.Cinemas.CinemasViewModel" Collapsed="true">
+    <Position X="19.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>YAAACAAAEAAAAIAAgAAgAAAAMAAgAAAAAEgAAAACAAA=</HashCode>
+      <FileName>ViewModel\Cinemas\CinemasViewModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="TicketSeller.ViewModel.Films.AddFilmViewModel" Collapsed="true">
+    <Position X="23.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEQAAAAQAAA=</HashCode>
+      <FileName>ViewModel\Films\AddFilmViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TicketSeller.ViewModel.Films.FilmsViewModel" Collapsed="true">
+    <Position X="35" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>YAAACAAAEAAAAIAAgAAgAAAAMAAgAAAAAECAAAAAABA=</HashCode>
+      <FileName>ViewModel\Films\FilmsViewModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="TicketSeller.ViewModel.Halls.AddHallViewModel" Collapsed="true">
+    <Position X="41.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAAACAAACAAAAAIAIAAAAAIAAAAAAgAEAAAAAA=</HashCode>
+      <FileName>ViewModel\Halls\AddHallViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TicketSeller.ViewModel.Halls.HallsViewModel" Collapsed="true">
+    <Position X="1.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>cAAACAAAEAAAEIAAgAAgAAAAMAAgAAAAAEAAAAAAAAA=</HashCode>
+      <FileName>ViewModel\Halls\HallsViewModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="TicketSeller.ViewModel.Halls.SeatsViewModel" Collapsed="true">
+    <Position X="10.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAEAAAAgAAAAAAAAAEAAAAAQAAA=</HashCode>
+      <FileName>ViewModel\Halls\SeatsViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TicketSeller.ViewModel.UserOthers.AboutMeViewModel" Collapsed="true">
+    <Position X="17" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAgAQAAEAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModel\Others\UserOthers\AboutMeViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TicketSeller.ViewModel.UserOthers.UserPageViewModel" Collapsed="true">
+    <Position X="21.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAEAAAAAAAIAAAAAAAAAAEAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModel\Others\UserOthers\UserPageViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TicketSeller.ViewModel.Others.UserOthers.UserFilmsViewModel" Collapsed="true">
+    <Position X="26" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>YAAgAAgAEAAAAIAAgAAAAAAAIAAgAAAAAECAAAAAABA=</HashCode>
+      <FileName>ViewModel\Others\UserOthers\UserFilmsViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TicketSeller.ViewModel.Others.UserOthers.UserSessionHistoryViewModel" Collapsed="true">
+    <Position X="30.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>YAAAAAAEEAAAAIAAgAAAAAAAIAAgAAAAAEAAAAACAAA=</HashCode>
+      <FileName>ViewModel\Others\UserOthers\UserSessionHistoryViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TicketSeller.ViewModel.Others.UserOthers.UserSessionsByFilmViewModel" Collapsed="true">
+    <Position X="37.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>YAAAAAAAEIAAIIAAgAAgAAAAIAAgAAAAAEQAAAAAAgA=</HashCode>
+      <FileName>ViewModel\Others\UserOthers\UserSessionsByFilmViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TicketSeller.ViewModel.AdminViewModel" Collapsed="true">
+    <Position X="44" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAgAAAAIBABAIIAAAABAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModel\Others\AdminPageViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TicketSeller.ViewModel.AuthorizationViewModel" Collapsed="true">
+    <Position X="3.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAAAAEAACAAAAAAAAAAAAAAAAgAAAAAAEAAQA=</HashCode>
+      <FileName>ViewModel\Others\AuthorizationViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TicketSeller.ViewModel.RegistrationViewModel" Collapsed="true">
+    <Position X="12.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAAAAAACAAAAAAAABAAAAAAAgAAAAAAAAAQA=</HashCode>
+      <FileName>ViewModel\Others\RegistrationViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TicketSeller.ViewModel.BaseViewModel" Collapsed="true">
+    <Position X="23.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModel\BaseViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TicketSeller.ViewModel.Sessions.AddSessionViewModel" Collapsed="true">
+    <Position X="28.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABQAACAAEAIAAQEIAIAAAAAIAAACQAiAEGAAAAY=</HashCode>
+      <FileName>ViewModel\Sessions\AddSessionViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TicketSeller.ViewModel.Sessions.SessionsViewModel" Collapsed="true">
+    <Position X="32.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>YAAACAAAEAAAIIAAgAAgAAAAMAAgAAAAAEAAAAAAAgA=</HashCode>
+      <FileName>ViewModel\Sessions\SessionsViewModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="TicketSeller.ViewModel.Tickets.AddTicketViewModel" Collapsed="true">
+    <Position X="39.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAIAIAAAAAAIACAACAAAAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>ViewModel\Tickets\AddTicketViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TicketSeller.ViewModel.Tickets.TicketsViewModel" Collapsed="true">
+    <Position X="46.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQACAAAAAAAAAAAgAAgAAAAEAAAAAAAAEAAAAAAAAA=</HashCode>
+      <FileName>ViewModel\Tickets\TicketsViewModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="TicketSeller.ViewModel.Users.AddUserViewModel" Collapsed="true">
+    <Position X="5.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAEAAAAAAAQA=</HashCode>
+      <FileName>ViewModel\Users\AddUserViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TicketSeller.ViewModel.Users.UsersViewModel" Collapsed="true">
+    <Position X="14.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>YAAACAAAEAAAAIAAgCAgAAAAMAAgAAAAAEAAAAAAAAA=</HashCode>
+      <FileName>ViewModel\Users\UsersViewModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="TicketSeller.Services.CinemaService" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="55.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAIA=</HashCode>
+      <FileName>Services\CinemaService.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="TicketSeller.Services.FilmService" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="54" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAIA=</HashCode>
+      <FileName>Services\FilmService.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="TicketSeller.Services.HallService" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="57.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAIA=</HashCode>
+      <FileName>Services\HallService.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="TicketSeller.Services.SessionService" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="57.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAIA=</HashCode>
+      <FileName>Services\SessionService.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="TicketSeller.Services.TicketService" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="50.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAIA=</HashCode>
+      <FileName>Services\TicketService.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="TicketSeller.Services.UserService" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="57.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAGAACAAACAAAAAAAAAIAAAAAAAAAAAABCAAAAAAAIA=</HashCode>
+      <FileName>Services\UserService.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="TicketSeller.Utils.DateToBooleanConverter" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="48.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAIAAAAAAAAgAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Utils\DateToBooleanConverter.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Interface Name="TicketSeller.ViewModel.ICrudViewModel&lt;T&gt;" Collapsed="true">
+    <Position X="50.5" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAAAAAAAAAgAAgAAAAEAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModel\ICrudViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="TicketSeller.Services.IClientService&lt;T&gt;" Collapsed="true">
+    <Position X="48.75" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAIA=</HashCode>
+      <FileName>Services\IClientService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="TicketSeller.ViewModel.Cinemas.CinemaOrderType" Collapsed="true">
+    <Position X="48.75" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModel\Cinemas\CinemasViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="TicketSeller.ViewModel.Films.FilmOrderType" Collapsed="true">
+    <Position X="50.5" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAAAAIAAAAAAAAAAAAAAAAAAIAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModel\Films\FilmsViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="TicketSeller.Services.HallOrderType" Collapsed="true">
+    <Position X="52.25" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Services\HallService.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="TicketSeller.Services.SessionsOrderType" Collapsed="true">
+    <Position X="54" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAAAIAIAAAAAAAAAAAAAAAAAAIAAAAAAAAAAA=</HashCode>
+      <FileName>Services\SessionService.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="TicketSeller.Services.UserOrderType" Collapsed="true">
+    <Position X="55.75" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Services\UserService.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
